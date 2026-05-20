@@ -1,0 +1,71 @@
+.wrapper {
+    padding-top:20px;
+    margin-bottom: clamp(70px, 5vw, 100px);
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    transition: all .8s ease;
+}
+.icon {
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .8s ease .5s;
+}
+
+.item:nth-child(1) .icon {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-delivery.svg);
+}
+.item:nth-child(2) .icon {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-pocket.svg);
+}
+.item:nth-child(3) .icon {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-joystick.svg);
+}
+.item:nth-child(4) .icon {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-support.svg);
+}
+.itemTitle {
+    font-weight: 700;
+    font-size: 24px;
+    transition: all .3s ease;
+}
+.text {
+    font-size: 14px;
+    line-height: 100%;
+    color:var(--grey);
+}
+
+.item:hover .icon {
+    filter: drop-shadow(0 0 8px red);
+}
+.item:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 940px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+@media (max-width: 520px) {
+    .list {
+        grid-template-columns:1fr;
+    }
+}

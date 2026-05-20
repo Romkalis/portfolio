@@ -1,0 +1,304 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    overflow: visible;
+    max-width: 320px;
+    align-self: start;
+    background:  var(--acc-d);
+    border-radius: 4px;
+    box-shadow: 0px 25px 50px -12px blueviolet;
+
+    backdrop-filter: blur(24px);
+    z-index:2;
+    transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+.header:not(:hover) {
+    transform: scale(0.8);
+    transform-origin: top left;
+}
+
+.wrapper {
+    font-size: 14px;
+}
+
+.top {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.58) 0%, rgba(56, 69, 115, 0.57) 50%, rgba(0, 47, 51, 0.88) 100%);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+}
+.logo {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    img {
+        height: 64px;
+        object-fit: contain;
+        object-position: center;
+        margin-bottom: 20px;
+    }
+}
+.aTitle {
+    font-size: 24px;
+    color: var(--text-l);
+    text-shadow: 2px 2px 5px var(--acc);
+    font-weight: 900;
+}
+
+.aText {
+    font-size: 14px;
+    color:var(--text-l);
+}
+
+.navList {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 16px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    gap: 8px;
+}
+.topButton {
+    display: block;
+}
+
+.navItem {
+    padding: 18px;
+    border-radius: 16px;
+    transition: all .3s ease-in-out;
+    svg, path {
+
+        stroke: var(--text-l);
+        transition: all .5s ease-in-out;
+    }
+}
+.svgWrap {
+    padding: 14px;
+    background: rgba(163, 250, 243, 0.5);
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+}
+
+.navLink {
+    color: var(--text-d);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.itemActive {
+    background: linear-gradient(90deg, rgba(231, 255, 255, 0.38) 0%, rgba(70, 176, 251, 0.7) 100%);
+    color: var(--acc);
+    position: relative;
+    padding: 18px 28px 18px 18px;
+
+    &::after {
+        content: "";
+        width: 14px;
+        aspect-ratio: 1;
+        transform: translateY(-50%);
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        background-color: var(--acc);
+        border-radius: 50%;
+    }
+
+    .svgWrap {
+        background:  var(--acc);
+        svg, path {
+            flex-shrink: 0;
+            stroke: var(--text-l);
+        }
+    }
+    .navLink {
+        color: var(--acc);
+        position: relative;
+    }
+}
+
+.language {
+    margin: 16px 16px 20px 34px;
+    border: 2px solid var(--acc);
+    border-radius: 16px;
+    content: url(../../../public/eg-docs/icons/ejGam332-aside-lang.svg);
+    padding: 14px;
+    display: grid;
+    place-items: center;
+    background-color: var(--grey-d);
+    cursor: not-allowed;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        filter: grayscale(1);
+    }
+}
+
+.navButton {
+    display: none;
+}
+
+.burger {
+    display: none;
+    border: none;
+}
+
+
+@media (max-width: 900px) {
+    .header {
+        position: relative;
+        margin: 0 auto -70px;
+        width: 100%;
+        max-width: 95vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 24px;
+        border-radius: 24px;
+        z-index: 1;
+    }
+
+    .header:not(:hover) {
+        transform: unset;
+        transform-origin: top left;
+    }
+
+    .wrapper {
+        display: flex;
+        padding: 0;
+    }
+    .top {
+        padding: 0;
+        background: unset;
+        display: flex;
+        gap: 6px;
+    }
+    .logo {
+        z-index: 22;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .logo img{
+        margin-bottom: 0;
+        width: 40px;
+        height: 40px;
+    }
+    .language {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        margin-right: 40px;
+    }
+    .aTitle {
+        font-size: clamp( 14px, 1.2vw, 24px);
+    }
+    .aText {
+        display: none;
+    }
+    .desktopView {
+        display: none;
+    }
+    .navButton {
+        display: block;
+    }
+
+
+    .navList {
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-200%);
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        background-color: black;
+        padding: 60px;
+        box-shadow: 2px 2px 12px rgba(54, 143, 232, 0.76);
+        transition: all .3s ease;
+        width: 100%;
+        border-radius: 20px;
+        z-index: 3;
+    }
+
+    .navListActive {
+        transform: translateX(0%);
+        transition: all .3s ease;
+        padding: 90px 20px 40px 20px;
+        z-index: 5;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        right: 12px;
+        top: 24px;
+        width: 34px;
+        height: 28px;
+        z-index: 5;
+    }
+
+    .burger {
+        width: 34px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .burger span {
+        width: 100%;
+        height: 2px;
+        background: var(--text-l);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .burger span:first-child {
+        width: 80%;
+    }
+    .burger span:last-child {
+        width: 80%;
+        margin-left: auto;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: translateY(2px) rotate(45deg);
+        width: 100%;
+    }
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+        width: 100%;
+    }
+
+    .navLink {
+        color: wheat;
+    }
+}
+
+
+@media (max-width: 359px) {
+    .aTitle {
+        display: none;
+    }
+}

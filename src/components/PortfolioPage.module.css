@@ -1,0 +1,248 @@
+.hero {
+  padding: 6rem 0 4rem;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.heroRole {
+  margin: 0.75rem 0 0;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.heroText {
+  margin: 1.5rem 0 0;
+  max-width: 58ch;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.aboutText {
+  margin-bottom: 0;
+}
+
+.skillsGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.skillCard {
+  padding: 1.35rem 1.5rem;
+}
+
+.skillCard h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+}
+
+.skillCard ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.skillCard li + li {
+  margin-top: 0.35rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.jobCard {
+  padding: 1.5rem;
+}
+
+.jobHeader h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.jobHeader a:hover {
+  color: var(--accent);
+}
+
+.period {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.jobCard ul {
+  margin: 1rem 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.jobCard li + li {
+  margin-top: 0.4rem;
+}
+
+.stack {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.simpleList {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.simpleList li + li {
+  margin-top: 0.35rem;
+}
+
+.subTitle {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.achievement {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+.projectsGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+.projectCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.projectTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.projectTop h3 {
+  margin: 0;
+}
+
+.projectCard p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tech {
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.demoLink {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.contactCard {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 36rem;
+}
+
+.contactCard a {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contactCard a:hover {
+  border-color: rgba(110, 231, 183, 0.35);
+  background: var(--accent-dim);
+}
+
+.contactCard span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contactCard strong {
+  font-size: 1.05rem;
+}
+
+.resumeDownload {
+  justify-self: start;
+  margin-top: 0.25rem;
+  text-align: center;
+}
+
+.footer {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .projectsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

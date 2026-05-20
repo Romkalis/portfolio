@@ -1,0 +1,19 @@
+User-agent: Googlebot
+User-agent: AdsBot-Googlebot
+Allow: /
+
+# Disallow access to Next.js internals and API
+Disallow: /_next/
+Disallow: /api/
+Disallow: /.well-known/
+
+# Allow access to static assets
+Allow: /fonts/
+Allow: /games/
+Allow: /topaulot-assets/
+
+# Sitemap location
+Sitemap: #/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -1,0 +1,10 @@
+# dependencies (root + projects/*)
+node_modules/
+**/node_modules/
+
+.venv-resume
+.next
+out-portfolio
+dist
+.DS_Store
+*.log

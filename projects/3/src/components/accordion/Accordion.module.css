@@ -1,0 +1,36 @@
+.accordions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    transition: all .3s ease;
+    list-style: none;
+    width: 100%;
+    margin: 0 auto 70px;
+
+    perspective: 1500px;
+    transform-style: preserve-3d;
+}
+
+.accordions:has(li:hover) li:not(:hover) {
+    transform: translateZ(-100px);
+    opacity: 0.7;
+    transition:
+            transform 0.5s ease,
+            opacity 0.4s ease,
+            filter 0.4s ease;
+}
+.accordions:not(:has(li:hover)) li {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+    filter: none;
+    transition:
+            transform 0.4s ease,
+            opacity 0.4s ease,
+            filter 0.4s ease;
+}
+
+@media (max-width: 468px) {
+    .accordions {
+        padding: 0;
+    }
+}

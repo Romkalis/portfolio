@@ -1,0 +1,211 @@
+.table {
+    margin-bottom: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 252px;
+    gap: 26px;
+}
+
+.players, .bonus {
+    background: linear-gradient(210deg, #F970DC99 0%, #384B8D99 35.1%, #362E5E 76.92%);
+    border: 2px solid rgba(0, 191, 255, 0.34);
+    box-shadow: 0px 25px 50px -12px #00000040;
+    border-radius: 24px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+
+}
+
+.playersHead {
+    padding: 32px;
+    background: linear-gradient(90deg, rgba(255, 150, 0, 0.1) 0%, rgba(230, 95, 42, 0.1) 100%);
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.button {
+    padding: 8px 22px;
+    border: 2px solid #FF96004D;
+    background: transparent;
+    color: var(--text-d);
+}
+
+.active {
+    border: 2px solid var(--acc);
+    background: var(--acc);
+    color: var(--text-l);
+}
+
+.list {
+    display: grid;
+    padding: 24px;
+    gap: 24px;
+}
+
+.item {
+    background: linear-gradient(90deg, rgba(255, 150, 0, 0.1) 0%, rgba(251, 90, 70, 0.1) 100%);
+    border: 2px solid #FF960033;
+    box-shadow: 0px 25px 50px -12px #00000040;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: var(--text-d);
+
+}
+
+.iconWrap {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+
+    font-size: 20px;
+    font-weight: 900;
+    background: var(--acc);
+    border-radius: 16px;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+}
+
+.icon {
+    position: relative;
+}
+.text {
+    color:var(--text-d);
+}
+
+.item:nth-child(1) {
+    .iconWrap {
+        background: linear-gradient(135deg, #FDC700 0%, #D08700 100%);
+    }
+    .icon {
+        content: url("../../../public/eg-docs/icons/ejGam332-cup-wh.svg");
+    }
+}
+.item:nth-child(2) {
+    .iconWrap {
+        background: linear-gradient(135deg, #D1D5DC 0%, #6A7282 100%);
+    }
+    .icon {
+        content: url("../../../public/eg-docs/icons/ejGam332-medal.svg");
+    }
+}
+.item:nth-child(3) {
+    .iconWrap {
+        background: linear-gradient(135deg, #FF8904 0%, #F54900 100%);
+    }
+    .icon {
+        content: url("../../../public/eg-docs/icons/ejGam332-achieve.svg");
+    }
+}
+.item:nth-child(4) {
+    .icon::before {
+        content: '4';
+    }
+}
+.item:nth-child(5) {
+    .icon::before {
+        content: '5';
+    }
+}
+
+.name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.points {
+    background: linear-gradient(90deg, rgba(230, 95, 42, 0.2) 0%, rgba(251, 90, 70, 0.2) 100%);
+    border: 2px solid #E65F2A4D;
+    color: var(--text-d);
+    padding: 14px 20px;
+    border-radius: 16px;
+    font-size: clamp(18px, 1.5vw, 26px);
+    font-weight: 700;
+    margin-left: auto;
+    text-align: center;
+}
+
+.rightList {
+    display: grid;
+    gap: 24px;
+    list-style: none;
+    padding: 12px;
+
+    li {
+        background: linear-gradient(90deg, rgba(255, 150, 0, 0.1) 0%, rgba(251, 90, 70, 0.1) 100%);
+        border: 2px solid #FF960033;
+        box-shadow: 0px 25px 50px -12px #00000040;
+        border-radius: 16px;
+        padding: 16px;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color:var(--text-d);
+        font-weight: 700;
+    }
+
+}
+.num {
+    padding: 6px 4px;
+    width: 1em;
+    border-radius: 10px;
+    background-color: var(--acc);
+    color: var(--text-l);
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .players {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .players {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .item {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+    .points {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .list {
+        padding: 24px 12px;
+    }
+}

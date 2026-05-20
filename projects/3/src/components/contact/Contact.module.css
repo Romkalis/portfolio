@@ -1,0 +1,154 @@
+.contact {
+
+    width: 100%;
+    padding-top: clamp(40px, 6vw, 80px);
+    padding-bottom: clamp(40px, 6vw, 80px);
+}
+.contactWrap {
+    padding:  40px clamp(12px, 4vw, 30px);
+    position: relative;
+    background: radial-gradient(94.95% 94.95% at 48.22% 5.05%, rgba(176, 37, 164, 0.4) 0%, rgba(46, 55, 103, 0.4) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    width: 100%;
+    max-width: 758px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+.description {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.isSended {
+    height: 2em;
+    text-align: center;
+    transition: all .3s ease;
+    color: wheat;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.finaltext {
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+.wrap {
+    display: grid;
+    margin: auto;
+    grid-template-columns:  1fr;
+    place-items: center;
+    gap: 20px;
+}
+.pic {
+    width: 100%;
+    min-height: 412px;
+    /*background-image: url(../../../public/topaulot-assets/img_AShjkl9a/topaulot-background/gamesgut-contact.webp);*/
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.info {
+    width: 100%;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    max-width: 522px;
+    margin: auto;
+}
+
+.label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 5px;
+    border: none;
+    color: var(--text-d);
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button {
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid var(--acc2);
+    color: var(--text-l);
+    margin: auto;
+    width: 100%;
+
+    &:disabled {
+        background: transparent;
+        border: 2px solid grey;
+        color: grey;
+    }
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+    .contactWrap {
+        max-width: calc(100vw - 32px);
+    }
+    .contact {
+        margin-bottom: 0px;
+    }
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .list {
+        grid-row: 2 /3;
+    }
+
+    .item {
+        margin-bottom: 14px;
+    }
+
+    .form {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 469px) {
+
+    .contactWrap {
+        /*padding: 40px 8px;*/
+        /*margin: 0 16px;*/
+        /*margin-bottom: 40px;*/
+    }
+}

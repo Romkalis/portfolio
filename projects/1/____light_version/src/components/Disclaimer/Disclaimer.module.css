@@ -1,0 +1,35 @@
+.disclaimer {
+    max-width: calc(100% - 32px);
+    padding: 66px 32px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(235, 211, 180, 0.3);
+    border-radius: 24px;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    color: var(--text-d);
+    gap: 24px;
+
+}
+.title {
+
+}
+.text {
+
+}
+
+@media (max-width: 600px) {
+    .disclaimer {
+        grid-template-columns: 1fr;
+        max-width: 90vw;
+        margin: auto;
+    }
+}
+
+@media (max-width: 359px) {
+    .disclaimer {
+        max-width: 280px;
+        margin: auto;
+    }
+}

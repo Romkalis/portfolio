@@ -1,0 +1,153 @@
+.platformName {
+    margin-top: 70px;
+    margin-bottom: 24px;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px;
+    gap: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    border: 1px solid #C1CCEC;
+    backdrop-filter: blur(5px);
+    margin-bottom: 70px;
+    background: var(--grd);
+}
+.bottomPlatformName {
+    margin-bottom: 24px;
+}
+.cardBottom {
+    background: #4C1717;
+}
+.logo {
+    max-width: 247px;
+    max-height: 113px;
+}
+.rating {
+    display: grid;
+    gap: 16px;
+}
+.rate {
+    font-weight: 800;
+    text-align: center;
+}
+
+.rateList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+}
+
+.rateItem {
+    background-image: url(../../../public/assets-pictures/lGty67q/logotypes-icons/lGty67q-rate-star.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    aspect-ratio: 1;
+}
+.rateItem:nth-child(3) {
+    width: 40px;
+}
+.bonusSection {
+    text-align: center;
+}
+.bonusText {
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.button {
+    background-color: var(--acc);
+}
+
+.blocks {
+    list-style: none;
+    display: grid;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.block {
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    border: 1px solid #C1CCEC;
+    backdrop-filter: blur(5px);
+    background: var(--grd);
+}
+.blockTitle {
+    font-weight: 700;
+}
+
+.listsInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 70px;
+}
+.bottomItem {
+    padding: 16px;
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    border: 1px solid #C1CCEC;
+    backdrop-filter: blur(5px);
+    background: #3D454F;
+
+    ul {
+        list-style-type: disc;
+        margin-left: 1.5em;
+    }
+}
+
+
+
+
+@media (max-width: 990px) {
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 660px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+    .button {
+        margin: auto;
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: auto;
+    }
+    .logo {
+        margin:auto;
+    }
+    .listsInfo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 359px) {
+    .card {
+        PADDING: 24px 12px;
+    }
+    .logo {
+        margin:auto;
+        max-width: 200px;
+    }
+}

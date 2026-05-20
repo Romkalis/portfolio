@@ -1,0 +1,139 @@
+.gamesListSection {
+    color: var(--text-d);
+}
+
+.topDeco {
+    display: flex;
+    align-items: center;
+    gap:24px;
+    margin-bottom: 16px;
+
+    div {
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+    div:nth-child(1) {
+        background: var(--acc);
+        width: 16px;
+        height: 16px;
+    }
+    div:nth-child(2) {
+        background: var(--acc);
+        opacity: 0.5;
+        width: 24px;
+        height: 24px;
+    }
+    div:nth-child(3) {
+        background: #FB5A4633;
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+    }
+}
+.head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 60px;
+    color: deepskyblue;
+}
+.bottomBlock {
+    padding: 12px 32px;
+    background: linear-gradient(0deg, #F970DC 0%, #384B8D 55.1%, #362E5E 76.92%);
+    border: 2px solid  #FF960033;
+    box-shadow: 0px 8px 10px -6px #0000001A;
+    display: flex;
+    align-items: center;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    gap: 8px;
+    position: relative;
+    max-width: max-content;
+    height: max-content;
+}
+.bottomBlock::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #00C950;
+    border-radius: 50%;
+}
+.gamesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    perspective: 1200px;
+    transition: all .5s ease;
+
+    &:hover .item:not(:hover) {
+        transform: rotateX(20deg);
+    }
+}
+
+.item {
+    width: 214px;
+    margin: auto;
+
+    transition: all .5s ease;
+    background: linear-gradient(0deg, #F970DCaa 0%, #384B8Daa 55.1%, #362E5Eaa 76.92%);
+    border: 2px solid var(--acc);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px 0px #0000001A;
+
+
+    &:hover {
+        transform: rotateX(0deg) translateZ(100px);
+        box-shadow: 0px 4px 10px 0px #0000006A;
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.pic {
+    display: block;
+    padding: 0 16px;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 1;
+    object-position: center;
+    min-width: 150px;
+    min-height: 150px;
+    overflow: hidden;
+}
+.info {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.name {
+    font-weight: 800;
+}
+.button {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .head {
+        grid-template-columns: 1fr;
+    }
+    .item {
+
+
+
+        &:hover {
+            transform: rotateX(0deg) scale(1.02);
+
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.disclaimerBottom {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: var(--acc);
+    color: var(--text-l);
+}
+
+.wrapper {
+    position: relative;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 16px;
+    margin-bottom: 0.5em;
+}
+
+.textTitle {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+
+}

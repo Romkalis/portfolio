@@ -1,0 +1,7 @@
+.policy {
+  margin: clamp(20px, 5vw, 50px) auto;
+  line-height: 150%;
+  font-size: clamp(16px, 2vw, 24px);
+  max-width: 1024px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy9wb2xpY3kuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJO0VBQ0E7RUFDQTtFQUNBIiwiZmlsZSI6ImJsb2Nrcy9wb2xpY3kuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnBvbGljeSB7XG4gICAgbWFyZ2luOiBjbGFtcCgyMHB4LCA1dncsIDUwcHgpIGF1dG87XG4gICAgbGluZS1oZWlnaHQ6IDE1MCU7XG4gICAgZm9udC1zaXplOiBjbGFtcCgxNnB4LCAydncsIDI0cHgpO1xuICAgIG1heC13aWR0aDogMTAyNHB4XG59Il19 */

@@ -1,0 +1,42 @@
+.about {
+    margin-top: clamp(40px, 6vw, 60px);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.title {
+}
+.text {
+    font-size: clamp(14px, 1.2vw,16px);
+}
+
+.pic {
+    background-image: url(../../../public/astra-docs/__g3k21aa-/astra_bg/topaulot__heroabout.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: bottom;
+    width: 100%;
+    aspect-ratio: 486/366;
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .pic {
+        max-width: 450px;
+        width: 100%;
+        margin: auto;
+    }
+}
+@media (max-width: 600px) {
+
+}

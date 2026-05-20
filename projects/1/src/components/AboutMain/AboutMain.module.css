@@ -1,0 +1,92 @@
+.about {
+    color: var(--text-d);
+    overflow: visible;
+    position: relative;
+    background: url(../../../public/eg-docs/icons/ejGam332-about-main.svg) no-repeat;
+    background-size: cover;
+    padding: 128px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.title {
+    font-size: clamp(72px, 6vw, 96px);
+    margin-bottom: 32px;
+    color: deepskyblue;
+}
+.text {
+    font-size: clamp(16px, 1.5vw, 20px);
+}
+.sub {
+    font-size: clamp(16px, 2vw, 32px);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.text {
+    margin-bottom: 32px;
+}
+.buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button {
+    border-radius: 50px;
+    z-index: 0;
+}
+.button2 {
+    border-radius: 50px;
+
+    background: transparent;
+    border: 2px solid var(--acc);
+    color: var(--text-d);
+    z-index: 0;
+
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    list-style: none;
+
+    li {
+        background: linear-gradient(30deg, #F970DC33 0%, #384B8D33 35.1%, #362E5E33 76.92%);
+        border: 2px solid #FF96004D;
+        box-shadow: 0px 25px 50px -12px #00000040;
+        border-radius: 16px;
+        padding: 16px;
+        text-align: center;
+    }
+    li:nth-child(even) {
+        margin-top: 30px;
+    }
+    li:nth-child(odd) {
+        margin-bottom: 30px;
+    }
+    .count {
+        font-size: clamp(18px, 3vw, 48px);
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 359px) {
+    .title {
+        font-size: 56px;
+    }
+}

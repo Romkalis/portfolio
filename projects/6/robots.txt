@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /files/
+
+Sitemap: #
+Host: xn----7sblghfj6a4ei.xn--p1ai

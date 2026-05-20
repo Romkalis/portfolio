@@ -1,0 +1,11 @@
+.intersection__button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-52%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy9pbmRleC9pbnRlcnNlY3Rpb25fX2J1dHRvbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQSIsImZpbGUiOiJibG9ja3MvaW5kZXgvaW50ZXJzZWN0aW9uX19idXR0b24uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmludGVyc2VjdGlvbl9fYnV0dG9uIHtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgYm90dG9tOiAyMHB4O1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUyJSk7XG4gICAgei1pbmRleDogMTA7XG4gICAgb3BhY2l0eTogMDtcbiAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IC4zcyBlYXNlLWluLW91dDtcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTsgLy8gYXV0b1xufSJdfQ== */

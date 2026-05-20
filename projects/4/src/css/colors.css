@@ -1,0 +1,21 @@
+:root {
+    --acc:  #6BFF69;
+
+    --text-l: #fefefe;
+    --text-c: #3B7DFE;
+    --text-g: #c8c8c8;
+    --text-d: #151518;
+
+
+    --grey: #a2a7bb;
+    --grey-d: #6e6e6e;
+
+    --btn-bg-dark: transparent;
+    --btn-bg-l: #3FB3EE;
+    --btn-bg-c: #5adeeb;
+
+    --bg-main: #151518;
+    --bg-c: #E0F2FF;
+    --bg-d: #1D2124;
+    --card: #F4F4F4;
+}

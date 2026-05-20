@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Увеличение прибыли компании с помощью оптимазации процессов. ССП, картирование, регламенты процессов, аудит, управленческий учёт" />
+		<meta name="keywords" content="аутсорс, управление, аналитика, финансовые показатели, доходы, расходы, прибыль, эффективность, Иванова Мария Ивановна" />
+		<title>Аудит, выстраивание и&#160;оптимизация процессов в&#160;компании</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="prefetch" href="./fonts/OpenSans.woff2" as="font" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+		<link rel="manifest" href="/dreamfin.webmanifest" />
+		<link rel="canonical" href="#" />
+		<script src="./js/index.bundle.js" type="module" defer></script>
+	</head>
+
+	<body>
+		<header class="header container">
+			<div class="header__wrapper">
+				<a href="/" class="header__logo">
+					<picture>
+						<source
+							srcset="./img/header/header_logo_horizontal_mob.webp 96w, img/header/header_logo_horizontal.webp 310w"
+							sizes="(max-width: 468px) 96w, 
+                              (min-width: 469px) 310w"
+							type="image/webp"
+						/>
+						<source
+							srcset="./img/header/header_logo_horizontal_mob.png 96w, img/header/header_logo_horizontal.png 310w"
+							sizes="(max-width: 468px) 96w, 
+                              (min-width: 469px) 310w"
+							type="image/png"
+						/>
+						<img
+							class="header__logo-image"
+							src="./img/header/header_logo_horizontal.png"
+							srcset="./img/header/header_logo_horizontal_mob.png 96w, img/header/header_logo_horizontal.png 310w"
+							sizes="(max-width: 468px) 96w, (min-width: 469px) 310w"
+							alt="логотип dreamfin"
+						/>
+					</picture>
+				</a>
+
+				<input type="checkbox" id="burger-toggle" class="header__burger-checkbox" />
+				<label for="burger-toggle" class="header__burger"></label>
+
+				<nav class="header__nav">
+					<ul class="header__navlist">
+						<li class="header__navitem"><a href="/" class="header__navlink link">Главная</a></li>
+						<li class="header__navitem"><a href="/#about" class="header__navlink link">О&#160;компании</a></li>
+						<li class="header__navitem">
+							<div class="header__nav-submenu">
+								<a href="services.html" class="header__navlink link header__navlink-title">Услуги</a>
+
+								<!-- для выделения активного линка добавляем header__subitem--active -->
+
+								<ul class="header__sublist">
+									<li class="header__subitem">
+										<a href="finances.html" class="header__navlink link">Финансы</a>
+									</li>
+									<li class="header__subitem">
+										<a href="control.html" class="header__navlink link header__subitem--active">Управление</a>
+									</li>
+									<li class="header__subitem">
+										<a href="finances-control.html" class="header__navlink link">Управление + Финансы</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header__navitem"><a href="/case_1.html" class="header__navlink link">Кейсы</a></li>
+						<li class="header__navitem"><a href="/clients.html" class="header__navlink link">Клиенты</a></li>
+						<li class="header__navitem"><a href="/#blog" class="header__navlink link">Блог</a></li>
+					</ul>
+
+					<div class="header__contacts">
+						<a href="#" target="_blank" rel="nofollow" class="header__button button button--dark js-feedback-popup" id="interview">
+							<span>Записаться на&#160;интервью</span>
+							<span>интервью</span>
+						</a>
+						</div>
+
+					<ul class="header__social">
+						<li class="header__social-icon">
+							<a href="#" target="_blank" rel="nofollow" class="header__social-link">
+								<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.6 1.6001C11.456 1.6001 1.60001 11.4561 1.60001 23.6001C1.60001 35.7441 11.456 45.6001 23.6 45.6001C35.744 45.6001 45.6 35.7441 45.6 23.6001C45.6 11.4561 35.744 1.6001 23.6 1.6001ZM33.808 16.5601C33.478 20.0361 32.048 28.4841 31.322 32.3781C31.014 34.0281 30.398 34.5781 29.826 34.6441C28.55 34.7541 27.582 33.8081 26.35 32.9941C24.414 31.7181 23.314 30.9261 21.444 29.6941C19.266 28.2641 20.674 27.4721 21.928 26.1961C22.258 25.8661 27.89 20.7401 28 20.2781C28.0153 20.2081 28.0133 20.1355 27.9941 20.0665C27.9749 19.9975 27.9392 19.9342 27.89 19.8821C27.758 19.7721 27.582 19.8161 27.428 19.8381C27.23 19.8821 24.15 21.9281 18.144 25.9761C17.264 26.5701 16.472 26.8781 15.768 26.8561C14.976 26.8341 13.48 26.4161 12.358 26.0421C10.972 25.6021 9.89401 25.3601 9.98201 24.5901C10.026 24.1941 10.576 23.7981 11.61 23.3801C18.034 20.5861 22.302 18.7381 24.436 17.8581C30.552 15.3061 31.806 14.8661 32.642 14.8661C32.818 14.8661 33.236 14.9101 33.5 15.1301C33.72 15.3061 33.786 15.5481 33.808 15.7241C33.786 15.8561 33.83 16.2521 33.808 16.5601Z"
+									/>
+								</svg>
+								<span class="visually-hidden">Телеграм</span>
+							</a>
+						</li>
+						<li class="header__social-icon">
+							<a href="#" class="header__social-link">
+								<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.6 1.6001C11.4496 1.6001 1.60001 11.4497 1.60001 23.6001C1.60001 35.7505 11.4496 45.6001 23.6 45.6001C35.7504 45.6001 45.6 35.7505 45.6 23.6001C45.6 11.4497 35.7504 1.6001 23.6 1.6001ZM32.0608 26.4211C32.0608 26.4211 34.0065 28.3416 34.4854 29.233C34.4992 29.2513 34.506 29.2697 34.5106 29.2788C34.7054 29.6066 34.7513 29.8609 34.655 30.0511C34.4946 30.3674 33.9446 30.5232 33.7567 30.537H30.3192C30.0808 30.537 29.5813 30.4751 28.9763 30.058C28.511 29.7326 28.0527 29.1986 27.6058 28.6784C26.939 27.9038 26.3615 27.2347 25.7794 27.2347C25.7055 27.2346 25.632 27.2462 25.5617 27.2691C25.1217 27.4111 24.5579 28.0391 24.5579 29.712C24.5579 30.2345 24.1454 30.5347 23.8544 30.5347H22.28C21.7438 30.5347 18.9502 30.3468 16.4752 27.7366C13.4456 24.5397 10.7185 18.1276 10.6956 18.068C10.5238 17.6532 10.879 17.4309 11.2663 17.4309H14.7381C15.201 17.4309 15.3523 17.7128 15.4577 17.9626C15.5815 18.2536 16.0352 19.4109 16.78 20.7126C17.9877 22.8347 18.7279 23.6963 19.3215 23.6963C19.4328 23.695 19.5421 23.6667 19.64 23.6138C20.4146 23.183 20.2702 20.4216 20.2358 19.8486C20.2358 19.7409 20.2335 18.6134 19.8371 18.0726C19.5529 17.6807 19.0694 17.5318 18.776 17.4768C18.8948 17.3129 19.0512 17.1801 19.2321 17.0895C19.7638 16.8236 20.7217 16.7847 21.6727 16.7847H22.2021C23.2333 16.7984 23.4992 16.8649 23.8727 16.9588C24.629 17.1399 24.645 17.628 24.5785 19.2986C24.5579 19.773 24.5373 20.3093 24.5373 20.9418C24.5373 21.0793 24.5304 21.2259 24.5304 21.3818C24.5075 22.232 24.48 23.1968 25.0804 23.5932C25.1587 23.6423 25.2492 23.6685 25.3417 23.6688C25.5502 23.6688 26.1781 23.6688 27.8785 20.7516C28.403 19.8126 28.8587 18.8368 29.2421 17.832C29.2765 17.7724 29.3773 17.5891 29.4965 17.518C29.5844 17.4732 29.6819 17.4504 29.7806 17.4516H33.8621C34.3067 17.4516 34.6115 17.518 34.6688 17.6899C34.7696 17.9626 34.6504 18.7945 32.7873 21.3176L31.9554 22.4153C30.2665 24.6291 30.2665 24.7413 32.0608 26.4211Z"
+									/>
+								</svg>
+
+								<span class="visually-hidden">Вконтакте</span>
+							</a>
+						</li>
+						<li class="header__social-icon">
+							<a href="#" target="_blank" rel="nofollow" class="header__social-link">
+								<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="22" cy="22" r="22" />
+									<path
+										d="M12.3516 29V14.7227H15.3789V29H12.3516ZM31.6387 29H27.791L21.5801 18.1992H21.4922C21.5182 18.6484 21.541 19.1009 21.5605 19.5566C21.5801 20.0124 21.5996 20.4681 21.6191 20.9238C21.6387 21.373 21.6582 21.8255 21.6777 22.2812V29H18.9727V14.7227H22.791L28.9922 25.416H29.0605C29.0475 24.9733 29.0312 24.5339 29.0117 24.0977C28.9922 23.6615 28.9727 23.2253 28.9531 22.7891C28.9401 22.3529 28.9271 21.9167 28.9141 21.4805V14.7227H31.6387V29Z"
+										fill="white"
+									/>
+								</svg>
+
+								<span class="visually-hidden">Инстаграмм</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="finances-control finances container">
+			<div class="main__heading">
+				<h1 class="main__title">управление</h1>
+				<p class="main__description">
+					Мы&#160;рады предложить вам наши услуги, которые помогут увеличить вашу прибыль и&#160;оптимизировать работу вашей компании. Это ключ к&#160;оптимизации вашего
+					финансового успеха
+				</p>
+			</div>
+
+			<section class="finances-control__accordions">
+				<!-- Сессия Стратегического Планирования (ССП) -->
+				<div class="finances-control__accordion finances__accordion--1">
+					<p class="finances-control__accordion-title" for="accordion1">Сессия Стратегического Планирования (ССП)</p>
+					<section class="finances-control__accordion-content">
+						<div class="finances__accordion-content_description finances__accordion-content_section">
+							<p class="finances__accordion-content_description-text">
+								Сессия Стратегического Планирования (ССП)&#160;&#8212; самая любимая услуга наших клиентов и&#160;нашего руководителя Марии Булыгиной. Личная
+								разработка структуры ССП, от&#160;Марии, позволяет определять в&#160;компании важные аспекты по&#160;целям, и&#160;разработка плана по&#160;развитию
+								и&#160;увеличению чистой прибыли услуга.
+							</p>
+							<p class="finances__accordion-content_text--color">
+								Это ваш ключ к&#160;структурированному плану развития бизнеса на&#160;минимум 1 год вперёд, с&#160;возможностью разработки стратегии
+								на&#160;5&#160;лет. Мы&#160;поможем вам превратить ваши миллион идей в&#160;действенные шаги, создать эффективную систему, обеспечивающую стабильную
+								прибыль, и&#160;избежать чувства одиночества в&#160;бизнесе.
+							</p>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Результаты после консультаций:
+							</h4>
+							<div class="control__section--wrapper">
+								<p class="finances__accordion-content_text">
+									Мы&#160;создадим согласованный стратегический план действий, включающий подробный список мероприятий и&#160;задач. С&#160;распределением
+									ответственности среди сотрудников и&#160;дедлайны.
+								</p>
+								<p class="finances__accordion-content_heading">
+									Почему ССП гарантирует результат? Всё дело в&#160;грамотном планировании и&#160;проведении сессии.
+								</p>
+							</div>
+						</div>
+
+						<div class="finances__accordion-menu  js-accordion-menu">
+							<p class="finances__accordion-menu_header finances__accordion-content_heading">Вот как это работает:</p>
+							<ul class="finances__accordion-menu_list">
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="stage1">
+										1 этап
+									</p>
+								</li>
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="stage2">
+										2 этап
+									</p>
+								</li>
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="stage3">
+										3 этап
+									</p>
+								</li>
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="stage4">
+										4 этап
+									</p>
+								</li>
+							</ul>
+
+							<!-- 1 этап -->
+							<div class="finances__accordion-menu_content" id="stage1-content">
+								<h4 class="finances__accordion-content_menu-title">Подготовительный</h4>
+								<p class="finances__accordion-content_menu-text">
+									Глубинная работа требует подготовки.<br />
+									Для руководителя: сформировать цели компании на&#160;год и&#160;подвести итоги прошлого.<br />
+									Для сотрудников: собрать в&#160;презентацию итоги года, личные и&#160;корпоративные цели, SWOT-анализ.<br />
+									Выполнение заданий обязательно и&#160;нужно сдавать заранее для обратной связи.
+								</p>
+							</div>
+
+							<!-- 2 этап -->
+							<div class="finances__accordion-menu_content" id="stage2-content">
+								<h4 class="finances__accordion-content_menu-title">Выступление руководителя и&#160;всех сотрудников</h4>
+								<p class="finances__accordion-content_menu-text">
+									Начнём с&#160;выступления владельца бизнеса: Определим важнейшие цели на&#160;год. Пропишем SWOT-анализ бизнеса. Работаем над минусами, превращая
+									их&#160;в&#160;сильные стороны. Категоризируем решения и&#160;определяем приоритеты.
+								</p>
+							</div>
+
+							<!-- 3 этап -->
+							<div class="finances__accordion-menu_content" id="stage3-content">
+								<h4 class="finances__accordion-content_menu-title">Мозговой штурм</h4>
+								<p class="finances__accordion-content_menu-text">
+									Творческий этап:<br />
+									Командой создаем и&#160;прорабатываем решения.<br />
+									Презентуем результаты и&#160;выбираем лучшие идеи.<br />
+									Составляем черновой план с&#160;указанием сроков выполнения задач, ответственных сотрудников и&#160;промежуточных показателей эффективности.
+								</p>
+							</div>
+							<!-- 4 этап -->
+							<div class="finances__accordion-menu_content" id="stage4-content">
+								<h4 class="finances__accordion-content_menu-title">Финальный</h4>
+								<p class="finances__accordion-content_menu-text">
+									После сессии вы&#160;получите: <br />
+									Стратегический план в&#160;виде таблицы.<br />
+									Презентацию с&#160;главными тезисами.
+								</p>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<div class="finances__accordion-content_heading">
+								Мы&#160;создадим согласованный стратегический план действий, включающий подробный список мероприятий и&#160;задач. С&#160;распределением
+								ответственности среди сотрудников и&#160;дедлайны.
+								<span class="finances__accordion-content_info--divider"></span>
+								Почему ССП гарантирует результат? Всё дело в&#160;грамотном планировании и&#160;проведении сессии.
+							</div>
+						</div>
+
+						<div class="finances__accordion-menu  js-accordion-menu">
+							<p class="finances__accordion-menu_header finances__accordion-content_heading">Стоимость</p>
+							<ul class="finances__accordion-menu_list">
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="startup">
+										Начинающий бизнес
+									</p>
+								</li>
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="working-business">
+										Действующий бизнес
+									</p>
+								</li>
+							</ul>
+
+							<!-- Начинающий бизнес -->
+							<div class="finances__accordion-menu_content" id="startup-content">
+								<ul class="finances__accordion-content_menu-info">
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">1 Пакет: ССП + коуч</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">20 000</span> рублей</p>
+										<p class="finances__accordion-content_menu-text">
+											Включает в&#160;себя 1 день Сессии Стратегического Планирования (ССП)
+										</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">2 Пакет: ССП + коуч + треккер по&#160;задачам</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">30 000</span> рублей</p>
+										<p class="finances__accordion-content_menu-text">
+											Включает в&#160;себя 1 день Сессии Стратегического Планирования (ССП)&#160;&#8212; 50 000 рублей, треккер (возможность групповых встреч
+											с&#160;сотрудниками)&#160;&#8212; 20 000 рублей.
+										</p>
+										<p class="finances__accordion-content-item_description finances__accordion-content-item_description--accent promo__description-text--italic">
+											При покупке услуги треккера на&#160;3 и&#160;более месяца, действует скидка.
+										</p>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Действующий бизнес -->
+							<div class="finances__accordion-menu_content" id="working-business-content">
+								<ul class="finances__accordion-content_menu-info">
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">1 Пакет: ССП + коуч</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">30 000</span> рублей</p>
+										<p class="finances__accordion-content_menu-text">
+											Включает в&#160;себя 1 день Сессии Стратегического Планирования (ССП)
+										</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">2 Пакет: ССП + коуч + треккер по&#160;задачам</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">70 000</span> рублей</p>
+										<p class="finances__accordion-content_menu-text">
+											Включает в&#160;себя 1 день Сессии Стратегического Планирования (ССП)&#160;&#8212; 50 000 рублей, треккер (возможность групповых встреч
+											с&#160;сотрудниками)&#160;&#8212; 20 000 рублей.
+										</p>
+										<p class="finances__accordion-content-item_description finances__accordion-content-item_description--accent promo__description-text--italic">
+											При покупке услуги треккера на&#160;3 и&#160;более месяца, действует скидка.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_contacts finances__accordion-content_section">
+							<a href="#" target="_blank" rel="nofollow" class="finances__accordion-content_button button button--medium">
+								написать в&#160;telegram
+							</a>
+						</div>
+					</section>
+				</div>
+
+				<!-- Картирование бизнес-процессов -->
+				<div class="finances-control__accordion finances__accordion--2">
+					<p class="finances-control__accordion-title" for="accordion2">Картирование бизнес-процессов</p>
+					<section class="finances-control__accordion-content">
+						<div class="finances__accordion-content_description finances__accordion-content_section">
+							<p class="finances__accordion-content_description-text">
+								Это необходимый инструмент для бизнеса, который позволяет чётко определить каждый этап цикла сделки с&#160;учётом времени и&#160;участия сотрудников.
+							</p>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Результаты услуги:
+							</h4>
+							<div class="finances__accordion-content_text">
+								<p class="finances__accordion-content_text">
+									Результаты после проведения данной услуги включают в&#160;себя:
+								</p>
+								<ol class="finances__accordion-content_text-list">
+									<li class="finances__accordion-content_text-item">
+										Чёткое понимание того, кто и&#160;что делает в&#160;компании, что помогает устранить хаос в&#160;коллективе.
+									</li>
+									<li class="finances__accordion-content_text-item">Создание эффективной системы работы, которая обеспечивает стабильную прибыль.</li>
+									<li class="finances__accordion-content_text-item">Формирование работающей команды, освобождая вас от необходимости все делать самому.</li>
+									<li class="finances__accordion-content_text-item">
+										Чёткое определение ЦКП (ценный конечный продукт) для каждого сотрудника от&#160;ТОПового состава до&#160;рядового сотрудника.
+									</li>
+									<li class="finances__accordion-content_text-item">Возможность усовершенствовать свой бизнес и&#160;повысить его эффективность.</li>
+									<li class="finances__accordion-content_text-item">
+										Избавление от&#160;ошибки начинающего бизнесмена, который считает, что может все сделать самостоятельно.
+									</li>
+								</ol>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Если вы&#160;столкнулись с&#160;хаосом в&#160;коллективе, не&#160;знаете, как улучшить работу своего бизнеса, хотите, чтобы команда работала
+								эффективно, и&#160;ищете способы увеличить прибыль, то&#160;услуга &#171;Картирование бизнес-процесса компании&#187; идеально подходит для вас.
+							</h4>
+							<p class="finances__accordion-content_text--additional">
+								Позвольте профессионалам помочь вам оптимизировать ваш бизнес и&#160;добиться желаемых результатов, освобождая вас от&#160;лишних забот и&#160;ускоряя
+								развитие вашей компании.
+							</p>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Стоимость
+							</h4>
+							<div class="finances__accordion-content-text">
+								<ul class="finances__accordion-content-list">
+									<li class="finances__accordion-content-item">
+										<h5 class="finances__accordion-content-item_heading">
+											1 Пакет: картирование
+										</h5>
+										<p class="finances__accordion-content-item_price"><span class="finances__accordion-content_menu-text--bold">30 000</span> рублей</p>
+										<p class="finances__accordion-content-item_description">
+											Срок оказания услуги&#160;&#8212; 1 день
+										</p>
+									</li>
+
+									<li class="finances__accordion-content-item">
+										<h5 class="finances__accordion-content-item_heading">
+											2 Пакет: картирование + треккер по&#160;задачам
+										</h5>
+										<p class="finances__accordion-content-item_price"><span class="finances__accordion-content_menu-text--bold">50 000</span> рублей</p>
+										<p class="finances__accordion-content-item_description">
+											Включает в&#160;себя Картирование (1 день)&#160;&#8212; 30 000 рублей, треккер (возможность групповых встреч с сотрудниками 1 раз
+											в&#160;месяц)&#160;&#8212; 20 000 рублей.
+										</p>
+										<p class="finances__accordion-content-item_description finances__accordion-content-item_description--accent promo__description-text--italic">
+											При покупке услуги треккера на&#160;3 и&#160;более месяца, действует скидка:
+										</p>
+										<p class="finances__accordion-content-item_description">
+											Картирование + треккер по&#160;задачам = стоимость 30 000 рублей, срок 1 день, + подарки от&#160;меня и&#160;за каждый месяц треккера + 50
+											000 рублей. (Возможность групповых встреч с&#160;сотрудниками 1 раз в неделю).<br />
+											При покупке услуги треккера на&#160;3 и&#160;более месяца, действует скидка.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_contacts finances__accordion-content_section">
+							<a href="#" target="_blank" rel="nofollow" class="finances__accordion-content_button button button--medium">
+								написать в&#160;telegram
+							</a>
+						</div>
+					</section>
+				</div>
+
+				<!-- Составление индивидуальных регламентов по процессам -->
+				<div class="finances-control__accordion finances__accordion--3">
+					<p class="finances-control__accordion-title" for="accordion3">Составление индивидуальных регламентов по&#160;процессам</p>
+					<section class="finances-control__accordion-content">
+						<div class="finances__accordion-content_description finances__accordion-content_section">
+							<p class="finances__accordion-content_description-text">
+								Это комплексная экспертная работа, направленная на оптимизацию и&#160;систематизацию бизнес-процессов. Мы&#160;внимательно изучим специфику вашего
+								бизнеса и потребности для разработки индивидуальных регламентов, которые будут оптимально соответствовать вашим целям и&#160;задачам.
+							</p>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Результаты услуги:
+							</h4>
+							<div class="finances__accordion-content_text">
+								<p class="finances__accordion-content_text">
+									Результаты после проведения данной услуги включают в&#160;себя:
+								</p>
+								<ol class="finances__accordion-content_text-list">
+									<li class="finances__accordion-content_text-item">Чёткую и&#160;структурированную документацию по бизнес-процессам.</li>
+									<li class="finances__accordion-content_text-item">Оптимизацию работы сотрудников благодаря чётким инструкциям и&#160;регламентам.</li>
+									<li class="finances__accordion-content_text-item">Увеличение эффективности и&#160;производительности.</li>
+									<li class="finances__accordion-content_text-item">Снижение рисков и&#160;ошибок в&#160;деятельности компании.</li>
+									<li class="finances__accordion-content_text-item">Создание основы для дальнейшего развития и масштабирования бизнеса.</li>
+								</ol>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Эта услуга не&#160;только улучшит работу вашего, но&#160;и&#160;поможет вашей компании стать более конкурентоспособной и успешной.
+							</h4>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Стоимость
+							</h4>
+							<div class="finances__accordion-content-text">
+								<p class="finances__accordion-content-item_price">
+									<span class="finances__accordion-content_menu-text--bold">по&#160;запросу</span>
+									<br />
+									<span class="finances__accordion-content-item_description">
+										Стоимость рассчитывается индивидуально для каждой организации
+									</span>
+								</p>
+							</div>
+						</div>
+						<div class="finances__accordion-content_contacts finances__accordion-content_section">
+							<a href="#" target="_blank" rel="nofollow" class="finances__accordion-content_button button button--medium">
+								написать в&#160;telegram
+							</a>
+						</div>
+					</section>
+				</div>
+
+				<!-- Юридический аудит -->
+				<div class="finances-control__accordion finances__accordion--4">
+					<p class="finances-control__accordion-title" for="accordion4">Юридический аудит</p>
+					<section class="finances-control__accordion-content">
+						<div class="finances__accordion-content_description finances__accordion-content_section">
+							<p class="finances__accordion-content_description-text">
+								Это комплексное исследование юридической деятельности вашей компании с&#160;целью выявления потенциальных рисков и&#160;ошибок, а&#160;также
+								обеспечения соответствия действующему законодательству.
+							</p>
+
+							<p class="finances__accordion-content_text--color">
+								Мы&#160;проведём тщательный анализ документов, контрактов, лицензий и&#160;других юридически значимых материалов, чтобы выявить возможные уязвимости
+								и&#160;предложить решения для их&#160;устранения.
+							</p>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Результаты услуги:
+							</h4>
+							<div class="finances__accordion-content_text">
+								<p class="finances__accordion-content_text">
+									Результаты юридического аудита помогут вашей компании:
+								</p>
+								<ol class="finances__accordion-content_text-list">
+									<li class="finances__accordion-content_text-item">
+										Идентифицировать и&#160;устранить юридические риски, которые могут привести к&#160;возможным санкциям или убыткам.
+									</li>
+									<li class="finances__accordion-content_text-item">Оптимизировать бизнес-процессы с&#160;точки зрения юридического соответствия.</li>
+									<li class="finances__accordion-content_text-item">
+										Повысить доверие со&#160;стороны партнёров и&#160;инвесторов благодаря прозрачной и&#160;законной деятельности.
+									</li>
+									<li class="finances__accordion-content_text-item">
+										Обеспечить стабильность и&#160;защиту вашего бизнеса в случае возможных судебных споров или проверок со&#160;стороны государственных органов.
+									</li>
+								</ol>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Стоимость
+							</h4>
+							<div class="finances__accordion-content-text">
+								<p class="finances__accordion-content-item_price">
+									<span class="finances__accordion-content_menu-text--bold">по&#160;запросу</span>
+									<br />
+									<span class="finances__accordion-content-item_description">
+										Стоимость рассчитывается индивидуально для каждой организации
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_contacts finances__accordion-content_section">
+							<a href="#" target="_blank" rel="nofollow" class="finances__accordion-content_button button button--medium">
+								написать в&#160;telegram
+							</a>
+						</div>
+					</section>
+				</div>
+
+				<!-- Управленческий учёт -->
+				<div class="finances-control__accordion finances__accordion--5">
+					<p class="finances-control__accordion-title" for="accordion5">Управленческий учёт</p>
+					<section class="finances-control__accordion-content">
+						<div class="finances__accordion-content_description finances__accordion-content_section">
+							<p class="finances__accordion-content_description-text"></p>
+
+							<p class="finances__accordion-content_text--color">
+								Ежемесячные (постоянные услуги) <br />
+								Ведение управленческого учёта нашими специалистами с&#160;итоговыми выводами и&#160;рекомендациями.
+							</p>
+						</div>
+
+						<div class="finances__accordion-menu  js-accordion-menu">
+							<p class="finances__accordion-menu_header finances__accordion-content_heading">Стоимость</p>
+							<ul class="finances__accordion-menu_list">
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="small">
+										Микро бизнес
+									</p>
+								</li>
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="medium">
+										Малый бизнес
+									</p>
+								</li>
+								<li class="finances__accordion-menu_item">
+									<p class="finances__accordion-menu_label finances__menu-button" id="large">
+										Средний бизнес
+									</p>
+								</li>
+							</ul>
+
+							<!-- малый бизнес -->
+							<div class="finances__accordion-menu_content" id="small-buisness">
+								<ul class="finances__accordion-content_menu-info">
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт ДР&#160;1 (Отчёт о&#160;доходах и&#160;расходах)</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">10 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт ДДС 2 (Отчёт о&#160;движении денежных средств)</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">10 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт Баланс 3</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">10 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">2 отчета</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">19 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">3 отчета</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">25 000</span> рублей</p>
+									</li>
+								</ul>
+							</div>
+
+							<!-- средний бизнес -->
+							<div class="finances__accordion-menu_content" id="medium-buisness">
+								<ul class="finances__accordion-content_menu-info">
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт ДР&#160;1 (Отчёт о&#160;доходах и&#160;расходах)</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">20 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт ДДС 2 (Отчёт о&#160;движении денежных средств)</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">20 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт Баланс 3</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">20 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">2 отчета</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">38 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">3 отчета</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">55 000</span> рублей</p>
+									</li>
+								</ul>
+							</div>
+
+							<!-- крупный бизнес -->
+							<div class="finances__accordion-menu_content" id="large-buisness">
+								<ul class="finances__accordion-content_menu-info">
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт ДР&#160;1 (Отчёт о&#160;доходах и&#160;расходах)</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">50 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт ДДС 2 (Отчёт о&#160;движении денежных средств)</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">50 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">Отчёт Баланс 3</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">50 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">2 отчета</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">95 000</span> рублей</p>
+									</li>
+
+									<li class="finances__accordion-content_menu-item">
+										<p class="finances__accordion-content_menu-title">3 отчета</p>
+										<p class="finances__accordion-content_menu-text"><span class="finances__accordion-content_menu-text--bold">140 000</span> рублей</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_contacts finances__accordion-content_section">
+							<a href="#" target="_blank" rel="nofollow" class="finances__accordion-content_button button button--medium">
+								написать в&#160;telegram
+							</a>
+						</div>
+					</section>
+				</div>
+
+				<!-- Кадровый подбор + обучение -->
+				<div class="finances-control__accordion finances__accordion--6">
+					<p class="finances-control__accordion-title" for="accordion6">Кадровый подбор + обучение</p>
+					<section class="finances-control__accordion-content">
+						<div class="finances__accordion-content_description finances__accordion-content_section">
+							<div class="finances__accordion-content_text--color">
+								<p>1. Финансовый директор.</p>
+								<p>2. Финансовый менеджер.</p>
+								<p>3. Главный бухгалтер.</p>
+							</div>
+
+							<p class="finances__accordion-content_text--color">
+								Ведение управленческого учёта нашими специалистами с&#160;итоговыми выводами и&#160;рекомендациями.
+							</p>
+						</div>
+
+						<div class="finances__accordion-content_info finances__accordion-content_section">
+							<h4 class="finances__accordion-content_heading">
+								Стоимость
+							</h4>
+							<div class="finances__accordion-content-text">
+								<p class="finances__accordion-content-item_price">
+									<span class="finances__accordion-content_menu-text--bold">по&#160;запросу</span>
+									<br />
+									<span class="finances__accordion-content-item_description">
+										Стоимость рассчитывается индивидуально для каждой организации
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="finances__accordion-content_contacts finances__accordion-content_section">
+							<a href="#" target="_blank" rel="nofollow" class="finances__accordion-content_button button button--medium">
+								написать в&#160;telegram
+							</a>
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<a href="/" class="footer__logo">
+					<picture>
+						<source srcset="./img/footer/logo_white.webp 1x, ./img/footer/logo_white@2x.webp 2x" type="image/webp" />
+						<source srcset="./img/footer/logo_white.png 1x, ./img/footer/logo_white@2x.png 2x" type="image/png" />
+						<img src="./img/footer/logo_white.png" alt="логотип компании" class="footer__logo-image" />
+					</picture>
+				</a>
+
+				<div class="footer__grid">
+					<div class="footer__contacts 123" id="contacts">
+						<a href="#" target="_blank" rel="nofollow" class="footer__contacts-button button button--medium js-feedback-popup"
+							>Записаться на&#160;интервью</a
+						>
+</div>
+					<ul class="footer__nav">
+						<li class="footer__nav-item">
+							<a href="/" class="footer__nav-link footer__link">Главная</a>
+						</li>
+						<li class="footer__nav-item">
+							<a href="/#about" class="footer__nav-link footer__link">О&#160;компании</a>
+						</li>
+						<li class="footer__nav-item"><a href="/#service" class="footer__nav-link footer__link">Услуги</a></li>
+						<li class="footer__nav-item"><a href="/case_1.html" class="footer__nav-link footer__link">Кейсы</a></li>
+						<li class="footer__nav-item"><a href="/clients.html" class="footer__nav-link footer__link">Клиенты</a></li>
+						<li class="footer__nav-item"><a href="/#blog" class="footer__nav-link footer__link">Блог</a></li>
+					</ul>
+					<div class="footer__info">
+						<p class="footer__info-text">
+							Иванова Мария Ивановна<br />
+							Плательщик налога на&#160;профессиональный доход<br />
+							Почтовый адрес: 123456, Demo City,<br />
+							ул. Example, дом&#160;10, оф. 1
+						</p>
+						<p class="footer__info-text">
+							ИНН: <span>000000000000</span><br />
+							Банк: АО&#160;&#171;Demo Bank&#187;<br />
+							Расчётный счёт: 40817810000000000001<br />
+							БИК: <span>000000000</span><br />
+							Корр.счёт: 30101810000000000000
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer__subnote">
+				<div class="container">
+					<ul class="footer__subnote-list">
+						<li class="footer__subnote-item">
+							<p class="footer__subnote-text">2024&#160;&#8212; <span id="dynamicYear">2025</span>. Все права защищены</p>
+						</li>
+						<li class="footer__subnote-item">
+							<a class="footer__subnote-link footer__link" href="/legal.html">
+								Правовая информация
+							</a>
+						</li>
+						<li class="footer__subnote-item">
+							<a href="http://www.videezy.com" target="_blank" rel="nofollow" class="footer__subnote-link footer__link">Автор используемого видео</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function(m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function() {
+						(m[i].a = m[i].a || []).push(arguments);
+					};
+				m[i].l = 1 * new Date();
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return;
+					}
+				}
+				(k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+			})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+			ym(93581751, "init", {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+			});
+		</script>
+		<noscript
+			><div><img src="https://mc.yandex.ru/watch/93581751" style="position:absolute; left:-9999px;" alt="" /></div
+		></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+		<div class="top__arrow" id="topArrow"></div>
+	</body>
+</html>

@@ -1,0 +1,163 @@
+.top {
+    margin-top: 70px;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: visible;
+    background: url("../../../public/docs_pic/bg/money-a5q.webp"),linear-gradient(90deg, #4c007daa 0%, #7D3FE7aa 100%);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
+
+.wrap {
+
+}
+
+.info {
+    position: relative;
+    display: grid;
+    max-width: 400px;
+    z-index: 2;
+}
+
+.title {
+    font-size:40px;
+}
+.price {
+    color: #FFC300;
+    font-size: clamp(90px, 5vw, 100px);
+}
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.item:nth-child(odd) {
+    background-color: #ffffff44;
+    border-radius: 8px;
+    width: clamp(60px, 4vw, 72px);
+    aspect-ratio: 1;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.item:nth-child(even) {
+    font-size: 30px;
+}
+
+.count {
+    font-size: 30px;
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    aspect-ratio: 390/267;
+    height: 100%;
+    transform: translateX(50%);
+    background-image: url(../../../public/docs_pic/bg/box-a5q.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    filter: drop-shadow( 0 0 20px darkgoldenrod);
+    z-index: 0;
+    animation: sway 16s ease-in-out infinite;
+}
+
+.hero {
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    aspect-ratio: 579/290;
+    height: 104%;
+    background-image: url(../../../public/docs_pic/bg/heroes-a5q.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    filter: drop-shadow( 0 0 20px gold);
+    animation: pulseShadow 4s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%   { transform: translateX(50%) rotate(0deg); }
+    25%  { transform: translateX(50%) rotate(1deg); }
+    50%  { transform: translateX(50%) rotate(0deg); }
+    75%  { transform: translateX(50%) rotate(-1deg); }
+    100% { transform: translateX(50%) rotate(0deg); }
+}
+
+@keyframes pulseShadow {
+    0%   { filter: drop-shadow(0 0 0px rgba(255,215,0,0)); }
+    50%  { filter: drop-shadow(0 0 25px rgba(255,215,0,1)); }
+    100% { filter: drop-shadow(0 0 0px rgba(255,215,0,0)); }
+}
+
+
+@media (max-width: 950px) {
+    .item:nth-child(odd) {
+        background-color: #00000044;
+    }
+    .price {
+     filter: drop-shadow( 0 0 20px black);
+    }
+}
+@media (max-width: 520px) {
+    .top {
+        background: linear-gradient(90deg, #4c007dff 0%, #7D3FE7aa 100%), url("../../../public/docs_pic/bg/money-a5q-m.webp");
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .price {
+        filter: unset;
+        font-size: 79px;
+    }
+    .list {
+        gap: 4px;
+        justify-content: center;
+    }
+    .item:nth-child(odd) {
+        background-color: #ffffff44;
+        aspect-ratio: 60/64;
+    }
+    .top {
+        height: 575px;
+        overflow: hidden;
+    }
+    .hero {
+        height: auto;
+        width: 140%;
+        right: 50%;
+        transform: translateX(50%);
+        background-image: url(../../../public/docs_pic/bg/heroes-a5q-m.webp);
+    }
+    .box {
+        height: unset;
+        width: 50%;
+        z-index: 1;
+        background-image: url(../../../public/docs_pic/bg/box-a5q-m.webp);
+    }
+
+}
+
+@media (max-width: 359px) {
+    .top {
+        height: 500px;
+    }
+    .price {
+        font-size: 65px;
+    }
+    .text {
+        font-size: 10px;
+    }
+    .item:nth-child(odd) {
+        background-color: #ffffff44;
+        aspect-ratio: 60/64;
+        width: clamp(40px, 15vw, 72px);
+    }
+}
+

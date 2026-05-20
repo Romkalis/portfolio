@@ -1,0 +1,52 @@
+.wrapper {
+    padding-top: clamp(20px, 5vw, 90px);
+    padding-bottom: clamp(20px, 5vw, 90px);
+    border-top: 2px dashed var(--acc);
+    border-bottom: 2px dashed var(--acc);
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    display: flex;
+    gap: 8px;
+}
+
+.item:nth-child(1) .icon {
+    background-image: url(../../../public/assets-pictures/lGty67q/logotypes-icons/asyt12sx-book.svg);
+}
+.item:nth-child(2) .icon {
+    background-image: url(../../../public/assets-pictures/lGty67q/logotypes-icons/asyt12sx-weight.svg);
+}
+.item:nth-child(3) .icon {
+    background-image: url(../../../public/assets-pictures/lGty67q/logotypes-icons/asyt12sx-shield.svg);
+}
+
+.icon {
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 26px;
+    aspect-ratio: 1;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+@media (max-width: 850px) {
+    .list {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+}

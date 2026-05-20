@@ -1,0 +1,273 @@
+.tour {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    gap: 60px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.title {
+    margin-bottom: 60px;
+}
+
+.topGrid {
+    display: flex;
+    justify-content: center;
+    justify-items: center ;
+    align-content: center;
+    gap: 20px;
+}
+.pic {
+    flex-basis: 25%;
+    flex-shrink: 1;
+    min-width: 180px;
+
+    aspect-ratio: 286 / 200;
+    max-width: 286px;
+    width: 100%;
+    background-image: url(../../../public/docs_pic/bg/prize.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation: floatPic 6s ease-in-out infinite, glowPic 3s ease-in-out infinite;
+}
+.pic:nth-child(3) {
+    transform: rotateY(180deg);
+    animation: floatPic 6s ease-in-out infinite, glowPic 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+@keyframes floatPic {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(5px) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+@keyframes glowPic {
+    0% {
+        filter: drop-shadow(0 0 2px #FACC1533);
+    }
+    50% {
+        filter: drop-shadow(0 0 18px #FACC15);
+    }
+    100% {
+        filter: drop-shadow(0 0 2px #FACC1533);
+    }
+}
+
+
+.info {
+    display: grid ;
+    gap: 20px;
+    width: 100%;
+    max-width: 597px;
+}
+
+.infoTitle {
+    font-size: 30px;
+    color: #FACC15;
+}
+
+.infoWrap {
+    background: #25003D;
+    border: 1px solid #BF5CFF;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    gap: 20px;
+}
+.winnerBlock {
+    flex-wrap: nowrap;
+    .name {
+        color: #FACC15;
+    }
+    .count {
+        border: 1px solid #FACC15;
+        background: #FACC1544;
+    }
+}
+.winBlock {
+    display: grid;
+    grid-template-columns: 55px;
+    column-gap: 20px;
+    align-items: center;
+
+    .name {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .nick {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+}
+.winIcon {
+    width: 100%;
+    aspect-ratio: 1;
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    background-image: url(../../../public/docs_pic/logos-a5q/wiiner-1.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.winBlock:nth-child(2) .winIcon {
+    background-image: url(../../../public/docs_pic/logos-a5q/wiiner-2.webp);
+}
+.winBlock:nth-child(3) .winIcon {
+    background-image: url(../../../public/docs_pic/logos-a5q/wiiner-3.webp);
+}
+
+
+
+
+.subtitle {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.playersList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+
+}
+
+
+
+.slide {
+    background: #25003D;
+    border: 1px solid #BF5CFF;
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.icon {
+    background-image: url(../../../public/docs_pic/bg/user-pic-1.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 66px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+}
+.slide:nth-child(2) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-2.webp);
+}
+.slide:nth-child(3) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-3.webp);
+}
+.slide:nth-child(4) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-4.webp);
+}
+.slide:nth-child(5) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-1.webp);
+}
+.text {
+    margin-right: auto;
+}
+.name {
+    font-size: 16px;
+    color: #BF5CFF;
+}
+.nick {
+    font-size: 14px;
+}
+
+.count {
+    background: #8500DB55;
+    border: 1px solid #BF5CFF;
+    border-radius: 50px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FED240;
+    font-size: 16px;
+
+    position: relative;
+}
+
+.count::after {
+    margin-top: 3px;
+    content: url("../../../public/docs_pic/logos-a5q/coin.webp");
+}
+
+
+@media (max-width: 1200px) and (min-width: 680px) {
+    .topGrid {
+        position: relative;
+    }
+    .pic {
+        position: absolute;
+        top: 10%;
+        z-index: -1;
+        left: 0;
+    }
+    .pic:nth-child(3) {
+        left: unset;
+        right: 0;
+        transform: rotateY(180deg);
+        animation: floatPic 6s ease-in-out infinite, glowPic 3s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+    .infoWrap {
+        background: #25003Dee;
+    }
+}
+
+
+
+@media (max-width: 680px) {
+    .topGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .playersList {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+@media (max-width: 375px) {
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text {
+        margin: auto;
+        text-align: center;
+    }
+    .icon {
+        width: 50px;
+    }
+    .count {
+        padding: 5px;
+    }
+}

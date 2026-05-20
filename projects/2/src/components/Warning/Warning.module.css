@@ -1,0 +1,55 @@
+.warning {
+    margin-bottom: clamp(60px, 10vw, 100px);
+}
+.title {
+    margin-bottom: 10px;
+}
+.text {
+    margin-bottom: 10px;
+}
+.careList {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+.careItem {
+
+}
+.careLink {
+    display: block;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.careItem:first-child .careLink {
+    width: 221px;
+    height: 64px;
+    background-image: url(../../../public/docs_pic/logos-a5q/warn-gamcare.webp);
+}
+.careItem:nth-child(2) .careLink {
+    width: 273px;
+    height: 40px;
+    background-image: url(../../../public/docs_pic/logos-a5q/warn-gamaware.webp);
+}
+
+.careItem:last-child  {
+    margin-left: auto;
+    width: 61px;
+    height: 64px;
+    background-image: url(../../../public/docs_pic/logos-a5q/warn-age.webp);
+}
+
+@media (max-width: 700px) {
+    .careList {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .careItem:last-child  {
+        margin-left: unset;
+    }
+}

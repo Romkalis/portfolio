@@ -1,0 +1,93 @@
+.particlesWrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    25% {
+        transform: translate(-20px, -15px) rotate(90deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(10px, -10px) rotate(180deg);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translate(-5px, 10px) rotate(270deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    top: calc(var(--random-y) * 100%);
+    left: calc(var(--random-x) * 100%);
+
+    width: calc(10px + 15px * var(--particle-size));
+    aspect-ratio: 1;
+
+    background: radial-gradient(circle, rgba(255, 194, 150, 0.77) 20%, transparent 100%);
+    border-radius: 50%;
+    animation: float 8s ease-in-out forwards;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+
+
+@keyframes spark {
+    0% {
+        transform: translateX(0vw) translateY(0vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(10vw) translateY(calc(-3vh + 6vh * var(--random-y))) rotate(180deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(50vw) translateY(calc(-3vh + 6vh * var(--random-y))) rotate(180deg);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateX(80vw) translateY(calc(-2vh + 4vh * var(--random-y))) rotate(360deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateX(100vw) translateY(calc(-2vh + 4vh * var(--random-y))) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.particle2 {
+    position: absolute;
+    top: calc(var(--random-y) * 100%);
+    left: -5vw;
+    width: calc(10px + 15px * var(--particle-size));
+    height: calc(0.2vw + 0.3vw * var(--particle-size));
+    background: linear-gradient(
+            135deg,
+            rgba(255, 215, 0, 0.8),
+            rgba(255, 100, 0, 0.4),
+            transparent
+    );
+    border-radius: 25% 50% 25% 50%;
+    animation: spark 4s ease-out forwards;
+    filter: drop-shadow(0 0 4px rgba(255, 180, 0, 0.6));
+    pointer-events: none;
+    z-index: -1;
+}
+

@@ -1,0 +1,33 @@
+body {
+	margin: 0px;
+	position: relative;
+
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url(../images/page.webp);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+canvas {
+	background-color: transparent;
+}
+
+.logo {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 1;
+	width: 100px;
+	height: 100px;
+	background-image: url('../images/favicon.webp');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}

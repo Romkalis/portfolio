@@ -1,0 +1,22 @@
+.top {
+    padding-top: 80px;
+    padding-bottom: 90px;
+    margin-bottom: 60px;
+    text-align: center;
+    background: linear-gradient(30deg, #F970DC99 0%, #384B8D99 35.1%, #362E5E 76.92%);
+}
+
+.title {
+    font-size: clamp(36px, 4vw, 60px);
+    margin-bottom: 32px;
+}
+
+.date {
+    width: max-content;
+    margin: auto;
+    background-color: var(--acc);
+    border-radius: 50px;
+    border-top: 1px solid  #FF960033;
+    padding: 8px 12px;
+    font-weight: 500;
+}

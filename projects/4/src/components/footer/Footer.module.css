@@ -1,0 +1,124 @@
+.footer {
+    color: var(--text-l);
+    background-color:var(--text-d);
+    padding: clamp(30px, 5vw, 50px) 0;
+    display: grid;
+    gap: 20px;
+    background: linear-gradient(360deg, rgba(38, 38, 46, 0.85) 0%, #151518 100%), url(../../../public/asset-files/akjsd5/backpics/footer-back.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footerWrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.top {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.topBlock {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+    max-width: 523px;
+    color:var(--text-g);
+}
+.navBlock {
+    display: flex;
+    justify-content: space-between;
+    color:var(--text-l);
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+.subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.cite {
+    width: 100%;
+}
+
+.logo {
+    width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    object-position: left;
+}
+
+.nav {
+    display: grid;
+    align-items: start;
+    align-content: start;
+}
+
+.navList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: inherit;
+    a {
+        transition: all .4s ease;
+        &:hover {
+            filter: drop-shadow(0 0 2px red);
+        }
+    }
+}
+
+.restriction {
+    background: #15151880;
+    padding: 10px 0;
+}
+.restrictionWrap {
+    display: grid;
+    gap: 8px;
+    color:var(--text-g);
+}
+
+.services {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.bottom {
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .top {
+        flex-wrap: wrap;
+    }
+    .topBlock:first-child {
+        width: 100%;
+    }
+    .navBlock {
+        margin: auto;
+    }
+}
+@media (max-width: 560px) {
+
+
+    .top {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 12px;
+    }
+    .restriction {
+        font-size: 12px;
+    }
+    .services {
+        justify-content: center;
+    }
+}

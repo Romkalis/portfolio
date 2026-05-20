@@ -1,0 +1,27 @@
+.disclaimer {
+    margin-top: 65px;
+    padding: 26px clamp(12px, 2vw, 32px);
+    margin-bottom: 80px;
+    border: 2px solid #FFD230;
+    background: linear-gradient(90deg, #FFFBEB 0%, #FFFBEB 100%);
+    box-shadow: 0px 20px 25px -5px #0000001A;
+    display: grid;
+    border-radius: 24px;
+    gap: 20px;
+
+}
+.title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+.icon {
+
+}
+.text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #bb4d00;
+}

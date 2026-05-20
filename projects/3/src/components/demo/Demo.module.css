@@ -1,0 +1,66 @@
+.demo {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+.title {
+    margin-bottom: 20px;
+}
+.iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 124/80;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, #15151588, #00000099), url(../../../public/astra-docs/__g3k21aa-/astra_bg/astra-aqua-bg.webp);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    transition: width 0.4s ease 0.3s;
+}
+
+.info {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    color: var(--text-l);
+    width: 100%;
+    min-height: 100%;
+}
+
+.play {
+   place-self: center;
+    border: none;
+    color: var(--text-l);
+    font-size: 24px;
+}
+.hide {
+    width: 0;
+}
+@media(max-width: 468px) {
+    .iframe, .wrap, .cover  {
+        height: 400px;
+    }
+    .pic {
+        max-width: 70vw;
+    }
+}

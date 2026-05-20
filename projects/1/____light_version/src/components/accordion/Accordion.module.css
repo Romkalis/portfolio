@@ -1,0 +1,43 @@
+.accordions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    transition: all .3s ease;
+    list-style: none;
+    width: 100%;
+    margin-bottom: 60px;
+
+    perspective: 1500px;
+    transform-style: preserve-3d;
+}
+
+.questions {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+.accordions:has(li:hover) li:not(:hover) {
+    opacity: 0.7;
+    transition:
+            transform 0.5s ease,
+            opacity 0.4s ease,
+            filter 0.4s ease;
+}
+.accordions:not(:has(li:hover)) li {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+    filter: none;
+    transition:
+            transform 0.4s ease,
+            opacity 0.4s ease,
+            filter 0.4s ease;
+}
+
+@media (max-width: 468px) {
+    .accordions {
+        padding: 0;
+    }
+}

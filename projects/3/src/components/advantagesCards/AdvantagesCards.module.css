@@ -1,0 +1,64 @@
+.advantages {
+    padding-top: 70px;
+    margin-bottom: 40px;
+}
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    transition: all .4s ease-in-out;
+}
+.card {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 24px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 16px;
+
+    text-align: center;
+    transition: all .4s ease-in-out;
+}
+.icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+.text {
+    color: #D3D3D3;
+}
+
+.list:has(.card:hover) {
+    .card {
+        box-shadow:  2px -2px 15px #465BFF;
+        transform: scale3d(78%, 85%, 200%) rotate3d(100, 60, 100, -6grad);
+        perspective: 200px;
+    }
+    .card:hover {
+        transform: scale3d(105%, 105%, 200%) rotate3d(100, 60, 100, 0grad);
+        box-shadow:  2px -2px 15px #96F6D1;
+    }
+}
+
+
+@media ( max-width: 1024px) {
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media ( max-width: 469px) {
+    .list {
+        grid-template-columns:  1fr;
+    }
+}

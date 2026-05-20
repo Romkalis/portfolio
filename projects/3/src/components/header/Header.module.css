@@ -1,0 +1,193 @@
+
+.header {
+    width: 100vw;
+    text-align: center;
+    overflow: visible;
+    color: var(--text-d);
+    font-family: var(--font-title);
+    background-color: #fff;
+}
+
+.wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 16px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.warn {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    position: relative;
+    padding: 4px 16px;
+    border: 2px solid var(--acc);
+    border-radius: 50px;
+}
+.warn::before {
+    margin-top: 4px;
+    content : url(../../../public/astra-docs/__g3k21aa-/astra_logos/18-header.svg);
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: clamp(18px, 2vw, 40px);
+    row-gap: 20px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.navItem {
+    transition: all .3s ease-in-out;
+}
+
+.navLink {
+    padding: 10px 0;
+}
+.linkActive {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+.linkActive::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #896D46;
+}
+
+.navButton {
+    display: none;
+}
+
+
+.burger {
+    display: none;
+    border: none;
+}
+
+.logo {
+    img {
+        height: 50px;
+    }
+}
+
+
+@media (max-width: 1044px) {
+    .navList {
+        column-gap: 20px;
+        row-gap: 10px;
+        justify-content: center;
+    }
+    .wrapper {
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        position: relative;
+        justify-content: end;
+        margin: 0;
+        padding: 4px 0px;
+    }
+
+    .desktopView {
+        display: none;
+    }
+
+    .navButton {
+        display: block;
+    }
+
+    .logo {
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .languages {
+        margin: auto;
+    }
+
+    .navList {
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-200%);
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        backdrop-filter: blur(12px) brightness(0.7) saturate(0.6);
+        padding: 60px;
+        border-radius: 0 0 5px 0;
+        box-shadow: 2px 2px 12px rgba(232, 157, 54, 0.76);
+        transition: all .3s ease;
+        width: 100vw;
+    }
+
+    .navListActive {
+        transform: translateX(0%);
+        color: #DCD0A8;
+        transition: all .3s ease;
+        z-index: 2;
+    }
+
+    .burger-menu {
+        display: block;
+        position: absolute;
+        right: 32px;
+        top: 30px;
+        width: 34px;
+        height: 24px;
+        z-index: 5;
+    }
+
+    .burger {
+        width: 34px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .burger span {
+        width: 100%;
+        height: 2px;
+        background: var(--acc);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: translateY(6px) rotate(35deg);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: translateY(-12px) rotate(-35deg);
+    }
+
+    .navLink {
+        font-size: 16px;
+    }
+}
+

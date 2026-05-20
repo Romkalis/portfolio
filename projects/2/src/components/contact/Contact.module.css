@@ -1,0 +1,140 @@
+.wrap {
+    display: grid;
+    grid-template-columns:  1fr;
+    place-items: center;
+    gap: 20px;
+    width: 100%;
+
+    background: #25003D;
+    border: 1px solid #8500DB;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+}
+.formToplink {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    align-items: center;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 24px;
+}
+.info {
+    width: 100%;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    margin: auto;
+}
+
+.label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.label:nth-child(5) {
+    grid-column: 1/-1;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    background: #F4F4F4;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button {
+    grid-column: 1/-1;
+    width: 100%;
+    border: none;
+
+    &:disabled {
+        background: transparent;
+        border: 2px solid grey;
+        color: grey;
+    }
+}
+
+.checkboxLabel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    input {
+        width: 20px;
+        height: 20px;
+    }
+}
+.link {
+    color: var(--acc);
+}
+
+.isSended {
+    height: 2em;
+    text-align: center;
+    transition: all .3s ease;
+    color: var(--acc);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.finaltext {
+    font-size: clamp(16px, 1.5vw, 24px);
+    font-weight: 700;
+
+}
+
+@media (max-width: 850px) {
+
+}
+
+@media (max-width: 668px) {
+    .contactWrap {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        margin-bottom: 0px;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .list {
+        grid-row: 2 /3;
+    }
+
+    .item {
+        margin-bottom: 14px;
+    }
+
+    .form {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 359px) {
+
+    .text {
+        word-break: break-word;
+    }
+}

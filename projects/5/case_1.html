@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Внедрение наших рекомендаций привело к значительному снижению операционных затрат. Прибыль с одного магазина увеличилась на 25% или 170 тысяч рублей."
+		/>
+		<meta name="keywords" content="розница, магазин одежды, финансовые показатели, доходы, расходы, анализ, прибыль, эффективность, реклама" />
+		<title>Кейс 1: Увеличение прибыли магазина одежды на&#160;25%</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="prefetch" href="./fonts/OpenSans.woff2" as="font" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+		<link rel="manifest" href="/dreamfin.webmanifest" />
+		<link rel="canonical" href="#" />
+		<script src="./js/index.bundle.js" type="module" defer></script>
+	</head>
+
+	<body>
+		<header class="header container">
+			<div class="header__wrapper">
+				<a href="/" class="header__logo">
+					<picture>
+						<source
+							srcset="./img/header/header_logo_horizontal_mob.webp 96w, img/header/header_logo_horizontal.webp 310w"
+							sizes="(max-width: 468px) 96w, 
+                        (min-width: 469px) 310w"
+							type="image/webp"
+						/>
+						<source
+							srcset="./img/header/header_logo_horizontal_mob.png 96w, img/header/header_logo_horizontal.png 310w"
+							sizes="(max-width: 468px) 96w, 
+                        (min-width: 469px) 310w"
+							type="image/png"
+						/>
+						<img
+							class="header__logo-image"
+							src="./img/header/header_logo_horizontal.png"
+							srcset="./img/header/header_logo_horizontal_mob.png 96w, img/header/header_logo_horizontal.png 310w"
+							sizes="(max-width: 468px) 96w, (min-width: 469px) 310w"
+							alt="логотип dreamfin"
+						/>
+					</picture>
+				</a>
+
+				<input type="checkbox" id="burger-toggle" class="header__burger-checkbox" />
+				<label for="burger-toggle" class="header__burger"></label>
+
+				<nav class="header__nav">
+					<ul class="header__navlist">
+						<li class="header__navitem"><a href="/" class="header__navlink link">Главная</a></li>
+						<li class="header__navitem"><a href="/#about" class="header__navlink link">О&#160;компании</a></li>
+						<li class="header__navitem">
+							<div class="header__nav-submenu">
+								<a href="services.html" class="header__navlink link header__navlink-title">Услуги</a>
+
+								<!-- для выделения активного линка добавляем header__subitem--active -->
+
+								<ul class="header__sublist">
+									<li class="header__subitem">
+										<a href="finances.html" class="header__navlink link">Финансы</a>
+									</li>
+									<li class="header__subitem">
+										<a href="control.html" class="header__navlink link">Управление</a>
+									</li>
+									<li class="header__subitem">
+										<a href="finances-control.html" class="header__navlink link">Управление + Финансы</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header__navitem"><a href="/case_1.html" class="header__navlink link">Кейсы</a></li>
+						<li class="header__navitem"><a href="/clients.html" class="header__navlink link">Клиенты</a></li>
+						<li class="header__navitem"><a href="/#blog" class="header__navlink link">Блог</a></li>
+					</ul>
+
+					<div class="header__contacts">
+						<a href="#" target="_blank" rel="nofollow" class="header__button button button--dark js-feedback-popup" id="interview">
+							<span>Записаться на&#160;интервью</span>
+							<span>интервью</span>
+						</a>
+						</div>
+
+					<ul class="header__social">
+						<li class="header__social-icon">
+							<a href="#" target="_blank" rel="nofollow" class="header__social-link">
+								<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.6 1.6001C11.456 1.6001 1.60001 11.4561 1.60001 23.6001C1.60001 35.7441 11.456 45.6001 23.6 45.6001C35.744 45.6001 45.6 35.7441 45.6 23.6001C45.6 11.4561 35.744 1.6001 23.6 1.6001ZM33.808 16.5601C33.478 20.0361 32.048 28.4841 31.322 32.3781C31.014 34.0281 30.398 34.5781 29.826 34.6441C28.55 34.7541 27.582 33.8081 26.35 32.9941C24.414 31.7181 23.314 30.9261 21.444 29.6941C19.266 28.2641 20.674 27.4721 21.928 26.1961C22.258 25.8661 27.89 20.7401 28 20.2781C28.0153 20.2081 28.0133 20.1355 27.9941 20.0665C27.9749 19.9975 27.9392 19.9342 27.89 19.8821C27.758 19.7721 27.582 19.8161 27.428 19.8381C27.23 19.8821 24.15 21.9281 18.144 25.9761C17.264 26.5701 16.472 26.8781 15.768 26.8561C14.976 26.8341 13.48 26.4161 12.358 26.0421C10.972 25.6021 9.89401 25.3601 9.98201 24.5901C10.026 24.1941 10.576 23.7981 11.61 23.3801C18.034 20.5861 22.302 18.7381 24.436 17.8581C30.552 15.3061 31.806 14.8661 32.642 14.8661C32.818 14.8661 33.236 14.9101 33.5 15.1301C33.72 15.3061 33.786 15.5481 33.808 15.7241C33.786 15.8561 33.83 16.2521 33.808 16.5601Z"
+									/>
+								</svg>
+								<span class="visually-hidden">Телеграм</span>
+							</a>
+						</li>
+						<li class="header__social-icon">
+							<a href="#" class="header__social-link">
+								<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.6 1.6001C11.4496 1.6001 1.60001 11.4497 1.60001 23.6001C1.60001 35.7505 11.4496 45.6001 23.6 45.6001C35.7504 45.6001 45.6 35.7505 45.6 23.6001C45.6 11.4497 35.7504 1.6001 23.6 1.6001ZM32.0608 26.4211C32.0608 26.4211 34.0065 28.3416 34.4854 29.233C34.4992 29.2513 34.506 29.2697 34.5106 29.2788C34.7054 29.6066 34.7513 29.8609 34.655 30.0511C34.4946 30.3674 33.9446 30.5232 33.7567 30.537H30.3192C30.0808 30.537 29.5813 30.4751 28.9763 30.058C28.511 29.7326 28.0527 29.1986 27.6058 28.6784C26.939 27.9038 26.3615 27.2347 25.7794 27.2347C25.7055 27.2346 25.632 27.2462 25.5617 27.2691C25.1217 27.4111 24.5579 28.0391 24.5579 29.712C24.5579 30.2345 24.1454 30.5347 23.8544 30.5347H22.28C21.7438 30.5347 18.9502 30.3468 16.4752 27.7366C13.4456 24.5397 10.7185 18.1276 10.6956 18.068C10.5238 17.6532 10.879 17.4309 11.2663 17.4309H14.7381C15.201 17.4309 15.3523 17.7128 15.4577 17.9626C15.5815 18.2536 16.0352 19.4109 16.78 20.7126C17.9877 22.8347 18.7279 23.6963 19.3215 23.6963C19.4328 23.695 19.5421 23.6667 19.64 23.6138C20.4146 23.183 20.2702 20.4216 20.2358 19.8486C20.2358 19.7409 20.2335 18.6134 19.8371 18.0726C19.5529 17.6807 19.0694 17.5318 18.776 17.4768C18.8948 17.3129 19.0512 17.1801 19.2321 17.0895C19.7638 16.8236 20.7217 16.7847 21.6727 16.7847H22.2021C23.2333 16.7984 23.4992 16.8649 23.8727 16.9588C24.629 17.1399 24.645 17.628 24.5785 19.2986C24.5579 19.773 24.5373 20.3093 24.5373 20.9418C24.5373 21.0793 24.5304 21.2259 24.5304 21.3818C24.5075 22.232 24.48 23.1968 25.0804 23.5932C25.1587 23.6423 25.2492 23.6685 25.3417 23.6688C25.5502 23.6688 26.1781 23.6688 27.8785 20.7516C28.403 19.8126 28.8587 18.8368 29.2421 17.832C29.2765 17.7724 29.3773 17.5891 29.4965 17.518C29.5844 17.4732 29.6819 17.4504 29.7806 17.4516H33.8621C34.3067 17.4516 34.6115 17.518 34.6688 17.6899C34.7696 17.9626 34.6504 18.7945 32.7873 21.3176L31.9554 22.4153C30.2665 24.6291 30.2665 24.7413 32.0608 26.4211Z"
+									/>
+								</svg>
+
+								<span class="visually-hidden">Вконтакте</span>
+							</a>
+						</li>
+						<li class="header__social-icon">
+							<a href="#" target="_blank" rel="nofollow" class="header__social-link">
+								<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="22" cy="22" r="22" />
+									<path
+										d="M12.3516 29V14.7227H15.3789V29H12.3516ZM31.6387 29H27.791L21.5801 18.1992H21.4922C21.5182 18.6484 21.541 19.1009 21.5605 19.5566C21.5801 20.0124 21.5996 20.4681 21.6191 20.9238C21.6387 21.373 21.6582 21.8255 21.6777 22.2812V29H18.9727V14.7227H22.791L28.9922 25.416H29.0605C29.0475 24.9733 29.0312 24.5339 29.0117 24.0977C28.9922 23.6615 28.9727 23.2253 28.9531 22.7891C28.9401 22.3529 28.9271 21.9167 28.9141 21.4805V14.7227H31.6387V29Z"
+										fill="white"
+									/>
+								</svg>
+
+								<span class="visually-hidden">Инстаграмм</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="case case_1 container" id="top">
+			<nav class="cases__breadscrumbs">
+				<a href="/cases.html" class="cases__breadscrumbs-main">Реализованные проекты/</a>
+				<span class="cases__breadscrumbs-changed">Увеличение прибыли магазина одежды</span>
+			</nav>
+
+			<h1 class="visually-hidden">Страница кейса магазина одеждый</h1>
+			<h2 class="article__title">Увеличение прибыли магазина одежды на&#160;25%</h2>
+
+			<ul class="case__nav" role="navigation" aria-label="Навигация по кейсу">
+				<li class="case__nav-item"><button data-value="trouble" class="case__nav-button button">Проблема</button></li>
+				<li class="case__nav-item"><button data-value="solution" class="case__nav-button button">Решение</button></li>
+				<li class="case__nav-item"><button data-value="result" class="case__nav-button button">Результат</button></li>
+			</ul>
+
+			<ul class="case__grid">
+				<li class="case__trouble case__card" role="region" aria-labelledby="trouble-heading">
+					<img src="./img/svgicons/case_trouble.svg" alt="изображение задумчивого мужчины" class="case__icon" />
+					<h3 class="case__card-heading" id="trouble-heading">Проблема:</h3>
+					<p class="case__text">
+						Клиент, владеющий сетью розничных магазинов одежды, столкнулся с&#160;высокими операционными затратами, угрожавшими его прибыльности. Анализ финансовых
+						показателей выявил, что операционные расходы составляют более 35% от&#160;общих доходов, превышая отраслевой стандарт.
+					</p>
+				</li>
+
+				<li class="case__solution case__card" role="region" aria-labelledby="solution-heading">
+					<img src="./img/svgicons/case_solution.svg" alt="иконка вспыхнувшей лампочки" class="case__icon" />
+					<h3 class="case__card-heading" id="solution-heading">Решение:</h3>
+					<p class="case__text">
+						Для решения проблемы мы&#160;провели глубокий анализ финансовых данных. Анализ отчётов о&#160;прибылях и&#160;убытках выявил, что основные расходы связаны
+						с&#160;арендой торговых площадей, заработной платой персонала и&#160;рекламными расходами. Мы&#160;также проанализировали денежные потоки, чтобы выявить узкие
+						места в&#160;управлении денежными средствами и&#160;определить возможности для оптимизации. Ещё, мы изучили баланс, чтобы оценить текущее финансовое положение
+						компании и&#160;выявить резервы для снижения издержек.
+					</p>
+				</li>
+
+				<li class="case__result case__card" role="region" aria-labelledby="result-heading">
+					<div class="case__result-content">
+						<div class="case__result-heading">
+							<img src="./img/svgicons/case_result.svg" alt="изображение цели для стрельбы" class="case__icon" />
+							<h3 class="case__card-heading" id="result-heading">Результат:</h3>
+						</div>
+						<p class="case__text">
+							Внедрение наших рекомендаций привело к&#160;значительному снижению операционных затрат. Стратегии управления арендной платой и&#160;персоналом позволили
+							сократить расходы на&#160;15%, а оптимизация рекламных расходов увеличила эффективность маркетинговых кампаний и&#160;сократила расходы на&#160;20%. Как
+							следствие, операционные расходы снизились с&#160;35% до&#160;25% от&#160;общих доходов, что привело к&#160;существенному росту прибыли. Например, прибыль
+							с&#160;одного магазина увеличилась на&#160;25%, что в&#160;денежном эквиваленте составило 170 тысяч рублей. Таким образом, наша работа принесла клиенту
+							ощутимые финансовые результаты и&#160;укрепила его позиции на&#160;рынке.
+						</p>
+						<picture>
+							<source srcset="./img/superhero/cases__heroWithLogo.webp 1x, ./img/superhero/cases__heroWithLogo@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/superhero/cases__heroWithLogo.png 1x, ./img/superhero/cases__heroWithLogo@2x.png 2x" type="image/png" />
+							<img class="case__image" src="./img/superhero/cases__heroWithLogo.png" alt="супердевушка держит в руках логотип dreamfin" />
+						</picture>
+					</div>
+				</li>
+
+				<nav class="case__nav-cases" aria-label="Навигация по следующему и предыдущему кейсам">
+					<a href="case_4.html" class="case__nav-link case__nav-link--prev">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g id="solar:arrow-right-linear">
+								<path id="Vector" d="M20 12H4M4 12L10 6M4 12L10 18" stroke="#412E36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</g>
+						</svg>
+
+						<span class="case__nav-text">Предыдущий кейс</span>
+					</a>
+					<a href="case_2.html" class="case__nav-link case__nav-link--next">
+						<span class="case__nav-text">Следующий кейс</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g id="solar:arrow-right-linear">
+								<path id="Vector" d="M4 12H20M20 12L14 6M20 12L14 18" stroke="#380017" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</g>
+						</svg>
+					</a>
+				</nav>
+
+				<div class="case__nav-top">
+					<a href="#" target="_blank" rel="nofollow" class="button button--dark js-feedback-popup">Записаться на&#160;интервью</a>
+				</div>
+			</ul>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<a href="/" class="footer__logo">
+					<picture>
+						<source srcset="./img/footer/logo_white.webp 1x, ./img/footer/logo_white@2x.webp 2x" type="image/webp" />
+						<source srcset="./img/footer/logo_white.png 1x, ./img/footer/logo_white@2x.png 2x" type="image/png" />
+						<img src="./img/footer/logo_white.png" alt="логотип компании" class="footer__logo-image" />
+					</picture>
+				</a>
+
+				<div class="footer__grid">
+					<div class="footer__contacts 123" id="contacts">
+						<a href="#" target="_blank" rel="nofollow" class="footer__contacts-button button button--medium js-feedback-popup"
+							>Записаться на&#160;интервью</a
+						>
+</div>
+					<ul class="footer__nav">
+						<li class="footer__nav-item">
+							<a href="/" class="footer__nav-link footer__link">Главная</a>
+						</li>
+						<li class="footer__nav-item">
+							<a href="/#about" class="footer__nav-link footer__link">О&#160;компании</a>
+						</li>
+						<li class="footer__nav-item"><a href="/#service" class="footer__nav-link footer__link">Услуги</a></li>
+						<li class="footer__nav-item"><a href="/case_1.html" class="footer__nav-link footer__link">Кейсы</a></li>
+						<li class="footer__nav-item"><a href="/clients.html" class="footer__nav-link footer__link">Клиенты</a></li>
+						<li class="footer__nav-item"><a href="/#blog" class="footer__nav-link footer__link">Блог</a></li>
+					</ul>
+					<div class="footer__info">
+						<p class="footer__info-text">
+							Иванова Мария Ивановна<br />
+							Плательщик налога на&#160;профессиональный доход<br />
+							Почтовый адрес: 123456, Demo City,<br />
+							ул. Example, дом&#160;10, оф. 1
+						</p>
+						<p class="footer__info-text">
+							ИНН: <span>000000000000</span><br />
+							Банк: АО&#160;&#171;Demo Bank&#187;<br />
+							Расчётный счёт: 40817810000000000001<br />
+							БИК: <span>000000000</span><br />
+							Корр.счёт: 30101810000000000000
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer__subnote">
+				<div class="container">
+					<ul class="footer__subnote-list">
+						<li class="footer__subnote-item">
+							<p class="footer__subnote-text">2024&#160;&#8212; <span id="dynamicYear">2025</span>. Все права защищены</p>
+						</li>
+						<li class="footer__subnote-item">
+							<a class="footer__subnote-link footer__link" href="/legal.html">
+								Правовая информация
+							</a>
+						</li>
+						<li class="footer__subnote-item">
+							<a href="http://www.videezy.com" target="_blank" rel="nofollow" class="footer__subnote-link footer__link">Автор используемого видео</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function(m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function() {
+						(m[i].a = m[i].a || []).push(arguments);
+					};
+				m[i].l = 1 * new Date();
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return;
+					}
+				}
+				(k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+			})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+			ym(93581751, "init", {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+			});
+		</script>
+		<noscript
+			><div><img src="https://mc.yandex.ru/watch/93581751" style="position:absolute; left:-9999px;" alt="" /></div
+		></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+		<div class="top__arrow" id="topArrow"></div>
+		<div class="feedback-form__wrapper" id="feedback-form-block">
+			<div class="feedback-form__popup">
+				<span class="feedback-form__close"></span>
+				<div class="feedback__first-screen">
+					<h2 class="feedback-form__title">
+						Пожалуйста, заполните форму ниже, и&#160;мы&#160;свяжемся с&#160;вами в&#160;ближайшее время.
+					</h2>
+					<form class="feedback-form">
+						<label>
+							<span class="feedback-form__alert-message visually-hidden">Имя должно состоять хотя&#160;бы из&#160;2х букв</span>
+							<input type="text" class="feedback-form__input" id="feedback-name" name="feedback-name" required placeholder="Имя *" />
+						</label>
+
+						<label>
+							<span class="feedback-form__alert-message visually-hidden"
+								>Проверьте правильность введенного номера <br />
+								+7 (9__) ___-__-__</span
+							>
+							<input type="tel" class="feedback-form__input" id="feedback-phone" name="feedback-phone" required placeholder="+7 Ваш телефон *" />
+						</label>
+
+						<label>
+							<span class="feedback-form__alert-message visually-hidden">Проверьте правильность введенного адреса почты</span>
+							<input type="email" class="feedback-form__input" name="feedback-mail" id="feedback-mail" placeholder="Email" />
+						</label>
+
+						<label>
+							<span class="feedback-form__alert-message visually-hidden"
+								>Вы&#160;превысили допустимое количество знаков (150) для данного поля.<br />
+								Пожалуйста, сформулируйте ваш запрос иначе</span
+							>
+							<input type="text" class="feedback-form__input" id="feedback-work" name="feedback-info" placeholder="Сфера деятельности" />
+						</label>
+
+						<p class="feedback-form__reference">
+							Нажимая кнопку &#171;отправить&#187;, вы&#160;подтверждаете своё согласие с&#160;<a href="" class="link feedback-form__link"
+								>политикой конфиденциальности</a
+							>
+							и&#160;даёте согласие на&#160;обработку персональных данных
+						</p>
+
+						<button class="button button--dark feedback-form__submit" disabled="false">Отправить</button>
+					</form>
+				</div>
+				<div class="feedback__second-screen visually-hidden">
+					<h2 class="feedback-form__title">
+						Сообщение успешно отправлено
+					</h2>
+					<p class="feedback__text">
+						Спасибо за&#160;вашу заявку!
+						<br />
+						Наша команда уже начала её&#160;обрабатывать, и&#160;вы&#160;можете ожидать обратную связь в&#160;ближайшее время.
+					</p>
+					<picture>
+						<source srcset="/img/superhero/feedback-popup.webp 1x, /img/superhero/feedback-popup@2x.webp 2x" type="image/webp" />
+						<source srcset="/img/superhero/feedback-popup.png 1x, /img/superhero/feedback-popup@2x.png 2x" type="image/png" />
+						<img src="/img/superhero/feedback-popup.png" alt="Изображение ссупергероя финдиректора" />
+					</picture>
+					<p class="feedback__text">
+						Если у&#160;вас есть вопросы, свяжитесь с&#160;нами через раздел
+						<a href="#contacts" class="feedback__goContacts">&#171;Контакты&#187;</a>
+						на&#160;сайте. Мы&#160;всегда готовы помочь!
+					</p>
+				</div>
+
+				<div class="feedback__third-screen visually-hidden">
+					<h2 class="feedback-form__title">
+						Наш сервер сейчас проходит обслуживание
+					</h2>
+					<p class="feedback__text">
+						Попробуйте через несколько минут, или, свяжитесь с&#160;нами через <a href="#" target="_blank" rel="nofollow" class=""> Телеграм</a>!
+					</p>
+					<picture>
+						<source srcset="/img/superhero/feedback-popup.webp 1x, /img/superhero/feedback-popup@2x.webp 2x" type="image/webp" />
+						<source srcset="/img/superhero/feedback-popup.png 1x, /img/superhero/feedback-popup@2x.png 2x" type="image/png" />
+						<img src="/img/superhero/feedback-popup.png" alt="Изображение ссупергероя финдиректора" />
+					</picture>
+					<p class="feedback__text">Еще у&#160;нас есть раздел &#171;Контакты&#187; на&#160;сайте. Мы&#160;всегда готовы помочь!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

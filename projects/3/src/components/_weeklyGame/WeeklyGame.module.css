@@ -1,0 +1,52 @@
+.weeklyGame {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background: linear-gradient(0deg, #5186EDaa, #5186EDaa), url(../../../public/astra-docs/__g3k21aa-/astra_bg/astra-sea-bg.webp);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.weeklyWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+
+.title {
+    font-size: 36px;
+    color: var(--text-l);
+    text-transform: unset;
+}
+
+.description {
+    font-size: 16px;
+}
+
+.pic {
+    width: 100%;
+    aspect-ratio: 56/37;
+    background: url(../../../public/astra-docs/__g3k21aa-/astra_bg/astra-sea-bg.webp);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+    .weeklyWrap {
+        grid-template-columns: 1fr;
+    }
+    .pic {
+        aspect-ratio: unset;
+        height: 370px;
+        width: 100%;
+    }
+}
+
+

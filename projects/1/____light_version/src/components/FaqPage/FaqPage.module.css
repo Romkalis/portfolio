@@ -1,0 +1,130 @@
+.faq {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: linear-gradient(135deg, #FFFBEB 0%, rgba(235, 211, 180, 0.3) 50%, rgba(255, 150, 0, 0.05) 100%);
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.popular {
+    background: #F9F1E3;
+    border: 2px solid #FF960033;
+    box-shadow: 0px 25px 50px -12px #00000040;
+    padding: 24px 0;
+    border-radius: 24px;
+    margin-bottom: 32px;
+}
+
+.top {
+    background: linear-gradient(90deg, rgba(255, 150, 0, 0.1) 0%, rgba(251, 90, 70, 0.1) 100%);
+    text-align: center;
+    padding: 32px clamp(12px, 2vw, 32px);
+    margin-bottom: 24px;
+}
+.secTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color:var(--acc);
+    margin-bottom: 8px;
+}
+
+.advList {
+    display: grid;
+    gap: 16px;
+    padding: 24px clamp(12px, 2vw, 32px);
+
+    li {
+        padding: 24px clamp(16px, 2vw, 24px);
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap:12px;
+        align-items: center;
+        border: 2px solid #FF960033;
+        border-radius: 24px;
+    }
+    .icon {
+        background: #FF96001A;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .subttile {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+}
+
+.troubles {
+    margin-top: 32px;
+    background:  #FF96000D;
+    border: 2px solid #FF960033;
+    box-shadow: 0px 25px 50px -12px #00000040;
+    padding: 56px clamp(12px, 2vw, 32px);
+    border-radius: 24px;
+}
+.troubleTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color:var(--acc);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        background: #FF960033;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.troubleList {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+        padding: 8px 8px;
+        border-radius: 50px;
+        border: 1px solid #FF960033;
+        font-weight: 500;
+    }
+}
+.troubleBottom {
+    text-align: center;
+
+    a {
+        color: var(--acc);
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+

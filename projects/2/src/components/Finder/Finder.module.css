@@ -1,0 +1,82 @@
+.finder {
+    display: flex;
+    gap: 20px;
+}
+.label {
+    flex-grow: 1;
+    position: relative;
+}
+.input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #8500d8;
+    background-color: #25003d;
+    color: var(--text-l);
+    padding: 14px 14px 14px 54px;
+    cursor: not-allowed;
+}
+.label::before {
+    content: "";
+    width: 20px;
+    aspect-ratio: 1;
+    background-image: url(../../../public/docs_pic/logos-a5q/-find.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.cap {
+    display: inline-block;
+    width: 20px;
+    aspect-ratio: 1;
+    background-image: url(../../../public/docs_pic/logos-a5q/cap-top-a5q.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+@media (max-width: 1000px) {
+    .finder {
+        gap: 10px;
+    }
+    .label::before {
+        left: 10px;
+    }
+    .input {
+        padding-left: 34px;
+    }
+    .button {
+        padding: 14px;
+    }
+}
+@media (max-width: 900px) {
+    .finder {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .label::before {
+        left: 10px;
+    }
+    .input {
+        padding-left: 34px;
+    }
+    .button {
+        padding: 14px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+    }
+}

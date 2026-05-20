@@ -1,0 +1,32 @@
+# robots.txt � version for Google Ads & Search
+# Updated: 2025-12-12
+# Purpose: Open access for Google crawlers and transparent site structure
+
+# --- General Google bots ---
+User-agent: Googlebot
+Allow: /
+
+# --- Google Ads crawlers (for ad review & policy compliance) ---
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: AdsBot-Google-Mobile-Apps
+Allow: /
+
+# --- Bing & others (optional openness) ---
+User-agent: Bingbot
+Allow: /
+
+# --- Block internal or admin pages ---
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+Disallow: /cdn-cgi
+
+# --- Sitemap declaration ---
+Sitemap: https://enjoygamesnow.com/sitemap.xml

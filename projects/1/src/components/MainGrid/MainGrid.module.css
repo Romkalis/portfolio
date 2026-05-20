@@ -1,0 +1,42 @@
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding:  4px 20px;
+
+    display: grid;
+    grid-template-columns: 295px 1155px;
+    gap: 20px;
+
+    position: relative;
+
+    .main {
+       grid-column: 2/3;
+    }
+
+    @media (max-width: 1500px) and (min-width: 901px) {
+        grid-template-columns: 295px calc(100vw - 320px - 40px - 20px);
+    }
+
+    @media (max-width: 900px) {
+
+        grid-template-columns: 1fr;
+        max-width: unset;
+        padding: 0;
+        gap: 0;
+
+        .main {
+            grid-column: unset;
+        }
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .isMobile {
+        display: none;
+    }
+}
+

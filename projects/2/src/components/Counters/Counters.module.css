@@ -1,0 +1,103 @@
+.counters {
+    margin-bottom: 60px;
+}
+
+.counterList {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.counter {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 71px 1fr;
+    column-gap: 20px;
+}
+
+.pic {
+    aspect-ratio: 1;
+    width: 71px;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation: floatPulse 4s ease-in-out infinite;
+}
+
+.counter:nth-child(1) .pic {
+    background-image: url(../../../public/docs_pic/logos-a5q/counter-1.webp);
+    animation-delay: 0s;
+}
+
+.counter:nth-child(2) .pic {
+    background-image: url(../../../public/docs_pic/logos-a5q/counter-2.webp);
+    animation-delay: 0.3s;
+}
+
+.counter:nth-child(3) .pic {
+    background-image: url(../../../public/docs_pic/logos-a5q/counter-3.webp);
+    animation-delay: 0.6s;
+}
+
+.counter:nth-child(4) .pic {
+    background-image: url(../../../public/docs_pic/logos-a5q/counter-4.webp);
+    animation-delay: 0.9s;
+}
+
+@keyframes floatPulse {
+    0% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0 rgba(250, 204, 21, 0));
+    }
+    25% {
+        transform: translateY(-5px) scale(1.05);
+        filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.5));
+    }
+    50% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 20px rgba(250, 204, 21, 1));
+    }
+    75% {
+        transform: translateY(5px) scale(0.95);
+        filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.5));
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 0 rgba(250, 204, 21, 0));
+    }
+}
+
+.info {
+    align-self: center;
+}
+
+.count {
+    color: #FACC15;
+    font-size: 30px;
+}
+
+.text {
+    font-size: 26px;
+}
+
+@media (max-width: 1286px) and (min-width: 520px) {
+    .counterList {
+        flex-wrap: wrap;
+    }
+    .counter {
+        flex-basis: 50%;
+        place-items: center;
+    }
+}
+@media (max-width: 520px) {
+    .counters {
+        overflow: visible;
+        max-width: calc(100vw - 40px);
+    }
+}
+
+.slider {
+    overflow: visible;
+}

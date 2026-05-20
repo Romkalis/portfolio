@@ -1,0 +1,24 @@
+.top {
+    padding-top: 80px;
+    padding-bottom: 90px;
+    margin-bottom: 60px;
+    text-align: center;
+    background: linear-gradient(30deg, rgba(248, 56, 208, 0.6) 0%, rgba(9, 13, 27, 0.6) 35.1%, #1d0e67 76.92%);
+}
+
+.title {
+    font-size: clamp(36px, 4vw, 60px);
+    margin-bottom: 32px;
+    color: deepskyblue;
+}
+
+.date {
+
+    width: max-content;
+    margin: auto;
+    background-color: var(--acc);
+    border-radius: 12px;
+    border: 2px solid  #FF960033;
+    padding: 12px 12px;
+    font-weight: 500;
+}

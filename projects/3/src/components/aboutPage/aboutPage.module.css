@@ -1,0 +1,38 @@
+.aboutPage {
+    padding-top: 80px;
+    position: relative;
+}
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    z-index: 2;
+    text-align: center;
+}
+
+.pic {
+    width: 100%;
+    background-image: url(../../../public/astra-docs/__g3k21aa-/astra_bg/_astra-about-pic.webp);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    aspect-ratio: 57/36;
+
+}
+.title {
+}
+.text {
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        grid-template-columns: 1fr;
+    }
+}

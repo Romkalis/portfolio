@@ -1,0 +1,54 @@
+.top {
+    background: linear-gradient(0deg, #00000080, #00000080), url(../../../public/astra-docs/__g3k21aa-/astra_bg/astra-top.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.wrap {
+    padding-top: clamp(140px, 10vw, 180px);
+    padding-bottom: clamp(140px, 10vw, 180px);
+    color: var(--text-l);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    z-index: 2;
+}
+
+.title {
+    font-size: clamp(32px, 4vw,  64px);
+    line-height: 120%;
+    text-align: center;
+    font-weight: 700;
+    margin: auto;
+    text-transform: uppercase;
+    color: var(--text-l);
+
+}
+
+.description {
+    text-align: center;
+    max-width: 768px;
+    margin: auto;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+ .button {
+     display: grid;
+     margin: auto;
+     padding: 10px 50px;
+     font-weight: 700;
+     font-size: 24px;
+     background-color: var(--acc2);
+     color:var(--text-l);;
+    text-align: center;
+ }
+
+/*@media (max-width: 768px) {*/
+
+/*    .button {*/
+/*        padding: 12px 6px;*/
+/*        font-size: 16px;*/
+/*    }*/
+/*}*/

@@ -1,0 +1,25 @@
+.star {
+    position: absolute;
+    top: -20px;
+    left: calc(10% + 80% * var(--random-x));
+    width: calc(20px * var(--random-x));
+    aspect-ratio: 1;
+    opacity: 0.8;
+    transform: rotate(45deg);
+    animation: fall 2s ease-out forwards;
+    background-image: url(../../../public/astra-docs/__g3k21aa-/astra_logos/astra-star.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    z-index: 0;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(0) rotate(145deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(10vw) translateY(100vh) rotate(45deg);
+        opacity: 0;
+    }
+}

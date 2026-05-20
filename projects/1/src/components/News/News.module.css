@@ -1,0 +1,44 @@
+.news {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    display: grid;
+    gap: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: grid;
+    gap: 30px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+}
+.item:nth-child(even) {
+    padding-left: 10%;
+}
+.item:nth-child(odd) {
+    padding-right: 10%;
+}
+
+.newsTitle {
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.button {
+    font-size: 14px;
+    &:disabled {
+        color: gray;
+    }
+}

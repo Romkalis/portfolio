@@ -1,0 +1,11 @@
+.finances-control .services__title {
+  color: var(--c-main);
+}
+.finances-control .services__description {
+  color: var(--text-dark);
+  margin-bottom: clamp(15px, 1.5vw, 20px);
+}
+.finances-control .services__description .promo__description-text--italic {
+  color: var(--c-main);
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy9maW5hbmNlcy1jb250cm9sL2ZpbmFuY2VzLWNvbnRyb2xfX2hlYWRpbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDSTtFQUNJOztBQUVKO0VBQ0k7RUFDQTs7QUFDQTtFQUNJIiwiZmlsZSI6ImJsb2Nrcy9maW5hbmNlcy1jb250cm9sL2ZpbmFuY2VzLWNvbnRyb2xfX2hlYWRpbmcuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZpbmFuY2VzLWNvbnRyb2wge1xuICAgIC5zZXJ2aWNlc19fdGl0bGUge1xuICAgICAgICBjb2xvcjogdmFyKC0tYy1tYWluKTtcbiAgICB9XG4gICAgLnNlcnZpY2VzX19kZXNjcmlwdGlvbiB7XG4gICAgICAgIGNvbG9yOiB2YXIoLS10ZXh0LWRhcmspO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiBjbGFtcCgxNXB4LCAxLjV2dywgMjBweCk7XG4gICAgICAgIC5wcm9tb19fZGVzY3JpcHRpb24tdGV4dC0taXRhbGljIHtcbiAgICAgICAgICAgIGNvbG9yOiB2YXIoLS1jLW1haW4pO1xuICAgICAgICB9XG4gICAgfVxufVxuXG4iXX0= */

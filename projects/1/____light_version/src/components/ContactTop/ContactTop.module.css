@@ -1,0 +1,27 @@
+.top {
+    background: linear-gradient(135deg, rgba(255, 150, 0, 0.1) 0%, rgba(251, 90, 70, 0.05) 50%, rgba(230, 95, 42, 0.1) 100%);
+    padding: 48px 24px;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+.title {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.description {
+    background: #fff;
+    border-top: 2px solid  #FF960033;
+    box-shadow: 0px 10px 15px -3px #0000001A;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 608px;
+    margin:auto;
+}
+
+
+@media (max-width: 900px) {
+    .top {
+        padding-top: 120px;
+    }
+}

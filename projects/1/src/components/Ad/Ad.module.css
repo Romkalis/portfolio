@@ -1,0 +1,56 @@
+.ad {
+    background-image: url("../../../public/eg-docs/icons/ejGam332-wave.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding: 128px 52px 20 52px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color:var(--text-d);
+}
+.title {
+    font-size: clamp(60px, 6vw, 72px);
+    margin-bottom: -8px;
+}
+.sub {
+    font-weight: 300;
+    font-size: clamp(36px, 4vw, 48px);
+    margin-bottom: 32px;
+
+}
+.text {
+    margin-bottom: 64px;
+}
+.link {
+    -webkit-border-radius:  50px;
+    -moz-border-radius:  50px;
+    border-radius:  50px;
+    max-width: 306px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .ad {
+        background-position: center;
+        padding: 128px clamp(8px, 3vw, 52px) 28px clamp(8px, 3vw, 52px);
+    }
+}
+@media (max-width: 359px) {
+    .link {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 48px;
+        max-width: 80vw;
+    }
+    .sub, .text {
+        max-width: 80vw;
+    }
+
+}

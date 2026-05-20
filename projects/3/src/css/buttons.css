@@ -1,0 +1,96 @@
+:root {
+    --gold-color-start: #f1e27f; /* начало */
+    --gold-color-end: rgba(255, 200, 65, 0.42); /* конец */
+    --gold-gradient-shine: linear-gradient(90deg, transparent 0%, var(--gold-color-end) 50%, transparent 100%);
+    --gold-border-color: #FFEA00aa;
+}
+
+.button {
+    font-family: var(--font-title);
+    background: var(--acc);
+    box-sizing: border-box;
+    display: inline-block;
+    color: var(--text-d);
+    font-size: 16px;
+    text-align: center;
+    border-radius: 50px;
+    width: max-content;
+    padding: 8px 40px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s ease, background-position 0s;
+
+    /*&::after {*/
+    /*    position: absolute;*/
+    /*    content: '';*/
+    /*    inset: 0;*/
+    /*    padding: 3px;*/
+    /*    background: var(--grad);*/
+    /*    border-radius: inherit;*/
+    /*    mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);*/
+    /*}*/
+
+    /*&::before {*/
+    /*    content: '';*/
+    /*    position: absolute;*/
+    /*    top: 0;*/
+    /*    left: -100%;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    background: var(--gold-gradient-shine);*/
+    /*    transform: skewX(-30deg);*/
+    /*    animation: shine 3s infinite 2s;*/
+    /*    z-index: 2;*/
+    /*    pointer-events: none;*/
+    /*}*/
+
+    &:hover {
+        opacity: 1;
+        transform: scale(0.98);
+        filter: contrast(1.3);
+        box-shadow: 0px 0px 15.8px 0px #fb6031;
+    }
+
+    &:active {
+        transform: scale(0.94);
+        filter: contrast(1.6) brightness(0.8);
+    }
+
+    &:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+        background: linear-gradient(180deg, #a1a1a1 0%, #efda8d 53.37%, #b9c5c3 100%);
+
+        &::before {
+            animation: none;
+            display: none;
+        }
+
+        &::after {
+            opacity: 0;
+            animation: none;
+        }
+    }
+}
+
+/* Анимация золотого блика */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%; /* Перемещаем блик полностью за пределы кнопки справа */
+    }
+}
+
+/* Анимация золотого ободка (вращение градиента) */
+@keyframes border-shine {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}

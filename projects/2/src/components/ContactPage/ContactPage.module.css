@@ -1,0 +1,60 @@
+.contactPage {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.contacts {
+    margin-top: 60px;
+    background: #25003D;
+    border: 1px solid #8500DB;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 60px;
+}
+
+.contactTitle {
+    color: #FACC15;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contactsList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contactItem {
+    display: grid;
+    gap: 10px;
+}
+
+.contactItemTitle {
+    color: #FACC15;
+    font-size: 18px;
+    position: relative;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contactItem:nth-child(1) .contactItemTitle::before {
+    content: url(../../../public/docs_pic/logos-a5q/contact-mail.svg);
+}
+.contactItem:nth-child(2) .contactItemTitle::before {
+    content: url(../../../public/docs_pic/logos-a5q/contact-phone.svg);
+}
+.contactItem:nth-child(3) .contactItemTitle::before {
+    content: url(../../../public/docs_pic/logos-a5q/contact-geo.svg);
+}
+.contactItem:nth-child(4) .contactItemTitle::before {
+    content: url(../../../public/docs_pic/logos-a5q/contact-time.svg);
+}
+
+@media (max-width: 468px) {
+    .contactsList {
+       flex-direction: column;
+    }
+}

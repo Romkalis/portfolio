@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Сохранение промышленного наследия: взгляд в прошлое сквозь руины" />
+		<meta name="keywords" content="руины, наследие, туризм, свердловская область, арт" />
+		<title>UralRuin&#160;&#8212; Сохраним прошлое</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="canonical" href="#" />
+		<script src="./js/index.bundle.js" type="module" defer></script>
+	</head>
+
+	<body>
+		<div class="burgerNav container">
+			<button class="burgerButton">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<ul class="burgerNavList">
+				<li class="burgerNavItem">
+					<a href="/" class="burgerNavLink" title="ГЛАВНАЯ"> ГЛ<span class="italic">А</span>ВНА<span class="italic">Я</span> </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="" class="burgerNavLink" title="НОВОСТИ"> НО<span class="italic">В</span>ОС<span class="italic">Т</span>И </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="/about.html" class="burgerNavLink" title="О ПРОЕКТЕ"> О&#160;ПР<span class="italic">О</span>ЕКТ<span class="italic">Е</span> </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="/expedition.html" class="burgerNavLink" title="ЭКСПЕДИЦИИ"> Э<span class="italic">К</span>СПЕДИ<span class="italic">Ц</span>ИИ </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="" class="burgerNavLink" title="ВЕЛОМАРШРУТ"> В<span class="italic">Е</span>ЛОМАРШ<span class="italic">Р</span>УТ </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="#" class="burgerNavLink" title="АРХ-РЕЗИДЕНЦИЯ">
+						А<span class="italic">Р</span>Х-Р<span class="italic">Е</span>ЗИДЕН<span class="italic">Ц</span>ИЯ
+					</a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="#" class="burgerNavLink" title="ФЕСТИВАЛЬ"> ФЕСТ<span class="italic">И</span>ВА<span class="italic">Л</span>Ь </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="#" class="burgerNavLink" title="МЫ ПРОЕКТИРУЕМ"> МЫ&#160;ПР<span class="italic">О</span>ЕКТИРУ<span class="italic">Е</span>М </a>
+				</li>
+				<li class="burgerNavItem">
+					<a href="" class="burgerNavLink" title="МАГАЗИН"> МА<span class="italic">Г</span>АЗИН </a>
+				</li>
+			</ul>
+		</div>
+		<main class="ruins">
+			<h1 class="visually-hidden" title="UralRuin - сохраняем наследие прошлого">UralRuin&#160;&#8212; сохраним наследие прошлого</h1>
+
+			<section class="top">
+				<picture>
+					<source srcset="/img/backgrounds/top-ruin.webp 1x, /img/backgrounds/top-ruin@2x.webp 2x" type="image/webp" />
+					<source srcset="/img/backgrounds/top-ruin.jpg 1x, /img/backgrounds/top-ruin@2x.jpg 2x" type="image/jpeg" />
+					<img
+						class="top__bg"
+						src="/img/backgrounds/top-ruin.jpg"
+						alt="«Маяк», здание бывшей ГЭС село Маминское"
+						class="top__bg"
+						title="«Маяк», здание бывшей ГЭС село Маминское"
+					/>
+				</picture>
+				<a href="/" class="top__title top__breadscrumbs" title="Главная">&lt;</a>
+				<h1 class="top__title" title="О ПРОЕКТЕ:РУИНЫ / АРТ >>">
+					РУИ<i>Н</i>Ы&#160;/ АРТ
+				</h1>
+			</section>
+
+			<div class="ruins__tab container">
+				<button class="ruins__tab-button is-active" data-tab="ruine">Руины</button>
+				<button class="ruins__tab-button" data-tab="art">Арт</button>
+			</div>
+
+			<section class="ruins__gallery container active" id="ruine">
+				<h2 class="visually-hidden">Руины</h2>
+				<p class="ruins__section-text">
+					Небольшой предворяющий текст о&#160;руинах небольшой предворяющий текст о&#160;руинах небольшой предворяющий текст о руинах небольшой предворяющий текст
+					о&#160;руинах небольшой предворяющий текст о&#160;руинах небольшой предворяющий текст о&#160;руинах небольшой предворяющий текст о&#160;руинах небольшой
+					предворяющий текст о&#160;руинах. Изучите все или выберите интересующие &#8811;
+				</p>
+
+				<nav class="ruin__nav">
+					<form class="ruin__navform">
+						<label class="ruin__nav-label" for="destination">
+							<select class="ruin__dropdown" id="destination" name="destination">
+								<option value="all">Населенный пункт</option>
+								<option value="maminskoe">Маминское</option>
+								<option value="kamyshevo">Камышево</option>
+								<option value="isetskoe">Исетское</option>
+								<option value="troitskoe">Троицкое</option>
+								<option value="gorniy">Горный</option>
+								<option value="smolinskoe">Смолинское</option>
+								<option value="chernousovo">Черноусово</option>
+								<option value="bobrovskiy">Бобровский</option>
+								<option value="kolytkino">Колюткино</option>
+								<option value="kamensk">Каменск-Demo Regionьский</option>
+							</select>
+						</label>
+						<label class="ruin__nav-label" for="useless">
+							<select class="ruin__dropdown" id="useless" name="useless">
+								<option value="all">Назначение</option>
+								<option value="2">Опция 2</option>
+								<option value="3">Опция 3</option>
+							</select>
+						</label>
+					</form>
+					<div class="ruin__view">
+						<button class="ruin__view-button is-active" data-view="gallery">Плитка</button>
+						<button class="ruin__view-button" data-view="map">Карта</button>
+					</div>
+				</nav>
+
+				<div class="ruin__info">
+					<ul class="ruin__list">
+						<!-- <li class="ruin__item" data-place="kamyshevo">
+            <picture>
+<source srcset="/img/slider/ruin-01.webp 1x, /img/slider/ruin-01@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-01.jpg 1x, /img/slider/ruin-01@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-01.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Церковь Георгия Победоносца</p>
+            <p class="ruin__location">село Камышево</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 1925 год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="kamyshevo">
+            <picture>
+<source srcset="/img/slider/ruin-02.webp 1x, /img/slider/ruin-02@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-02.jpg 1x, /img/slider/ruin-02@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-02.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Сапого-валяльная фабрика</p>
+            <p class="ruin__location">село Камышево</p>
+
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="maminskoe">
+            <picture>
+<source srcset="/img/slider/ruin-03.webp 1x, /img/slider/ruin-03@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-03.jpg 1x, /img/slider/ruin-03@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-03.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Церковь Архангела Михаила </p>
+            <p class="ruin__location">село Маминское</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="maminskoe">
+            <picture>
+<source srcset="/img/slider/ruin-04.webp 1x, /img/slider/ruin-04@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-04.jpg 1x, /img/slider/ruin-04@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-04.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Сельская управа</p>
+            <p class="ruin__location">село Маминское</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="maminskoe">
+            <picture>
+<source srcset="/img/slider/ruin-05.webp 1x, /img/slider/ruin-05@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-05.jpg 1x, /img/slider/ruin-05@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-05.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">«Маяк», здание бывшей ГЭС </p>
+            <p class="ruin__location">село Маминское</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="isetskoe">
+            <picture>
+<source srcset="/img/slider/ruin-06.webp 1x, /img/slider/ruin-06@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-06.jpg 1x, /img/slider/ruin-06@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-06.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Церковь св. Николая Победоносца</p>
+            <p class="ruin__location">село Исетское</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="troitskoe">
+            <picture>
+<source srcset="/img/slider/ruin-07.webp 1x, /img/slider/ruin-07@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-07.jpg 1x, /img/slider/ruin-07@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-07.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Троицкая церковь</p>
+            <p class="ruin__location">село Троицкое</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="gorniy">
+            <picture>
+<source srcset="/img/slider/ruin-08.webp 1x, /img/slider/ruin-08@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-08.jpg 1x, /img/slider/ruin-08@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-08.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Картонная фабрика</p>
+            <p class="ruin__location">поселок Горный</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="smolinskoe">
+            <picture>
+<source srcset="/img/slider/ruin-09.webp 1x, /img/slider/ruin-09@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-09.jpg 1x, /img/slider/ruin-09@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-09.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Церковь Илии Пророка</p>
+            <p class="ruin__location">село Смолинское</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="chernousovo">
+            <picture>
+<source srcset="/img/slider/ruin-10.webp 1x, /img/slider/ruin-10@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-10.jpg 1x, /img/slider/ruin-10@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-10.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Льно-прядильная фабрика</p>
+            <p class="ruin__location">село Черноусово</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li>
+
+          <li class="ruin__item" data-place="chernousovo">
+            <picture>
+<source srcset="/img/slider/ruin-11.webp 1x, /img/slider/ruin-11@2x.webp 2x" type="image/webp">
+<source srcset="/img/slider/ruin-11.jpg 1x, /img/slider/ruin-11@2x.jpg 2x" type="image/jpeg">
+<img class="ruins__image" src="/img/slider/ruin-11.jpg" alt="Описание фото">
+</picture>
+            <p class="ruin__title">Конюшни</p>
+            <p class="ruin__location">село Черноусово</p>
+            <div class="ruin__info slider-view">
+              <p class="ruin__date">Даты строительства: 19ХХ год</p>
+              <p class="ruin__activity">Нет</p>
+              <p class="ruin__geo">Координаты: </p>
+
+              <p class="ruin__information">Краткая информация о руине краткая информация о руине краткая информация о
+                руине краткая информация о руине краткая информация о руине краткая информация о руине краткая
+                информация о руине краткая информация о руине</p>
+
+              <p class="ruin__ad">
+                Увидеть ее вместе с нами можно в <a href="/expedition" class="underline">ближайшей экспедиции</a> > >
+              </p>
+            </div>
+          </li> -->
+					</ul>
+
+					<div class="splider__wrapper">
+						<div class="splide ruin-slider">
+							<div class="splide__track">
+								<ul class="splide__list"></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="ruins__gallery container" id="art">
+				<h2 class="visually-hidden">Арт объекты</h2>
+				<p class="ruins__section-text">
+					Небольшой предворяющий текст об&#160;арте и&#160;искусстве среди руин небольшой предворяющий текст об&#160;арте и&#160;искусстве среди руин небольшой предворяющий
+					текст об&#160;арте и&#160;искусстве среди руин небольшой предворяющий текст об&#160;арте и искусстве среди руин небольшой предворяющий текст об&#160;арте
+					и&#160;искусстве среди руин небольшой предворяющий текст об арте и&#160;искусстве среди руин
+				</p>
+
+				<nav class="ruin__nav">
+					<div class="ruin__view">
+						<button class="ruin__view-button is-active" data-view="gallery">Плитка</button>
+						<button class="ruin__view-button" data-view="map">Карта</button>
+					</div>
+				</nav>
+
+				<div class="ruin__info">
+					<ul class="ruin__list">
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-01.webp 1x, /img/slider/art-01@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-01.jpg 1x, /img/slider/art-01@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-01.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">&#171;Маяк&#187;, здание бывшей ГЭС</p>
+							<p class="ruin__location">село Маминское</p>
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 1925 год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-02.webp 1x, /img/slider/art-02@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-02.jpg 1x, /img/slider/art-02@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-02.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">&#171;Сад простыней&#187;</p>
+							<p class="ruin__location">село Маминское</p>
+
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 19ХХ год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-03.webp 1x, /img/slider/art-03@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-03.jpg 1x, /img/slider/art-03@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-03.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">Знак &#171;Не&#160;пустое место&#187;</p>
+							<p class="ruin__location">село Маминское</p>
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 19ХХ год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-04.webp 1x, /img/slider/art-04@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-04.jpg 1x, /img/slider/art-04@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-04.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">&#171;Солнце руин&#187;</p>
+							<p class="ruin__location">село Маминское</p>
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 19ХХ год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-05.webp 1x, /img/slider/art-05@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-05.jpg 1x, /img/slider/art-05@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-05.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">&#171;Во&#160;сне Игнатия Попова&#187;</p>
+							<p class="ruin__location">село ___</p>
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 19ХХ год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-06.webp 1x, /img/slider/art-06@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-06.jpg 1x, /img/slider/art-06@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-06.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">&#171;Закром&#187;</p>
+							<p class="ruin__location">село ___</p>
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 19ХХ год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+
+						<li class="ruin__item">
+							<picture>
+								<source srcset="/img/slider/art-07.webp 1x, /img/slider/art-07@2x.webp 2x" type="image/webp" />
+								<source srcset="/img/slider/art-07.jpg 1x, /img/slider/art-07@2x.jpg 2x" type="image/jpeg" />
+								<img class="ruins__image" src="/img/slider/art-07.jpg" alt="Описание фото" />
+							</picture>
+							<p class="ruin__title">&#171;Диалог&#187;, руины моста</p>
+							<p class="ruin__location">деревня Шилова</p>
+							<div class="ruin__info slider-view">
+								<p class="ruin__date">Даты строительства: 19ХХ год</p>
+								<p class="ruin__activity">Нет</p>
+								<p class="ruin__geo">Координаты:</p>
+
+								<p class="ruin__information">
+									Краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о руине краткая информация о&#160;руине краткая информация
+									о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине краткая информация о&#160;руине
+								</p>
+
+								<p class="ruin__ad">Увидеть ее&#160;вместе с&#160;нами можно в&#160;<a href="/expedition" class="underline">ближайшей экспедиции</a> > ></p>
+							</div>
+						</li>
+					</ul>
+
+					<div class="splider__wrapper">
+						<div class="splide ruin-slider">
+							<div class="splide__track">
+								<ul class="splide__list"></ul>
+							</div>
+						</div>
+					</div>
+
+					<p>
+						Каждый год количество объектов искусства среди руин становится больше на&#160;нашей резиденции&#160;&#8212;
+						<a href="/about" class="underline bold">узнать подробнее и&#160;стать участником > ></a>
+					</p>
+				</div>
+			</section>
+
+			<div class="ruin__map hidden">
+				<div id="map" class="r t-rec b-title" data-record-type="526">
+					<div class="t526">
+						<div class="t-section__container t-container">
+							<div class="t-col t-col_12">
+								<div class="t-align_center">
+									<h3 class="t-section__title t-title t-title_xs" field="btitle">Карта объектов URALRUIN</h3>
+								</div>
+							</div>
+
+							<div class="ruin__view map__nav">
+								<button class="ruin__view-button is-active" data-view="gallery">Плитка</button>
+								<button class="ruin__view-button" data-view="map">Карта</button>
+							</div>
+						</div>
+						<div class="b-yamap" id="mymap"></div>
+						<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=5622f3f8-13cb-4416-8718-9d7004f46df2" type="text/javascript"></script>
+					</div>
+				</div>
+
+				<div class="r t-rec" style="padding: 20px 0 40px 0; text-align: center;" data-record-type="526">
+					<div class="t526" style="padding-bottom: 20px;">
+						<div class="t-section__container t-container">
+							<div class="t-col t-col_12">
+								<div class="t-align_center">
+									<div class="t-section__title t-title t-title_xs" field="btitle">Выбирай маршрут</div>
+								</div>
+							</div>
+						</div>
+						<ul class="b-maps_links">
+							<li>ur-1</li>
+							<li>ur-2</li>
+							<li>ur-3</li>
+							<li>ur-4</li>
+							<li>ur-5</li>
+							<li>ur-6</li>
+						</ul>
+						<picture>
+							<source srcset="/img/maps/ur-1.webp 1x, /img/maps/ur-1@2x.webp 2x" type="image/webp" />
+							<img class="b-maps active" src="/img/maps/ur-1.webp" />
+						</picture>
+						<picture>
+							<source srcset="/img/maps/ur-2.webp 1x, /img/maps/ur-2@2x.webp 2x" type="image/webp" />
+							<img class="b-maps" src="/img/maps/ur-2.webp" />
+						</picture>
+						<picture>
+							<source srcset="/img/maps/ur-3.webp 1x, /img/maps/ur-3@2x.webp 2x" type="image/webp" />
+							<img class="b-maps" src="/img/maps/ur-3.webp" />
+						</picture>
+						<picture>
+							<source srcset="/img/maps/ur-4.webp 1x, /img/maps/ur-4@2x.webp 2x" type="image/webp" />
+							<img class="b-maps" src="/img/maps/ur-4.webp" />
+						</picture>
+						<picture>
+							<source srcset="/img/maps/ur-5.webp 1x, /img/maps/ur-5@2x.webp 2x" type="image/webp" />
+							<img class="b-maps" src="/img/maps/ur-5.webp" />
+						</picture>
+						<picture>
+							<source srcset="/img/maps/ur-6.webp 1x, /img/maps/ur-6@2x.webp 2x" type="image/webp" />
+							<img class="b-maps" src="/img/maps/ur-6.webp" />
+						</picture>
+					</div>
+					<a class="b-btn" href="/events" title="Доступные экскурсии">Посмотреть ближайшие экспедиции</a>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer container">
+			<div class="footer__social">
+				<a href="#" class="footer__link">
+					<svg class="footer__svg" width="43" height="27" viewBox="0 0 43 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M21.7598 26.9375C27.9805 26.9375 25.7624 22.9994 26.2425 21.8671C26.2354 21.0214 26.2282 20.208 26.2569 19.7135C26.651 19.8246 27.5809 20.2958 29.5016 22.1627C32.4668 25.1548 33.2247 26.9375 35.6201 26.9375H40.0294C41.4269 26.9375 42.1543 26.3588 42.518 25.8732C42.8692 25.4038 43.2132 24.5797 42.837 23.2968C41.8533 20.208 36.1164 14.8742 35.7599 14.3116C35.8136 14.2077 35.8996 14.0697 35.9444 13.9981H35.9408C37.0732 12.502 41.3947 6.02696 42.0307 3.43621C42.0325 3.43262 42.0343 3.42725 42.0343 3.42188C42.3783 2.23937 42.063 1.47254 41.7369 1.03896C41.246 0.390375 40.4648 0.0625 39.4095 0.0625H35.0002C33.5239 0.0625 32.4041 0.806041 31.8379 2.16233C30.8901 4.57212 28.2277 9.52787 26.2318 11.2819C26.1709 8.79688 26.2121 6.8995 26.2443 5.48946C26.3088 2.73925 26.5167 0.0625 23.6625 0.0625H16.7324C14.9443 0.0625 13.2333 2.01542 15.0858 4.33383C16.7055 6.36558 15.6681 7.49792 16.0175 13.1345C14.6558 11.6743 12.2335 7.73083 10.5207 2.69088C10.0405 1.32742 9.31308 0.0642915 7.26521 0.0642915H2.85592C1.06783 0.0642915 0 1.03896 0 2.67117C0 6.33692 8.11446 26.9375 21.7598 26.9375ZM7.26521 2.75179C7.654 2.75179 7.69342 2.75179 7.98188 3.57058C9.73592 8.73596 13.6704 16.3792 16.5443 16.3792C18.7032 16.3792 18.7032 14.1665 18.7032 13.3334L18.7014 6.70062C18.5832 4.50583 17.7841 3.41292 17.2591 2.75L23.5443 2.75717C23.5479 2.78763 23.5085 10.094 23.5622 11.8642C23.5622 14.3779 25.5581 15.8184 28.6738 12.6651C31.9615 8.95454 34.2352 3.40754 34.3265 3.18179C34.4609 2.85929 34.5774 2.75 35.0002 2.75H39.4095H39.4274C39.4256 2.75537 39.4256 2.76075 39.4238 2.76612C39.0207 4.64737 35.0414 10.6423 33.7102 12.5038C33.6887 12.5325 33.669 12.563 33.6493 12.5934C33.0634 13.5502 32.5868 14.6072 33.7299 16.0943C33.8338 16.2197 34.1062 16.5136 34.5003 16.9221C35.7258 18.187 39.9291 22.5121 40.3018 24.2321C40.0545 24.2715 39.7858 24.2428 35.6201 24.2518C34.7333 24.2518 34.0399 22.926 31.3936 20.2564C29.0142 17.9415 27.4698 16.9955 26.0634 16.9955C23.3329 16.9955 23.5317 19.2118 23.5568 21.8922C23.5658 24.7983 23.5479 23.8791 23.5676 24.0619C23.4081 24.1246 22.9513 24.25 21.7598 24.25C10.3917 24.25 2.9885 6.20613 2.70362 2.75717C2.80217 2.74821 4.15846 2.75358 7.26521 2.75179Z"
+						/>
+					</svg>
+				</a>
+				<a href="#" class="footer__link">
+					<svg class="footer__svg" width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M30.393 0.491374C29.8943 0.0344261 29.1854 -0.11785 28.543 0.093883L1.28549 9.07911C0.542635 9.32396 0.0388849 9.98707 0.00213291 10.7683C-0.0345585 11.5496 0.404709 12.2571 1.12122 12.5707L7.86221 15.52C7.89509 15.6726 9.83023 24.6478 9.89605 24.9529C9.98051 25.3448 10.1794 25.6938 10.6008 25.8012C11.0269 25.9098 11.328 25.6768 11.646 25.4388C11.823 25.3063 16.6484 21.693 16.6484 21.693L22.4966 26.4786C22.8372 26.7575 23.2535 26.9029 23.678 26.9029C23.8801 26.9028 24.0842 26.8699 24.2827 26.8026C24.8982 26.5939 25.3545 26.0915 25.5032 25.4589L30.9504 2.29955C31.1052 1.6411 30.8917 0.948321 30.393 0.491374ZM12.0818 17.2101C12.0785 17.2179 12.0752 17.2268 12.0721 17.2375L10.9445 21.1772L9.68607 15.3407L18.3393 10.533L12.2893 16.8588C12.194 16.9585 12.1239 17.079 12.0818 17.2101ZM12.4397 22.57L12.9518 20.7805L13.4417 19.0689L15.1971 20.5053L12.4397 22.57ZM29.1781 1.88262L23.731 25.0419C23.7282 25.0534 23.7246 25.0693 23.698 25.0783C23.6716 25.0873 23.6587 25.0771 23.6496 25.0695L17.2504 19.833C17.2502 19.8328 17.2501 19.8327 17.2499 19.8325L14.285 17.4063L23.8104 7.44646C24.1215 7.12114 24.1481 6.61733 23.8731 6.26101C23.5979 5.90463 23.1037 5.80285 22.7103 6.02155L8.60585 13.8581L1.85105 10.9026C1.83047 10.8936 1.81915 10.8886 1.82078 10.8538C1.82242 10.8191 1.83416 10.8152 1.85547 10.8081L29.113 1.82298C29.1262 1.81868 29.1411 1.81372 29.163 1.8337C29.1849 1.8538 29.1813 1.86906 29.1781 1.88262Z"
+						/>
+					</svg>
+				</a>
+				<a href="#" class="footer__link">
+					<svg class="footer__svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_2428_764)">
+							<path
+								d="M20.2727 0H7.72678C3.46623 0 0 3.4664 0 7.72694V20.2729C0 24.5336 3.46623 27.9998 7.72678 27.9998H20.2727C24.5336 27.9998 27.9998 24.5334 27.9998 20.2729V7.72694C28 3.4664 24.5336 0 20.2727 0ZM25.5157 20.2729C25.5157 23.1638 23.1638 25.5156 20.2729 25.5156H7.72678C4.83607 25.5157 2.48428 23.1638 2.48428 20.2729V7.72694C2.48428 4.83623 4.83607 2.48428 7.72678 2.48428H20.2727C23.1636 2.48428 25.5156 4.83623 25.5156 7.72694V20.2729H25.5157Z"
+							/>
+							<path
+								d="M14 6.78516C10.0217 6.78516 6.78516 10.0217 6.78516 14C6.78516 17.9782 10.0217 21.2145 14 21.2145C17.9783 21.2145 21.2149 17.9782 21.2149 14C21.2149 10.0217 17.9783 6.78516 14 6.78516ZM14 18.7301C11.3917 18.7301 9.26944 16.6082 9.26944 13.9998C9.26944 11.3913 11.3915 9.26927 14 9.26927C16.6085 9.26927 18.7306 11.3913 18.7306 13.9998C18.7306 16.6082 16.6083 18.7301 14 18.7301Z"
+							/>
+							<path
+								d="M21.5171 4.67871C21.0385 4.67871 20.5683 4.87249 20.2303 5.212C19.8906 5.54987 19.6953 6.02022 19.6953 6.50052C19.6953 6.97932 19.8907 7.44951 20.2303 7.78903C20.5681 8.12689 21.0385 8.32232 21.5171 8.32232C21.9974 8.32232 22.4661 8.12689 22.8056 7.78903C23.1452 7.44951 23.3389 6.97915 23.3389 6.50052C23.3389 6.02022 23.1452 5.54987 22.8056 5.212C22.4678 4.87249 21.9974 4.67871 21.5171 4.67871Z"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_2428_764">
+								<rect width="28" height="28" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+			</div>
+
+			<blockquote class="footer__copyright">
+				&#169; 2025, АНО URALRUIN
+			</blockquote>
+		</footer>
+	</body>
+</html>

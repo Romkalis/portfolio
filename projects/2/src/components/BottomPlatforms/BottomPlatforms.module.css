@@ -1,0 +1,111 @@
+.platforms {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.top {
+    max-width: 758px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.list {
+    perspective: 2000px;
+    will-change: transform;
+    transition: transform 0.5s ease;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    gap: 20px;
+
+    .slide {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        transition: transform .3s ease 0.3s, opacity .5s ease, filter 0.8s ease 0.8s, box-shadow 0.5s ease;
+
+        &:hover {
+            box-shadow: 0 0 30px #3B7DFE;
+            transition: all .4s ease-in-out;
+        }
+    }
+}
+.list:hover .slide:not(:hover) {
+    transform: translateZ(-300px) rotateZ(2deg) rotateY(20deg);
+    opacity: 0.4;
+    filter: drop-shadow(0 0 10px #548EFF55);
+    transition: transform .3s ease 0.3s, opacity .5s ease, filter 0.8s ease 0.3s;
+    z-index: -1;
+}
+.slide {
+    background: var(--grd);
+    border-radius: 16px;
+    padding: 34px 24px;
+    border: 1px solid #C1CCEC;
+    backdrop-filter: blur(5px);
+    text-align: center;
+
+    display: grid;
+    place-items: center;
+    gap: 12px;
+
+}
+.rate {
+    font-weight: 800;
+}
+.rateList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+}
+
+.rateItem {
+    background-image: url(../../../public/assets-pictures/lGty67q/logotypes-icons/lGty67q-rate-star.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    aspect-ratio: 1;
+}
+.rateItem:nth-child(3) {
+    width: 40px;
+}
+.bonusTitle {
+    margin-bottom: auto;
+}
+.bonusText {
+    font-weight: 800;
+}
+.button {
+    background-color: var(--acc);
+}
+.buttonSec {
+    border: 1px solid var(--acc);
+}
+
+@media (max-width: 1220px) {
+    .list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 359px) {
+    .slide {
+        padding: 24px 12px;
+    }
+}

@@ -1,0 +1,120 @@
+.reviews {
+    width: 100%;
+    overflow: visible;
+    max-width: calc(100vw - 40px);
+    margin-bottom: 60px;
+}
+.title {
+    margin-bottom: 20px;
+}
+.slider {
+    overflow: visible;
+}
+.slide {
+    background: #25003D;
+    border: 1px solid #BF5CFF;
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    background-image: url(../../../public/docs_pic/bg/user-pic-1.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 66px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+}
+.slide:nth-child(2) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-2.webp);
+}
+.slide:nth-child(3) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-3.webp);
+}
+.slide:nth-child(4) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-4.webp);
+}
+.slide:nth-child(5) .icon{
+    background-image: url(../../../public/docs_pic/bg/user-pic-1.webp);
+}
+.text {
+    margin-right: auto;
+}
+.name {
+    font-size: 16px;
+    color: #BF5CFF;
+}
+.nick {
+    font-size: 14px;
+}
+
+.count {
+    background: #8500DB55;
+    border: 1px solid #BF5CFF;
+    border-radius: 50px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FED240;
+    font-size: 16px;
+
+    position: relative;
+}
+
+.count::after {
+    margin-top: 3px;
+    content: url("../../../public/docs_pic/logos-a5q/coin.webp");
+}
+@media (max-width: 768px) {
+    .slide {
+        padding: 12px 20px;
+        display: grid;
+        grid-template-columns: 66px 1fr;
+        gap: 20px;
+    }
+    .count {
+        grid-column: 1/-1;
+        justify-content: center;
+    }
+}
+@media (max-width: 468px) {
+    .slide {
+        padding: 12px;
+        grid-template-columns: 60px 1fr;
+        gap: 10px;
+    }
+    .icon {
+        width: 60px;
+    }
+    .count {
+        grid-column: 1/-1;
+        justify-content: center;
+    }
+}
+@media (max-width: 390px) {
+    .slide {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .icon {
+        width: 66px;
+    }
+    .text, .name, .nick {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .count {
+        grid-column: 1/-1;
+        justify-content: center;
+    }
+
+}

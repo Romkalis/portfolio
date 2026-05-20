@@ -1,0 +1,58 @@
+.about {
+    margin-top: 10px;
+    margin-bottom: clamp(70px, 5vw, 100px);
+    display: grid;
+    grid-template-columns:  auto 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.info {
+    max-width: 630px;
+}
+
+.text {
+    color: var(--grey)
+}
+
+.pic {
+    background-image: url(../../../public/asset-files/akjsd5/backpics/-about-rifleman.webp);
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: 20px;
+    background-position: bottom;
+    width: 100%;
+    max-width: 413px;
+    aspect-ratio: 1;
+    transform: rotateY(180deg);
+    margin-left: auto;
+}
+
+
+@media (max-width: 900px) {
+    .about {
+        grid-template-columns: 1fr;
+        position: relative;
+    }
+
+    .pic {
+        margin: auto;
+        max-width: 413px;
+    }
+
+    .info {
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 359px) {
+    .title {
+        font-size: 32px;
+    }
+}

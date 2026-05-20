@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    color: var(--text-l);
+    background-color: var(--bg-main);
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 1200px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 600px) {
+        padding: 0 24px;
+    }
+}
+
+.agreements {
+    margin: clamp(20px, 5vw, 50px) auto;
+    width: 100%;
+
+    h1, h2, h3 {
+        padding: 10px 0;
+    }
+
+    p {
+        padding: 10px 0;
+    }
+
+    ul, ol {
+        padding-left: 1rem;
+    }
+    .subtitle {
+        font-family: var(--font-title);
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,144 @@
+.survey {
+    text-align: center;
+
+}
+.wrap {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin: auto;
+    background-image: url(../../../public/asset-files/akjsd5/backpics/astra-interactive-bg.webp);
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.stepList {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    position: relative;
+}
+.stepList::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--acc2);
+}
+
+.stepItem {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    border: 1px solid var(--acc2);
+}
+
+
+
+.active {
+    background-color: var(--acc2);
+}
+.title {
+    /*color:var()*/
+}
+.decription {}
+.surveyWrap {
+    background: #170E27;
+    min-height: 302px;
+    padding: 50px 30px;
+    color: var(--text-l);
+
+    display: grid;
+    gap: 20px;
+    align-items: center;
+}
+.blockTitle {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-right: auto;
+}
+.label {
+    display: flex;
+    gap:8px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    width: max-content;
+    margin-left: auto;
+}
+.button {
+    background-color: var(--acc);
+    border: none;
+    color: var(--text-l);
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 50px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.9;
+        filter: contrast(1.2);
+    }
+}
+.prev {
+    border: 2px solid transparent;
+    background-color: transparent;
+    font-weight: 400;
+    &:hover {
+        border: 2px solid var(--acc);
+
+    }
+}
+
+.next {
+}
+
+.text {
+    font-size: 20px;
+}
+
+.lastScreen {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    gap: 20px;
+    place-items: center;
+
+    .text {
+        font-size: 15px;
+    }
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 500px) {
+    .wrap {
+        background-size: cover;
+    }
+}

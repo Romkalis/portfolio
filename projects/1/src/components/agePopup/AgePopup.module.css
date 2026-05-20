@@ -1,0 +1,99 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+
+.wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 50px 30px 30px;
+    color: var(--text-l);
+    background: #1d2751aa;
+
+    border-radius: 20px;
+    border: 1px solid #A7B8FF;
+    max-width: 453px;
+    width: 100%;
+
+    transition: all .5s ease-in-out;
+    text-align: center;
+    z-index: 200;
+}
+
+.close {
+    background-image: url(../../../public/eg-docs/icons/ejGam332-close-cross.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 20px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        transform: rotate(-180deg) scale(1.1);
+        filter: drop-shadow(0px 0px 2px #ff0000);
+    }
+
+}
+.title {
+    font-weight: 400;
+}
+
+.buttons {}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    color: var(--text-l);
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        border-color: wheat;
+        transform: scaleX(.98);
+    }
+}
+
+
+
+
+
+
+@media (max-width: 394px) {
+    .cookie-popup {
+        width: 100%;
+    }
+}
+
+.popup.active {
+    transform: translateX(0%);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}

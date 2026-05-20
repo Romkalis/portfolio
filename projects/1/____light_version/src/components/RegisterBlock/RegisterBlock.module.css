@@ -1,0 +1,77 @@
+.formBlock {
+    padding: 24px;
+    border-radius: 24px;
+    background: #F9F1E3;
+    border-top: 1px solid #D2A478;
+    box-shadow: 0px 1px 3px 0px #0000001A;
+    display: grid;
+    gap: 16px;
+}
+.title {
+    text-align: center;
+    color: var(--acc);
+}
+.description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+.form {
+    display: grid;
+    gap: 16px;
+}
+.label {
+    display: grid;
+}
+.checkLabel {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 15px;
+    a {
+        color: var(--acc);
+    }
+}
+.labelTitle {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.input {
+    padding: 8px 16px;
+    border: 1px solid #EFE3CF;
+    border-radius: 8px;
+}
+.inputError {
+    border-color: #FB5A46;
+}
+.error {
+    margin-top: 6px;
+    color: #FB5A46;
+    font-size: 13px;
+}
+.button {
+    color: var(--text-d);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.bottom {
+    text-align: center;
+    color: var(--acc);
+
+    a {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}
+.bottomText {
+    font-size: 14px;
+    text-align: center;
+}
+@media (max-width: 359px) {
+    .formBlock {
+        padding:24px 12px;
+    }
+}

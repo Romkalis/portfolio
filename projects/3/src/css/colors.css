@@ -1,0 +1,18 @@
+:root {
+
+    --acc:   #9a14fc;
+    --acc2: #5186ed;
+    --text-l: #ffffff;
+    --text-c: #3FB3EE;
+    --text-g: #C1C1C1;
+    --text-d:  #2b2b2b;
+
+    --grey-l: #9A9A9A;
+    --grey-d: #6e6e6e;
+
+    --btn-bg-dark: transparent;
+    --btn-bg-l:  #3FB3EE;
+    --btn-bg-c:  #5adeeb;
+
+    --bg-main: #090510;
+}

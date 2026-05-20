@@ -1,0 +1,61 @@
+.howToBuy {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info {
+    max-width: 632px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text {
+    color: var(--text-g);
+    margin-bottom: 20px;
+}
+
+.pic {
+    margin-left: auto;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 358 / 546;
+    background-image: url(../../../public/asset-files/akjsd5/backpics/-howto-buy.webp);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-width: 300px;
+}
+
+.pageLine {
+    background: linear-gradient(180deg, rgba(38, 38, 46, 0.85) 0%, #151518 100%), url(../../../public/asset-files/akjsd5/items-pic/-offer-fn.webp);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: clamp(50px, 5vw, 100px);
+}
+.pageLineText {
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .pic {
+        display: none;
+    }
+    .howToBuy {
+        grid-template-columns: 1fr;
+    }
+}

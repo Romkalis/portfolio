@@ -1,0 +1,159 @@
+.catalog {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.title {
+
+}
+.changer {
+    display: flex;
+    gap:10px;
+    align-items: center;
+    list-style-type: none;
+}
+.changeItem {
+    flex: 0 0 32%;
+}
+.changeButton {
+    background: #15151880;
+    width: clamp(90px, 25vw, 120px);
+    aspect-ratio: 120/45;
+    display: grid;
+    border-radius: 8px;
+    border: 2px solid #15151880;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: 40%;
+    transition: all .8s ease;
+}
+.changeButton.active {
+    border: 2px solid white;
+}
+.changeItem:nth-child(1) .changeButton {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-cs.svg);
+}
+.changeItem:nth-child(2) .changeButton {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-dota.svg);
+    background-size: 70%;
+}
+.changeItem:nth-child(3) .changeButton {
+    background-image: url(../../../public/asset-files/akjsd5/logotypes-icons/bNya67Asd-fortnite.svg);
+    background-size: 50%;
+}
+
+.list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+}
+.item {
+
+}
+
+.itemBg {
+    background:linear-gradient(0deg, rgba(197, 192, 58, 0.15) 0%, rgba(176, 197, 58, 0.01) 50%, rgba(176, 197, 58, 0) 100%), linear-gradient(0deg, #26272F, #26272F);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all .4s ease;
+}
+.image {
+    max-width: 207px;
+    width: 100%;
+    aspect-ratio: 207/155;
+    object-fit: contain;
+    object-position: center;
+    margin: auto;
+    transition: all .4s ease 0.4s;
+}
+.bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    font-weight: 700;
+}
+.grey {
+    color: var(--grey);
+}
+.buyButton {
+    color:var(--acc);
+    border: 2px solid var(--acc);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: all .8s ease 0.4s;
+}
+.inCart {
+    .buyButton {
+        color:tomato;
+        border: 2px solid tomato;
+    }
+    .itemBg {
+        box-shadow: 0 0 10px tomato;
+    }
+    .image {
+        filter: drop-shadow(0 0 10px goldenrod);
+    }
+}
+.name {
+    margin-top: 20px;
+    font-weight: 700;
+}
+.description {
+    color: var(--grey)
+}
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .bottom {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 12px;
+    }
+    .buyButton {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 359px) {
+    .item {
+        max-width: 90vw;
+        width: 100%;
+        margin: auto;
+    }
+    .itemBg {
+        padding: 14px
+    }
+    .changer {
+        display: flex;
+        gap:5px;
+        align-items: center;
+        list-style-type: none;
+    }
+}

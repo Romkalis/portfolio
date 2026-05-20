@@ -1,0 +1,96 @@
+.sect {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.sect::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -50vw;
+    width: 200vw;
+    min-height: 100vh;
+    height: 100%;
+    background: linear-gradient(135deg, #101828 0%, #0b121b 50%, #101828 100%);
+    z-index: -1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 954px;
+    align-items: start;
+
+}
+
+.infoBlock {
+    color: var(--text-l);
+    display: grid;
+    gap: 16px;
+
+    .title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .text {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    ul {
+        margin-left: 1em;
+        list-style-type: none;
+        display: grid;
+        gap: 16px;
+    }
+    li {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    li::before {
+        content: url(../../../public/eg-docs/icons/ejGam332-reg-arrow.svg);
+        display: grid;
+        place-items: center;
+    }
+}
+
+
+@media (max-width: 1100px) and (min-width: 901px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .sect {
+        margin-top: 80px;
+        background: linear-gradient(135deg, #101828 0%, #1E2939 50%, #101828 100%);
+        min-height: unset;
+        padding: 80px 16px;
+    }
+    .sect::before {
+    content: unset;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .infoBlock {
+        display: none;
+    }
+}
+
+@media (max-width: 359px) {
+    .container {
+        padding: 0;
+
+    }
+}

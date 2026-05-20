@@ -1,0 +1,102 @@
+.respons {
+
+    padding-bottom: 128px;
+}
+.title {
+    margin-bottom: 32px;
+    color: deepskyblue;
+}
+.sub {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
+    text-align: center;
+    color: rgba(0, 191, 255, 0.49);
+}
+.wrap {
+    position: relative;
+}
+.wrap::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 110%;
+    top: 40%;
+    left: -5%;
+    height: 35%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 10000%);
+}
+
+.wrapContent {
+    background:  var(--acc-d);
+    border-top: 2px solid rgba(0, 234, 255, 0.2);
+    box-shadow: 0px 25px 50px -12px rgba(0, 255, 193, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 97px clamp(20px,4vw,  50px);
+    padding-bottom: 70px;
+    border-radius: 24px;
+}
+
+.list {
+    margin-top: 32px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    li {
+        text-align: center;
+        padding: 12px 14px;
+        border-radius: 50px;
+        background:#FF96001A;
+        border: 2px solid #FF96004D;
+        color: var(--text-d);
+        font-weight: 500;
+    }
+}
+
+
+.notice {
+    margin-top: 128px;
+    margin-bottom: 128px;
+    max-width: 992px;
+    background:  var(--acc-d);
+    border-radius: 24px;
+    border: 2px solid #E65F2A4D;
+    padding: 24px 0;
+}
+
+.top {
+    background: linear-gradient(30deg, #F970DC99 0%, #384B8D99 35.1%, #362E5E 76.92%);
+
+    padding: 36px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #E65F2A4D;
+    display: grid;
+    place-items: center
+}
+
+.noticeText {
+    padding: 36px 24px;
+    max-width: 780px;
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 901px) {
+    .notice {
+        max-width: calc(100vw - 32px);
+    }
+}

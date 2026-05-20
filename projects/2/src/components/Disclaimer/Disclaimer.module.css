@@ -1,0 +1,20 @@
+.disclaimer {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    padding: 24px;
+    text-align: center;
+    background: var(--grd);
+    border: 1px solid #C1CCEC;
+    border-radius: 24px;
+}
+.title {
+    max-width: 1040px;
+    margin: auto;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.text {
+    max-width: 1040px;
+    margin: auto;
+}

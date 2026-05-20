@@ -1,0 +1,11 @@
+.velo__accordions .accordion-title {
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.velo__accordions ul, .velo__accordions ol {
+  display: grid;
+  gap: 0.5em;
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 150%;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJsb2Nrcy92ZWxvL3ZlbG9fX2FjY29yZGlvbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDSTtFQUNJO0VBQ0E7O0FBR0o7RUFDSTtFQUNBO0VBQ0E7RUFDQSIsImZpbGUiOiJibG9ja3MvdmVsby92ZWxvX19hY2NvcmRpb25zLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi52ZWxvX19hY2NvcmRpb25zIHtcbiAgICAuYWNjb3JkaW9uLXRpdGxlIHtcbiAgICAgICAgcGFkZGluZy10b3A6IDAuNWVtO1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAwLjVlbTtcblxuICAgIH1cbiAgICB1bCwgb2wge1xuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBnYXA6IC41ZW07XG4gICAgICAgIGZvbnQtc2l6ZTogY2xhbXAoMTRweCwgMnZ3LCAyMHB4KTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDE1MCU7XG4gICAgfVxufSJdfQ== */

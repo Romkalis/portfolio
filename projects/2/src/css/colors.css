@@ -1,0 +1,28 @@
+:root {
+    --acc:  #548EFF;
+    --link: #9b00ff;
+
+    --text-l: #ffffff;
+    --text-gr: #e4e4e4;
+    --text-c: #3B7DFE;
+    --text-g: #C1C1C1;
+    --text-d: #1D2124;
+
+
+    --grey-l: #9A9A9A;
+    --grey-d: #6e6e6e;
+
+    --btn-bg-dark: transparent;
+    --btn-bg-l: #3FB3EE;
+    --btn-bg-c: #5adeeb;
+
+    --bg-main: #150021;
+    --bg-c: #E0F2FF;
+    --bg-d: #1D2124;
+    --card: #F4F4F4;
+    --grd: linear-gradient(180deg, rgba(33, 33, 33, 0.4) 0%, rgba(40, 50, 63, 0.4) 100%);
+
+    --gr-1: linear-gradient(180deg, #E100FF 0%, #7D3FE7 100%);
+    --gr-2: linear-gradient(180deg, #FE0CD2 0%, #FE0C69 100%);
+    --gr-3: linear-gradient(-90deg, #E100FF 0%, #7D3FE7 60%)
+}

@@ -1,0 +1,43 @@
+.news {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    display: grid;
+    gap: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.list {
+    display: grid;
+    gap: 30px;
+    list-style: none;
+}
+
+.item {
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid var(--acc);
+    border-radius: 20px;
+}
+.item:nth-child(even) {
+    padding-left: 5%;
+}
+.item:nth-child(odd) {
+    padding-right: 5%;
+}
+
+.newsTitle {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--acc);
+}
+
+.button {
+    &:disabled {
+        color: gray;
+    }
+}

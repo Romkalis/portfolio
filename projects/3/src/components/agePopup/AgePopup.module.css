@@ -1,0 +1,96 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+
+.wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--text-d);
+    padding: 30px;
+
+    color: var(--text-l);
+    max-width: 400px;
+    width: 100%;
+
+    transition: all .5s ease-in-out;
+    text-align: center;
+    border-radius: 3px;
+
+    z-index: 200;
+}
+
+.title {
+    font-family: var(--font-title);
+    font-weight: 400;
+}
+
+.buttons {}
+
+.button {
+    margin-top: 10px;
+    background-color: var(--acc);
+    color: var(--text-l);
+
+    padding: 10px 10px;
+    transition: all .3s ease;
+    border-radius: 12px;
+    min-width: 45%;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        border-color: wheat;
+        transform: scaleX(.98);
+    }
+}
+
+.buttonReject {
+    background-color: #000;
+    color: var(--text-l);
+}
+
+
+
+
+@media (max-width: 394px) {
+    .cookie-popup {
+        width: 100%;
+    }
+}
+
+.popup.active {
+    transform: translateX(0%);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}

@@ -1,0 +1,204 @@
+.contact {
+    padding-top: clamp(20px, 6vw, 90px);
+    padding-bottom: clamp(20px, 6vw, 90px);
+    display: grid;
+    gap: 20px;
+}
+
+.title {
+}
+.description {
+    color: var(--grey);
+}
+
+.contactWrap {
+    display: grid;
+    grid-template-columns: 528fr 732fr;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.pic {
+    background: url(../../../public/asset-files/akjsd5/backpics/-contact-pic.webp);
+    width: 100%;
+    aspect-ratio: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 20px;
+
+}
+
+
+.info {
+    width: 100%;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    margin: auto;
+}
+
+.label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.label:nth-child(3),
+.label:nth-child(4) {
+    grid-column: 1/-1;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 10px;
+    color: var(--text-d);
+    background: #F4F4F4;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button {
+    grid-column: 1/-1;
+    font-size: 16px;
+    color: var(--text-d);
+    margin-right: auto;
+
+    &:disabled {
+        background: transparent;
+        border: 2px solid grey;
+        color: grey;
+    }
+}
+
+.checkboxLabel {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    input {
+        width: 20px;
+        height: 20px;
+    }
+}
+.link {
+    color: var(--acc);
+}
+
+.isSended {
+    height: 2em;
+    text-align: center;
+    transition: all .3s ease;
+    color: var(--acc);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.finaltext {
+    font-size: clamp(16px, 1.5vw, 24px);
+    font-weight: 700;
+
+}
+
+@media (max-width: 850px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 668px) {
+    .contactWrap {
+        grid-template-columns: 1fr;
+    }
+    .pic {
+        display: none;
+    }
+
+    .contact {
+        margin-bottom: 0px;
+    }
+
+    .title {
+        margin-bottom: 30px;
+    }
+
+    .wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .list {
+        grid-row: 2 /3;
+    }
+
+    .item {
+        margin-bottom: 14px;
+    }
+
+    .form {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 359px) {
+
+    .text {
+        word-break: break-word;
+    }
+}
+
+
+/*//POpup styles*/
+
+
+.popupBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(38, 38, 46, 0.85) 0%, #151518 100%);
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+.showPopup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popupField {
+    max-width: 732px;
+    width: 100%;
+    margin: 20px;
+    background: linear-gradient(180deg, rgba(38, 38, 46, 0.85) 0%, #151518 100%), url("../../../public/asset-files/akjsd5/backpics/-popup.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF80;
+    padding: clamp(20px, 4vw,  40px);
+    display: grid;
+     gap: 40px;
+    font-size: 18px;
+    color: var(--grey)
+}
+
+.popupTitle {
+    color: var(--text-l);
+}

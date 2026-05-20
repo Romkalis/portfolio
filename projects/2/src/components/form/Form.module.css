@@ -1,0 +1,98 @@
+.form {
+  color: var(--text-l);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 560px;
+  place-items: center;
+  margin: auto;
+}
+
+.label {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.input {
+  border: none;
+  background-color: var(--text-l);
+  padding: 1em;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: var(--text-d);
+}
+
+.textarea {
+
+}
+
+.formButton {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  background-color: var(--bg-d);
+  color: var(--text-l);
+  padding: 24px;
+
+  max-width: 453px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  place-items: center;
+
+}
+
+.popup_icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+
+  background-image: url(../../../public/assets-pictures/lGty67q/logotypes-icons/jeuxscenligne--accept.svg);
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.popupTitle {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.popupMessage {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+.popupClose {
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: var(--text-l);
+  background-color: var(--c-main);
+  border: none;
+
+}
