@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/maintenance-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model MaintenanceRecord {
+  id              String    @id @default(cuid())
+  carId           String
+  mileage         Int
+  performedAt     DateTime  @db.Timestamptz(3)
+  works           String
+  recommendations String?
+  cost            Decimal   @db.Decimal(12, 2)
+  attachments     Json?
+  deletedAt       DateTime? @db.Timestamptz(3)
+  createdAt       DateTime  @default(now()) @db.Timestamptz(3)
+
+  @@index([carId, performedAt])
+  @@map("maintenance_records")
+}
+
+model CarMaintenanceProfile {
+  id            String @id @default(cuid())
+  carId         String @unique
+  oilChangeKm   Int    @default(10000)
+  airFilterKm   Int    @default(15000)
+  sparkPlugKm   Int    @default(60000)
+  lastMileage   Int    @default(0)
+
+  @@map("car_maintenance_profiles")
+}

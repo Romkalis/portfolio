@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/finance-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ExpenseCategory {
+  maintenance
+  repair
+  fuel
+  insurance
+  tax
+  washing
+  fines
+  other
+}
+
+enum IncomeSource {
+  booking
+  additional_service
+  other
+}
+
+model Income {
+  id          String       @id @default(cuid())
+  carId       String?
+  bookingId   String?
+  source      IncomeSource @default(booking)
+  amount      Decimal      @db.Decimal(14, 2)
+  currency    String       @default("EUR")
+  description String?
+  occurredAt  DateTime     @db.Timestamptz(3)
+  deletedAt   DateTime?    @db.Timestamptz(3)
+  createdAt   DateTime     @default(now()) @db.Timestamptz(3)
+
+  @@index([carId, occurredAt])
+  @@map("income")
+}
+
+model Expense {
+  id          String          @id @default(cuid())
+  carId       String?
+  category    ExpenseCategory
+  amount      Decimal         @db.Decimal(14, 2)
+  currency    String          @default("EUR")
+  description String?
+  occurredAt  DateTime        @db.Timestamptz(3)
+  deletedAt   DateTime?       @db.Timestamptz(3)
+  createdAt   DateTime        @default(now()) @db.Timestamptz(3)
+
+  @@index([carId, occurredAt])
+  @@index([category])
+  @@map("expenses")
+}

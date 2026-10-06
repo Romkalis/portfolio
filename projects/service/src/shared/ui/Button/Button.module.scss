@@ -1,0 +1,60 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s, opacity 0.15s;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.md {
+  padding: 0.6rem 1.1rem;
+  font-size: 0.95rem;
+}
+
+.sm {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    background: var(--primary-hover);
+  }
+}
+
+.secondary {
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+
+  &:hover:not(:disabled) {
+    background: var(--bg-card);
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text-muted);
+
+  &:hover:not(:disabled) {
+    color: var(--text);
+    background: var(--bg-elevated);
+  }
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+}

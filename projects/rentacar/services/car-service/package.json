@@ -1,0 +1,51 @@
+{
+  "name": "@rentacar/car-service",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/main.js",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.2",
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/core": "^11.1.2",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-express": "^11.1.2",
+    "@nestjs/swagger": "^11.2.0",
+    "@prisma/client": "^6.19.3",
+    "@rentacar/prisma": "*",
+    "@rentacar/shared-types": "*",
+    "@rentacar/shared-utils": "*",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "minio": "^8.0.5",
+    "multer": "^2.0.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.7",
+    "@rentacar/eslint-config": "*",
+    "@rentacar/tsconfig": "*",
+    "@types/express": "^5.0.2",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.15.21",
+    "@types/passport-jwt": "^4.0.1",
+    "eslint": "^9.27.0",
+    "prisma": "^6.19.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

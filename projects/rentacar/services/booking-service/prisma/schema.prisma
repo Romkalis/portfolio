@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/booking-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum BookingStatus {
+  pending
+  confirmed
+  active
+  completed
+  cancelled
+  overdue
+}
+
+enum BlockType {
+  cleaning
+  manual
+  maintenance
+  service
+}
+
+model BookingSettings {
+  id                  String   @id @default("default")
+  cleaningBufferHours Int      @default(2)
+  updatedAt           DateTime @updatedAt @db.Timestamptz(3)
+
+  @@map("booking_settings")
+}
+
+model Booking {
+  id               String        @id @default(cuid())
+  carId            String
+  customerId       String?
+  pickupLocationId String
+  returnLocationId String
+  startAt          DateTime      @db.Timestamptz(3)
+  endAt            DateTime      @db.Timestamptz(3)
+  status           BookingStatus @default(pending)
+  totalPrice       Decimal?      @db.Decimal(12, 2)
+  notes            String?
+  deletedAt        DateTime?     @db.Timestamptz(3)
+  isArchived       Boolean       @default(false)
+  createdAt        DateTime      @default(now()) @db.Timestamptz(3)
+  updatedAt        DateTime      @updatedAt @db.Timestamptz(3)
+
+  options BookingOptionLink[]
+  blocks  BookingBlock[]
+
+  @@index([carId, startAt, endAt])
+  @@index([status])
+  @@index([deletedAt])
+  @@map("bookings")
+}
+
+model BookingOption {
+  id          String   @id @default(cuid())
+  code        String   @unique
+  name        String
+  pricePerDay Decimal  @db.Decimal(12, 2)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now()) @db.Timestamptz(3)
+
+  bookings BookingOptionLink[]
+
+  @@map("booking_options")
+}
+
+model BookingOptionLink {
+  id        String  @id @default(cuid())
+  bookingId String
+  optionId  String
+  quantity  Int     @default(1)
+  unitPrice Decimal @db.Decimal(12, 2)
+
+  booking Booking       @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  option  BookingOption @relation(fields: [optionId], references: [id])
+
+  @@unique([bookingId, optionId])
+  @@map("booking_option_links")
+}
+
+model BookingBlock {
+  id        String    @id @default(cuid())
+  carId     String
+  type      BlockType
+  startAt   DateTime  @db.Timestamptz(3)
+  endAt     DateTime  @db.Timestamptz(3)
+  reason    String?
+  bookingId String?
+  deletedAt DateTime? @db.Timestamptz(3)
+  createdAt DateTime  @default(now()) @db.Timestamptz(3)
+
+  booking Booking? @relation(fields: [bookingId], references: [id], onDelete: SetNull)
+
+  @@index([carId, startAt, endAt])
+  @@map("booking_blocks")
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  entity    String
+  entityId  String
+  action    String
+  oldValue  Json?
+  newValue  Json?
+  changedBy String?
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@index([entity, entityId])
+  @@map("audit_logs")
+}

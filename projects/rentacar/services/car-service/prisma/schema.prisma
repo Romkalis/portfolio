@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/car-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CarClass {
+  economy
+  standard
+  business
+  premium
+  suv
+  cabriolet
+  minivan
+}
+
+enum CarStatus {
+  available
+  booked
+  in_service
+  cleaning
+  damaged
+  inactive
+}
+
+enum Transmission {
+  manual
+  automatic
+}
+
+enum FuelType {
+  petrol
+  diesel
+  electric
+  hybrid
+}
+
+model Location {
+  id         String    @id @default(cuid())
+  name       String
+  city       String
+  country    String
+  address    String
+  timezone   String    @default("UTC")
+  latitude   Float?
+  longitude  Float?
+  deletedAt  DateTime? @db.Timestamptz(3)
+  isArchived Boolean   @default(false)
+  createdAt  DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt  DateTime  @updatedAt @db.Timestamptz(3)
+
+  cars Car[]
+
+  @@index([city, country])
+  @@map("locations")
+}
+
+model Car {
+  id            String       @id @default(cuid())
+  locationId    String
+  brand         String
+  model         String
+  class         CarClass
+  year          Int
+  transmission  Transmission
+  seats         Int
+  horsepower    Int?
+  engineVolume  Float?
+  fuelType      FuelType
+  color         String
+  trunkVolume   Int?
+  pricePerDay   Decimal      @db.Decimal(12, 2)
+  status        CarStatus    @default(available)
+  vin           String       @unique
+  mileage       Int          @default(0)
+  purchasePrice Decimal?     @db.Decimal(12, 2)
+  expenses      Json?
+  deletedAt     DateTime?    @db.Timestamptz(3)
+  isArchived    Boolean      @default(false)
+  createdAt     DateTime     @default(now()) @db.Timestamptz(3)
+  updatedAt     DateTime     @updatedAt @db.Timestamptz(3)
+
+  location         Location          @relation(fields: [locationId], references: [id])
+  photos           CarPhoto[]
+  serviceIntervals CarServiceInterval?
+
+  @@index([locationId])
+  @@index([status])
+  @@index([class])
+  @@index([deletedAt])
+  @@map("cars")
+}
+
+model CarPhoto {
+  id         String   @id @default(cuid())
+  carId      String
+  url        String
+  storageKey String?
+  fileName   String?
+  mimeType   String?
+  sortOrder  Int      @default(0)
+  isPrimary  Boolean  @default(false)
+  createdAt  DateTime @default(now()) @db.Timestamptz(3)
+
+  car Car @relation(fields: [carId], references: [id], onDelete: Cascade)
+
+  @@index([carId])
+  @@map("car_photos")
+}
+
+model CarServiceInterval {
+  id                 String @id @default(cuid())
+  carId              String @unique
+  oilChangeKm        Int    @default(10000)
+  airFilterKm        Int    @default(15000)
+  fuelFilterKm       Int    @default(30000)
+  cabinFilterKm      Int    @default(20000)
+  sparkPlugKm        Int    @default(60000)
+  customIntervals    Json?
+
+  car Car @relation(fields: [carId], references: [id], onDelete: Cascade)
+
+  @@map("car_service_intervals")
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  entity    String
+  entityId  String
+  action    String
+  oldValue  Json?
+  newValue  Json?
+  changedBy String?
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+
+  @@index([entity, entityId])
+  @@map("audit_logs")
+}

@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/pricing-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PricingSettings {
+  id                   String   @id @default("default")
+  weekendMultiplier    Decimal  @default(1.15) @db.Decimal(6, 3)
+  holidayMultiplier    Decimal  @default(1.25) @db.Decimal(6, 3)
+  summerMultiplier     Decimal  @default(1.10) @db.Decimal(6, 3)
+  winterMultiplier     Decimal  @default(0.95) @db.Decimal(6, 3)
+  highDemandMultiplier Decimal  @default(1.20) @db.Decimal(6, 3)
+  updatedAt            DateTime @updatedAt @db.Timestamptz(3)
+
+  @@map("pricing_settings")
+}
+
+model CarPricingOverride {
+  id                     String   @id @default(cuid())
+  carId                  String   @unique
+  pricePerDay            Decimal? @db.Decimal(12, 2)
+  pricePerWeek           Decimal? @db.Decimal(12, 2)
+  pricePerMonth          Decimal? @db.Decimal(12, 2)
+  customSummerMultiplier Decimal? @db.Decimal(6, 3)
+  customWinterMultiplier Decimal? @db.Decimal(6, 3)
+  customDemandMultiplier Decimal? @db.Decimal(6, 3)
+  deletedAt              DateTime? @db.Timestamptz(3)
+  createdAt              DateTime @default(now()) @db.Timestamptz(3)
+  updatedAt              DateTime @updatedAt @db.Timestamptz(3)
+
+  @@map("car_pricing_overrides")
+}
+
+model LoyaltyRule {
+  id              String  @id @default("default")
+  isEnabled       Boolean @default(true)
+  isVisible       Boolean @default(true)
+  tier10Percent   Int     @default(10)
+  tier30Percent   Int     @default(30)
+  discount10      Decimal @default(0.05) @db.Decimal(6, 3)
+  discount30      Decimal @default(0.10) @db.Decimal(6, 3)
+  manualDiscount  Decimal? @db.Decimal(6, 3)
+
+  @@map("loyalty_rules")
+}

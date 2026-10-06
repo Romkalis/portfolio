@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Демо hero-анимации в стиле morpho.org: 3D-сфера из частиц и орбита логотипов"
+		/>
+		<title>Morpho-style Hero — Vanilla Demo</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.170.0/build/three.module.js"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header class="header">
+			<a class="header__logo" href="#" aria-label="Home">
+				<svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+					<path
+						fill="currentColor"
+						d="M16 4c-4 6-8 10-8 14a8 8 0 1 0 16 0c0-4-4-8-8-14zm0 22a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"
+					/>
+				</svg>
+			</a>
+			<button type="button" class="header__cta">Launch App</button>
+		</header>
+
+		<!-- Hero: 3D particle sphere (как на morpho.org), рост при скролле -->
+		<section class="hero" id="hero">
+			<div class="hero__sticky">
+				<canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+				<div class="hero__noise" aria-hidden="true"></div>
+
+				<div class="hero__content">
+				<h1 class="hero__title">
+					Connect to the open credit network<br />
+					<span class="hero__title-accent">for the world</span>
+				</h1>
+				<p class="hero__subtitle">Access global liquidity at the best possible terms</p>
+
+				<div class="hero__sphere-wrap">
+					<div class="hero__logo" aria-hidden="true">
+						<svg viewBox="0 0 48 48" width="56" height="56">
+							<path
+								fill="#fff"
+								d="M24 6C14 14 8 20 8 28a16 16 0 0 0 32 0c0-8-6-14-16-22zm0 30a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"
+							/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="hero__metrics">
+					<div class="metric">
+						<span class="metric__label">Deposits</span>
+						<span class="metric__value" data-counter data-target="11403360962" data-prefix="$">$0</span>
+					</div>
+					<div class="metric">
+						<span class="metric__label">Loans</span>
+						<span class="metric__value" data-counter data-target="3940139866" data-prefix="$">$0</span>
+					</div>
+				</div>
+
+				<p class="hero__scroll">Scroll to explore</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Секция «Powered by» — орбита бейджей + звёздное поле -->
+		<section class="orbit" id="orbit">
+			<canvas class="orbit__stars" id="orbit-stars" aria-hidden="true"></canvas>
+			<div class="orbit__badges" id="orbit-badges" aria-hidden="true"></div>
+			<div class="orbit__content">
+				<h2 class="orbit__title">Powered by Morpho</h2>
+				<p class="orbit__text">
+					Businesses connect with Morpho to power onchain credit solutions at scale.
+				</p>
+			</div>
+		</section>
+
+		<section class="note">
+			<h3>Как это сделано</h3>
+			<p>
+				Hero-сфера — <strong>Three.js</strong> (<code>Points</code> + градиент цветов по высоте).
+				Орбита логотипов — <strong>Canvas 2D</strong> (звёзды) + <strong>vanilla JS</strong>
+				(parallax и дрейф DOM-элементов). Счётчики — чистый JS с easing.
+			</p>
+			<p>
+				На morpho.org используют похожий стек: WebGL/Three.js для сферы, scroll-анимации часто через
+				<strong>GSAP ScrollTrigger</strong> или <strong>Lenis</strong> для плавного скролла.
+			</p>
+		</section>
+
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>

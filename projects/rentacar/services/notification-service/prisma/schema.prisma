@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/notification-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum NotificationLogStatus {
+  received
+  processed
+  failed
+}
+
+enum NotificationChannel {
+  email
+  sms
+  in_app
+}
+
+enum DeliveryStatus {
+  queued
+  sent
+  failed
+  skipped
+}
+
+model NotificationLog {
+  id            String                @id @default(cuid())
+  eventId       String                @unique
+  eventType     String
+  aggregateId   String
+  aggregateType String
+  payload       Json
+  status        NotificationLogStatus @default(received)
+  error         String?
+  createdAt     DateTime              @default(now()) @db.Timestamptz(3)
+  processedAt   DateTime?             @db.Timestamptz(3)
+  deliveries    NotificationDelivery[]
+
+  @@index([eventType])
+  @@index([createdAt])
+  @@map("notification_logs")
+}
+
+model NotificationTemplate {
+  id        String              @id @default(cuid())
+  eventType String
+  channel   NotificationChannel @default(email)
+  locale    String              @default("en")
+  subject   String
+  body      String
+  isActive  Boolean             @default(true)
+  createdAt DateTime            @default(now()) @db.Timestamptz(3)
+  updatedAt DateTime            @updatedAt @db.Timestamptz(3)
+
+  @@unique([eventType, channel, locale])
+  @@map("notification_templates")
+}
+
+model NotificationDelivery {
+  id        String              @id @default(cuid())
+  logId     String
+  log       NotificationLog     @relation(fields: [logId], references: [id], onDelete: Cascade)
+  channel   NotificationChannel
+  locale    String
+  recipient String?
+  subject   String
+  body      String
+  status    DeliveryStatus      @default(queued)
+  error     String?
+  sentAt    DateTime?           @db.Timestamptz(3)
+  createdAt DateTime            @default(now()) @db.Timestamptz(3)
+
+  @@index([logId])
+  @@index([status])
+  @@map("notification_deliveries")
+}

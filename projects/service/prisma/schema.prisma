@@ -1,0 +1,121 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrderStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+model Owner {
+  id           String                @id @default(cuid())
+  lastName     String
+  firstName    String
+  middleName   String?
+  phone        String
+  notes        String?
+  createdAt    DateTime              @default(now())
+  cars         Car[]
+  orders       Order[]
+  appointments ScheduleAppointment[]
+
+  @@index([lastName, firstName])
+  @@index([phone])
+}
+
+model Car {
+  id          String                @id @default(cuid())
+  ownerId     String
+  brand       String
+  model       String
+  year        Int
+  vin         String                @unique
+  mileage     Int
+  oil         String?
+  oilFilter   String?
+  airFilter   String?
+  fuelFilter  String?
+  cabinFilter String?
+  owner       Owner                 @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  repairs     RepairHistory[]
+  orders      Order[]
+  appointments ScheduleAppointment[]
+  createdAt   DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+
+  @@index([ownerId])
+  @@index([brand, model])
+}
+
+model RepairHistory {
+  id              String    @id @default(cuid())
+  carId           String
+  repairDate      DateTime  @db.Date
+  mileage         Int
+  workDone        String
+  partsList       String
+  recommendations String?
+  nextServiceDate DateTime? @db.Date
+  car             Car       @relation(fields: [carId], references: [id], onDelete: Cascade)
+  createdAt       DateTime  @default(now())
+
+  @@index([carId, repairDate])
+}
+
+model Order {
+  id          String      @id @default(cuid())
+  orderNumber String      @unique
+  clientId    String
+  carId       String
+  date        DateTime    @db.Date
+  time        String
+  problem     String
+  comment     String?
+  status      OrderStatus @default(PENDING)
+  totalAmount Decimal?    @db.Decimal(12, 2)
+  earnings    Decimal?    @db.Decimal(12, 2)
+  client      Owner       @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  car         Car         @relation(fields: [carId], references: [id], onDelete: Cascade)
+  appointment ScheduleAppointment?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([status])
+  @@index([date])
+  @@index([clientId])
+  @@index([carId])
+}
+
+model ScheduleAppointment {
+  id        String            @id @default(cuid())
+  date      DateTime          @db.Date
+  time      String
+  clientId  String
+  carId     String?
+  phone     String
+  problem   String
+  status    AppointmentStatus @default(PENDING)
+  completed Boolean           @default(false)
+  orderId   String?           @unique
+  client    Owner             @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  car       Car?              @relation(fields: [carId], references: [id], onDelete: SetNull)
+  order     Order?            @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+
+  @@index([date])
+  @@index([clientId])
+}

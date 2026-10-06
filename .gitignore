@@ -1,6 +1,7 @@
 # dependencies (root + projects/*)
 node_modules/
 **/node_modules/
+docs/
 
 .venv-resume
 .next

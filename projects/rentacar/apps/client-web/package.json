@@ -1,0 +1,30 @@
+{
+  "name": "@rentacar/client-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3200",
+    "build": "next build",
+    "start": "next start -p 3200",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@rentacar/shared-types": "*",
+    "@tanstack/react-query": "^5.80.6",
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zustand": "^5.0.5",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@rentacar/eslint-config": "*",
+    "@rentacar/tsconfig": "*",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "eslint": "^9.27.0",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/customer-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id                  String    @id @default(cuid())
+  firstName           String
+  lastName            String
+  email               String?   @unique
+  phone               String?
+  telegram            String?
+  whatsapp            String?
+  viber               String?
+  notes               String?
+  blacklist           Boolean   @default(false)
+  discountPercent     Decimal?  @db.Decimal(5, 2)
+  totalBookings       Int       @default(0)
+  successfulBookings  Int       @default(0)
+  cancelledBookings   Int       @default(0)
+  totalSpent          Decimal   @default(0) @db.Decimal(14, 2)
+  deletedAt           DateTime? @db.Timestamptz(3)
+  isArchived          Boolean   @default(false)
+  createdAt           DateTime  @default(now()) @db.Timestamptz(3)
+  updatedAt           DateTime  @updatedAt @db.Timestamptz(3)
+
+  @@index([lastName, firstName])
+  @@index([deletedAt])
+  @@map("customers")
+}

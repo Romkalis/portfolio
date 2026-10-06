@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../../node_modules/@prisma/settings-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PlatformSettings {
+  id                  String   @id @default("singleton")
+  cleaningBufferHours Int      @default(2)
+  defaultCurrency     String   @default("EUR")
+  defaultLocale       String   @default("en")
+  companyName         String   @default("RentACar")
+  updatedAt           DateTime @updatedAt @db.Timestamptz(3)
+
+  @@map("platform_settings")
+}

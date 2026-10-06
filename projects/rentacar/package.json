@@ -1,0 +1,33 @@
+{
+  "name": "rentacar-platform",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "db:generate": "turbo run db:generate",
+    "db:setup": "npm run db:generate --workspace=@rentacar/auth-service && npm run db:generate --workspace=@rentacar/car-service && npm run db:generate --workspace=@rentacar/booking-service && npm run db:generate --workspace=@rentacar/pricing-service && npm run db:generate --workspace=@rentacar/customer-service && npm run db:generate --workspace=@rentacar/finance-service && npm run db:generate --workspace=@rentacar/maintenance-service && npm run db:generate --workspace=@rentacar/payment-service && npm run db:generate --workspace=@rentacar/settings-service && npm run db:generate --workspace=@rentacar/notification-service && npm run db:push --workspace=@rentacar/auth-service && npm run db:push --workspace=@rentacar/car-service && npm run db:push --workspace=@rentacar/booking-service && npm run db:push --workspace=@rentacar/pricing-service && npm run db:push --workspace=@rentacar/customer-service && npm run db:push --workspace=@rentacar/finance-service && npm run db:push --workspace=@rentacar/maintenance-service && npm run db:push --workspace=@rentacar/payment-service && npm run db:push --workspace=@rentacar/settings-service && npm run db:push --workspace=@rentacar/notification-service && npm run db:seed --workspace=@rentacar/auth-service && npm run db:seed --workspace=@rentacar/car-service && npm run db:seed --workspace=@rentacar/booking-service && npm run db:seed --workspace=@rentacar/pricing-service && npm run db:seed --workspace=@rentacar/customer-service && npm run db:seed --workspace=@rentacar/settings-service && npm run db:seed --workspace=@rentacar/payment-service && npm run db:seed --workspace=@rentacar/notification-service",
+    "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.3",
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

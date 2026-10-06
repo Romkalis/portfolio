@@ -1,0 +1,55 @@
+/* Minimal FullCalendar v6 layout (package no longer ships CSS) */
+.fc {
+  font-size: 0.875rem;
+}
+
+.fc .fc-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.fc .fc-button {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border, #2a2f3a);
+  background: var(--surface, #1a1d24);
+  color: inherit;
+  cursor: pointer;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 1px solid var(--border, #2a2f3a);
+}
+
+.fc-theme-standard .fc-scrollgrid {
+  border: 1px solid var(--border, #2a2f3a);
+}
+
+.fc .fc-daygrid-day-number,
+.fc .fc-col-header-cell-cushion {
+  padding: 0.35rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fc .fc-event {
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.fc .fc-timegrid-slot-label-cushion {
+  padding: 0 0.35rem;
+}

@@ -1,0 +1,10 @@
+CREATE DATABASE rentacar_auth;
+CREATE DATABASE rentacar_car;
+CREATE DATABASE rentacar_booking;
+CREATE DATABASE rentacar_customer;
+CREATE DATABASE rentacar_pricing;
+CREATE DATABASE rentacar_finance;
+CREATE DATABASE rentacar_maintenance;
+CREATE DATABASE rentacar_payment;
+CREATE DATABASE rentacar_notification;
+CREATE DATABASE rentacar_settings;
