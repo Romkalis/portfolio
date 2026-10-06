@@ -27,15 +27,15 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Роман Бондарчук — Front-end Developer",
+  title: "Roman Bondarchuk — Front-end Developer",
   description:
-    "Портфолио frontend-разработчика: React, Next.js, TypeScript и примеры проектов.",
+    "Portfolio of a frontend developer: React, Next.js, TypeScript, and live project demos.",
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html
-      lang="ru"
+      lang="en"
       className={`${playfair.variable} ${montserrat.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >

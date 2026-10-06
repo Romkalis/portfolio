@@ -24,7 +24,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = "portfolio-locale";
 
 export function LanguageProvider({children}: {children: React.ReactNode}) {
-  const [locale, setLocaleState] = useState<Locale>("ru");
+  const [locale, setLocaleState] = useState<Locale>("en");
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
