@@ -5,6 +5,7 @@ docs/
 
 .venv-resume
 .next
+.next-dev
 out-portfolio
 dist
 .DS_Store
