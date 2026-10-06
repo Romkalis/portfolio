@@ -28,9 +28,11 @@ export default function Header() {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
 
+  // The scrolled state uses backdrop-filter, which would trap the fixed
+  // mobile menu inside the header, so it is dropped while the menu is open.
   const headerClass = [
     styles.header,
-    scrolled || menuOpen ? styles.scrolled : "",
+    menuOpen ? styles.menuOpen : scrolled ? styles.scrolled : "",
   ].join(" ");
 
   return (

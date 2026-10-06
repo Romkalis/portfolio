@@ -165,9 +165,7 @@
   transform: translateY(-4px) rotate(-45deg);
 }
 
-.scrolled:has(.navOpen) {
-  background: transparent;
-  box-shadow: none;
+.menuOpen {
   color: #fff;
 }
 
