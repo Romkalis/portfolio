@@ -64,6 +64,8 @@ function rewriteContent(content, base, htmlNames, srcDir) {
 
   out = out.replace(/href="(\/[^"]*)"/g, (_, p) => `href="${resolvePageHref(p, base, htmlNames, srcDir)}"`);
   out = out.replace(/href='(\/[^']*)'/g, (_, p) => `href='${resolvePageHref(p, base, htmlNames, srcDir)}'`);
+  // Markup embedded in JS bundles uses escaped quotes: href=\"/page\"
+  out = out.replace(/href=\\"(\/[^"\\]*)\\"/g, (_, p) => `href=\\"${resolvePageHref(p, base, htmlNames, srcDir)}\\"`);
 
   out = out.replace(/src="\/([^"]*)"/g, (_, p) => `src="${base}/${p}"`);
   out = out.replace(/src='\/([^']*)'/g, (_, p) => `src='${base}/${p}'`);
@@ -74,9 +76,13 @@ function rewriteContent(content, base, htmlNames, srcDir) {
   out = out.replace(/url\(\.\.\/\.\.\/\.\.\/img\//g, `url(${base}/img/`);
   out = out.replace(/url\(\.\.\/\.\.\/img\//g, `url(${base}/img/`);
 
-  out = out.replace(/url\(\/(?!\/)/g, `url(${base}/`);
-  out = out.replace(/url\("\/(?!\/)/g, `url("${base}/`);
-  out = out.replace(/url\('\/(?!\/)/g, `url('${base}/`);
+  // Skip urls already prefixed by the ../img/ rules above (avoids /demos/x/demos/x/).
+  out = out.replace(/url\(\/(?!\/|demos\/)/g, `url(${base}/`);
+  out = out.replace(/url\("\/(?!\/|demos\/)/g, `url("${base}/`);
+  out = out.replace(/url\('\/(?!\/|demos\/)/g, `url('${base}/`);
+
+  // Relative image paths in JS data ("../../../img/...") resolve against the page URL.
+  out = out.replace(/(["'])(?:\.\.\/)+img\//g, `$1${base}/img/`);
 
   out = out.replace(/"\/img\//g, `"${base}/img/`);
   out = out.replace(/'\/img\//g, `'${base}/img/`);
