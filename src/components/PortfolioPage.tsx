@@ -2,6 +2,7 @@
 
 import {contacts, demos, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
+import Hero from "./sections/Hero";
 import styles from "./PortfolioPage.module.css";
 
 export default function PortfolioPage() {
@@ -11,22 +12,7 @@ export default function PortfolioPage() {
 
   return (
     <main>
-      <section className={styles.hero}>
-        <div className="container">
-          <p className={styles.badge}>{t.heroBadge}</p>
-          <h1 className={styles.heroTitle}>{t.heroTitle}</h1>
-          <p className={styles.heroRole}>{t.heroRole}</p>
-          <p className={styles.heroText}>{t.heroText}</p>
-          <div className={styles.heroActions}>
-            <a href="#projects" className="btn btnPrimary">
-              {t.heroCtaProjects}
-            </a>
-            <a href="#contact" className="btn btnGhost">
-              {t.heroCtaContact}
-            </a>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       <section id="about" className="section">
         <div className="container">
