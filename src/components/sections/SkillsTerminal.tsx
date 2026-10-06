@@ -255,7 +255,7 @@ export default function SkillsTerminal() {
     }
   }, [autoplayDone]);
 
-  const [lead, accent, tail] = t.skillsHeading;
+  const [lead, accent] = t.skillsHeading;
 
   return (
     <section id="skills" className={`section sectionNavy ${styles.section}`}>
@@ -265,7 +265,6 @@ export default function SkillsTerminal() {
           <h2 className="sectionTitle">
             {lead}
             <em>{accent}</em>
-            {tail}
           </h2>
           <p className="sectionLead">{t.skillsLead}</p>
         </div>

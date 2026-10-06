@@ -96,7 +96,7 @@ export const translations = {
     aboutText:
       "Frontend-разработчик, ориентированный на создание качественных и масштабируемых web-сервисов. Владею современными технологиями (HTML5, CSS3, JavaScript ES6+, React, Redux Toolkit, TypeScript, Next.js). Опыт разработки адаптивных, user-friendly интерфейсов с высокой производительностью (PageSpeed / Lighthouse ≥ 95).",
     skillsTitle: "Навыки",
-    skillsHeading: ["Мой ", "стек", " в терминале"],
+    skillsHeading: ["Мой ", "стек"],
     skillsLead:
       "Всё, чем я пользуюсь каждый день. Терминал живой — введите команду или нажмите на подсказку ниже.",
     terminal: {
@@ -304,7 +304,7 @@ export const translations = {
     aboutText:
       "Frontend developer focused on building high-quality, scalable web services. Proficient in modern technologies (HTML5, CSS3, JavaScript ES6+, React, Redux Toolkit, TypeScript, Next.js). Experienced in responsive, user-friendly interfaces with strong performance (PageSpeed / Lighthouse ≥ 95).",
     skillsTitle: "Skills",
-    skillsHeading: ["My ", "stack", " in a terminal"],
+    skillsHeading: ["My ", "stack"],
     skillsLead:
       "Everything I use day to day. The terminal is live — type a command or tap a hint below.",
     terminal: {
