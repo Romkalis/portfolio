@@ -2,6 +2,7 @@
 
 import {contacts, demos, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
+import About from "./sections/About";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 import styles from "./PortfolioPage.module.css";
@@ -16,12 +17,7 @@ export default function PortfolioPage() {
       <Hero />
       <Features />
 
-      <section id="about" className="section">
-        <div className="container">
-          <h2 className="sectionTitle">{t.aboutTitle}</h2>
-          <p className={`sectionLead ${styles.aboutText}`}>{t.aboutText}</p>
-        </div>
-      </section>
+      <About />
 
       <section id="skills" className="section">
         <div className="container">

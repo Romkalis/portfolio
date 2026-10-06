@@ -86,6 +86,13 @@ export const translations = {
     heroCtaProjects: "Смотреть проекты",
     heroCtaContact: "Связаться",
     aboutTitle: "Обо мне",
+    aboutGreeting: ["Привет. Я Роман,", "приятно познакомиться."],
+    aboutStats: [
+      {value: 150, suffix: "+", label: "сайтов в продакшене"},
+      {value: 110, suffix: "+", label: "проектов на React / Next.js"},
+      {value: 95, suffix: "+", label: "баллов PageSpeed в среднем"},
+      {value: 3, suffix: "+", label: "года коммерческого опыта"},
+    ],
     aboutText:
       "Frontend-разработчик, ориентированный на создание качественных и масштабируемых web-сервисов. Владею современными технологиями (HTML5, CSS3, JavaScript ES6+, React, Redux Toolkit, TypeScript, Next.js). Опыт разработки адаптивных, user-friendly интерфейсов с высокой производительностью (PageSpeed / Lighthouse ≥ 95).",
     skillsTitle: "Навыки",
@@ -244,6 +251,13 @@ export const translations = {
     heroCtaProjects: "View projects",
     heroCtaContact: "Get in touch",
     aboutTitle: "About me",
+    aboutGreeting: ["Hi. I'm Roman,", "nice to meet you."],
+    aboutStats: [
+      {value: 150, suffix: "+", label: "sites shipped to production"},
+      {value: 110, suffix: "+", label: "React / Next.js projects"},
+      {value: 95, suffix: "+", label: "average PageSpeed score"},
+      {value: 3, suffix: "+", label: "years of commercial experience"},
+    ],
     aboutText:
       "Frontend developer focused on building high-quality, scalable web services. Proficient in modern technologies (HTML5, CSS3, JavaScript ES6+, React, Redux Toolkit, TypeScript, Next.js). Experienced in responsive, user-friendly interfaces with strong performance (PageSpeed / Lighthouse ≥ 95).",
     skillsTitle: "Skills",
