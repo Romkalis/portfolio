@@ -3,6 +3,7 @@
 import {contacts, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
 import About from "./sections/About";
+import CtaBand from "./sections/CtaBand";
 import Education from "./sections/Education";
 import Experience from "./sections/Experience";
 import Features from "./sections/Features";
@@ -30,6 +31,8 @@ export default function PortfolioPage() {
       <Education />
 
       <Projects />
+
+      <CtaBand />
 
       <section id="contact" className="section">
         <div className="container">

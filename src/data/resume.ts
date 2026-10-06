@@ -221,6 +221,15 @@ export const translations = {
       "Ниже — собранные статические версии сайтов. Откройте любой, чтобы пройтись по страницам и интерактиву.",
     openDemo: "Открыть сайт",
     contactTitle: "Контакты",
+    ctaExplore: {
+      title: ["Хотите ", "узнать больше?"],
+      text: "Полное резюме с опытом, стеком и достижениями.",
+    },
+    ctaInterested: {
+      title: ["Есть ", "проект?"],
+      text: "Расскажите о задаче — отвечу в течение дня.",
+      action: "Написать в Telegram",
+    },
     telegram: "Telegram",
     email: "Email",
     downloadResume: "Скачать резюме (DOCX)",
@@ -417,6 +426,15 @@ export const translations = {
       "Static builds of sample sites below. Open any demo to browse pages and interactions.",
     openDemo: "Open site",
     contactTitle: "Contact",
+    ctaExplore: {
+      title: ["Want to ", "know more?"],
+      text: "Full résumé with experience, stack, and achievements.",
+    },
+    ctaInterested: {
+      title: ["Have a ", "project?"],
+      text: "Tell me about it — I'll reply within a day.",
+      action: "Message on Telegram",
+    },
     telegram: "Telegram",
     email: "Email",
     downloadResume: "Download résumé (DOCX)",
