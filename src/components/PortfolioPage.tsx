@@ -3,6 +3,7 @@
 import {contacts, demos, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
 import About from "./sections/About";
+import Experience from "./sections/Experience";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 import SkillsTerminal from "./sections/SkillsTerminal";
@@ -22,37 +23,7 @@ export default function PortfolioPage() {
 
       <SkillsTerminal />
 
-      <section id="experience" className="section">
-        <div className="container">
-          <h2 className="sectionTitle">{t.experienceTitle}</h2>
-          <div className={styles.timeline}>
-            {t.experience.map((job) => (
-              <article key={job.company} className={`card ${styles.jobCard}`}>
-                <header className={styles.jobHeader}>
-                  <div>
-                    <h3>
-                      {"link" in job && job.link ? (
-                        <a href={job.link} target="_blank" rel="noreferrer">
-                          {job.company}
-                        </a>
-                      ) : (
-                        job.company
-                      )}
-                    </h3>
-                    <p className={styles.period}>{job.period}</p>
-                  </div>
-                </header>
-                <ul>
-                  {job.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-                <p className={styles.stack}>{job.stack}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Experience />
 
       <section className="section">
         <div className="container">

@@ -1,0 +1,144 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--accent-2), rgba(130, 36, 227, 0.1));
+}
+
+.job {
+  position: relative;
+  padding: 2rem;
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.job + .job {
+  margin-top: 1.5rem;
+}
+
+.job::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem + 0.35rem - 6px);
+  top: 2.35rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 3px solid var(--accent);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.job:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.job:hover::before {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+.period {
+  margin: 0 0 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.company {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.company a {
+  display: inline-flex;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.company a span {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.company a:hover {
+  color: var(--accent);
+}
+
+.company a:hover span {
+  transform: translate(2px, -2px);
+}
+
+.points {
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-muted);
+}
+
+.points li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.points li + li {
+  margin-top: 0.4rem;
+}
+
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.65rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 0.8fr 1.4fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}

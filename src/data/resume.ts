@@ -153,6 +153,9 @@ export const translations = {
       },
     ],
     experienceTitle: "Опыт работы",
+    experienceHeading: ["Где я ", "работал"],
+    experienceLead:
+      "Коммерческие проекты: от лендингов и интернет-магазинов до воронок продаж с CRM и платёжными системами.",
     experience: [
       {
         company: "Boomerang Media",
@@ -344,6 +347,9 @@ export const translations = {
       },
     ],
     experienceTitle: "Work experience",
+    experienceHeading: ["Where I've ", "worked"],
+    experienceLead:
+      "Commercial work: from landing pages and online stores to sales funnels with CRM and payment integrations.",
     experience: [
       {
         company: "Boomerang Media",
