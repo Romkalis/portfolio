@@ -1,6 +1,7 @@
 "use client";
 
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
+import type {PointerEvent} from "react";
 import {useLanguage} from "@/context/LanguageContext";
 import styles from "./Hero.module.css";
 
@@ -51,13 +52,31 @@ export default function Hero() {
   const {t} = useLanguage();
   const word = useTypewriter(t.heroWords);
   const [lead, accent, tail] = t.heroHeadline;
+  const backdropRef = useRef<HTMLDivElement>(null);
+
+  // Nudges the glow layers toward the pointer for a light parallax effect.
+  const onPointerMove = (event: PointerEvent<HTMLElement>) => {
+    const backdrop = backdropRef.current;
+    if (!backdrop || event.pointerType !== "mouse") {
+      return;
+    }
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    backdrop.style.setProperty("--mx", x.toFixed(3));
+    backdrop.style.setProperty("--my", y.toFixed(3));
+  };
 
   return (
-    <section className={styles.hero}>
-      <div className={styles.backdrop} aria-hidden="true">
-        <span className={`${styles.orb} ${styles.orbBlue}`} />
-        <span className={`${styles.orb} ${styles.orbPurple}`} />
-        <span className={`${styles.orb} ${styles.orbRed}`} />
+    <section className={styles.hero} onPointerMove={onPointerMove}>
+      <div ref={backdropRef} className={styles.backdrop} aria-hidden="true">
+        <span className={styles.glow} />
+        <span className={styles.dots} />
+        <div className={styles.orbs}>
+          <span className={`${styles.orb} ${styles.orbBlue}`} />
+          <span className={`${styles.orb} ${styles.orbPurple}`} />
+          <span className={`${styles.orb} ${styles.orbRed}`} />
+        </div>
       </div>
 
       <div className={`container ${styles.content}`}>
