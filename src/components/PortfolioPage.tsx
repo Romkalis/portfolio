@@ -3,6 +3,7 @@
 import {contacts, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
 import About from "./sections/About";
+import Education from "./sections/Education";
 import Experience from "./sections/Experience";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
@@ -26,24 +27,7 @@ export default function PortfolioPage() {
 
       <Experience />
 
-      <section className="section">
-        <div className="container">
-          <h2 className="sectionTitle">{t.educationTitle}</h2>
-          <ul className={styles.simpleList}>
-            {t.education.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <h3 className={styles.subTitle}>{t.achievementTitle}</h3>
-          <p className={styles.achievement}>{t.achievement}</p>
-          <h3 className={styles.subTitle}>{t.languagesTitle}</h3>
-          <ul className={styles.simpleList}>
-            {t.languages.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <Education />
 
       <Projects />
 
