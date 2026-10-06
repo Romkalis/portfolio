@@ -120,5 +120,17 @@ for (const { id, slug } of VANILLA_DEMOS) {
     }
   }
 
+  // A demo's own .htaccess may force HTTPS; that is decided once by the site's root
+  // .htaccess (scripts/hosting), otherwise the demo breaks on a domain without SSL.
+  const htaccess = path.join(destDir, ".htaccess");
+  if (fs.existsSync(htaccess)) {
+    const rules = fs.readFileSync(htaccess, "utf8");
+    const stripped = rules.replace(
+      /(#[^\n]*HTTPS[^\n]*\n)?(RewriteCond[^\n]*(HTTPS|X-Forwarded-Proto)[^\n]*\n)+RewriteRule[^\n]*https:\/\/[^\n]*\n/g,
+      "# HTTPS redirect is handled by the site's root .htaccess\n",
+    );
+    if (stripped !== rules) fs.writeFileSync(htaccess, stripped);
+  }
+
   console.log(`  • vanilla ${id} → demos/${slug} (${count} files patched)`);
 }
