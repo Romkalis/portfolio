@@ -1,0 +1,61 @@
+# Apache config for the static build (dist/), e.g. Timeweb shared hosting.
+# Copied into dist/ by scripts/build-all.sh — edit it here, not in dist/.
+
+AddDefaultCharset UTF-8
+Options -Indexes
+DirectoryIndex index.html
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+  AddType text/plain .txt
+</IfModule>
+
+# Force HTTPS. Enable once the SSL certificate is issued in the Timeweb panel.
+# Timeweb terminates TLS in nginx, so the original scheme comes in X-Forwarded-Proto.
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/manifest+json
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # HTML always revalidates so a new deploy shows up immediately.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Résumé files keep their name across updates — revalidate them too.
+  <FilesMatch "\.docx$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Next.js bundles have content hashes in their names (portfolio and demos).
+  <If "%{REQUEST_URI} =~ m#/_next/static/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

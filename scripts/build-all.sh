@@ -50,6 +50,9 @@ echo "→ Building portfolio..."
   rm -rf "$ROOT/out-portfolio"
 )
 
+echo "→ Adding hosting config (.htaccess)..."
+cp "$ROOT/scripts/hosting/.htaccess" "$DIST/.htaccess"
+
 echo "→ Sanitizing built demos in dist/..."
 node "$ROOT/scripts/sanitize-demo-contacts.mjs" | grep -E '^dist|^done' || true
 
