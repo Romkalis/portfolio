@@ -16,7 +16,7 @@ export default function Education() {
     <section className={`sectionCream ${styles.section}`}>
       <div className={`container ${styles.grid}`}>
         {columns.map((column) => (
-          <article key={column.title} className={styles.card}>
+          <article key={column.title} className={styles.card} data-reveal>
             <span className={styles.icon} aria-hidden="true">
               {column.icon}
             </span>

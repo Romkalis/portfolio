@@ -42,7 +42,7 @@ export default function About() {
   return (
     <section id="about" className="section">
       <div className={`container ${styles.grid}`}>
-        <div>
+        <div data-reveal>
           <span className="eyebrow">{t.aboutTitle}</span>
           <h2 className={`sectionTitle ${styles.title}`}>
             {greeting} <em>{greetingAccent}</em>
@@ -55,7 +55,7 @@ export default function About() {
           </div>
         </div>
 
-        <div ref={ref} className={styles.stats}>
+        <div ref={ref} className={styles.stats} data-reveal>
           {t.aboutStats.map((stat) => (
             <div key={stat.label} className={styles.stat}>
               <strong>

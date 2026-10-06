@@ -14,7 +14,7 @@ export default function Contact() {
     <section id="contact" className={styles.contact}>
       <div className={`container ${styles.inner}`}>
         <span className="eyebrow">{t.contactTitle}</span>
-        <h2 className={styles.title}>
+        <h2 className={styles.title} data-reveal>
           {lead}
           <em>{accent}</em>
           {tail}

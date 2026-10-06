@@ -10,7 +10,7 @@ export default function Experience() {
   return (
     <section id="experience" className="section sectionCream">
       <div className={`container ${styles.grid}`}>
-        <div className={styles.aside}>
+        <div className={styles.aside} data-reveal>
           <span className="eyebrow">{t.experienceTitle}</span>
           <h2 className="sectionTitle">
             {lead}
@@ -23,7 +23,7 @@ export default function Experience() {
           {t.experience.map((job) => {
             const link = "link" in job && job.link !== "#" ? job.link : null;
             return (
-              <li key={job.company} className={styles.job}>
+              <li key={job.company} className={styles.job} data-reveal>
                 <p className={styles.period}>{job.period}</p>
                 <h3 className={styles.company}>
                   {link ? (

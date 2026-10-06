@@ -260,7 +260,7 @@ export default function SkillsTerminal() {
   return (
     <section id="skills" className={`section sectionNavy ${styles.section}`}>
       <div className="container">
-        <div className="sectionHead">
+        <div className="sectionHead" data-reveal>
           <span className="eyebrow">{t.skillsTitle}</span>
           <h2 className="sectionTitle">
             {lead}
@@ -270,7 +270,7 @@ export default function SkillsTerminal() {
           <p className="sectionLead">{t.skillsLead}</p>
         </div>
 
-        <div ref={ref} className={styles.window}>
+        <div ref={ref} className={styles.window} data-reveal>
           <div className={styles.bar}>
             <span className={styles.dots} aria-hidden="true">
               <i />

@@ -32,7 +32,7 @@ export default function Features() {
     <section id="features" className={styles.features} aria-label={t.featuresTitle}>
       <div className={`container ${styles.grid}`}>
         {t.features.map((feature, index) => (
-          <article key={feature.title} className={styles.item}>
+          <article key={feature.title} className={styles.item} data-reveal>
             <span className={styles.icon}>
               <svg
                 viewBox="0 0 24 24"

@@ -1,5 +1,6 @@
 "use client";
 
+import ScrollReveal from "./ScrollReveal";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import CtaBand from "./sections/CtaBand";
@@ -22,6 +23,7 @@ export default function PortfolioPage() {
       <Projects />
       <CtaBand />
       <Contact />
+      <ScrollReveal />
     </main>
   );
 }

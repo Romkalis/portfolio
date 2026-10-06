@@ -17,7 +17,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section">
       <div className="container">
-        <div className="sectionHead">
+        <div className="sectionHead" data-reveal>
           <span className="eyebrow">{t.projectsTitle}</span>
           <h2 className="sectionTitle">
             {lead}
