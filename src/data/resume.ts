@@ -64,6 +64,25 @@ export const translations = {
     heroText:
       "Эта страница — моё портфолио. Здесь собраны контакты, опыт, навыки и примеры сайтов, которые можно открыть и посмотреть вживую.",
     heroScroll: "Листайте",
+    featuresTitle: "Что я делаю",
+    features: [
+      {
+        title: "Быстрые сайты",
+        text: "PageSpeed и Lighthouse 95+ — оптимизирую каждый килобайт.",
+      },
+      {
+        title: "Под ваши задачи",
+        text: "Воронки продаж, CRM, платёжки и локализация под бизнес.",
+      },
+      {
+        title: "Pixel-perfect код",
+        text: "Точная вёрстка по макету и валидный W3C-код без ошибок.",
+      },
+      {
+        title: "Любой экран",
+        text: "Адаптивные интерфейсы от 320 до 1600px и выше.",
+      },
+    ],
     heroCtaProjects: "Смотреть проекты",
     heroCtaContact: "Связаться",
     aboutTitle: "Обо мне",
@@ -203,6 +222,25 @@ export const translations = {
     heroText:
       "This page is my portfolio. Here you will find contacts, experience, skills, and sample websites you can open and explore live.",
     heroScroll: "Scroll",
+    featuresTitle: "What I do",
+    features: [
+      {
+        title: "Fast websites",
+        text: "PageSpeed and Lighthouse 95+ — every kilobyte optimized.",
+      },
+      {
+        title: "Tailored to you",
+        text: "Sales funnels, CRM, payments, and localization for your business.",
+      },
+      {
+        title: "Pixel-perfect code",
+        text: "Faithful to the design and W3C-valid without errors.",
+      },
+      {
+        title: "Any screen",
+        text: "Responsive interfaces from 320 to 1600px and beyond.",
+      },
+    ],
     heroCtaProjects: "View projects",
     heroCtaContact: "Get in touch",
     aboutTitle: "About me",

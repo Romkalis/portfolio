@@ -2,6 +2,7 @@
 
 import {contacts, demos, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
+import Features from "./sections/Features";
 import Hero from "./sections/Hero";
 import styles from "./PortfolioPage.module.css";
 
@@ -13,6 +14,7 @@ export default function PortfolioPage() {
   return (
     <main>
       <Hero />
+      <Features />
 
       <section id="about" className="section">
         <div className="container">
