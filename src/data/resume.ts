@@ -58,9 +58,9 @@ export const translations = {
     heroBadge: "Роман Бондарчук · Front-end Developer",
     heroTitle: "Роман Бондарчук",
     heroRole: "Front-end Developer",
-    heroHeadline: ["Не просто ", "фронтенд", "-разработчик"],
+    heroHeadline: ["Создаю ", "быстрые", " и удобные сайты"],
     heroTaglineStart: "Превращаю ваши идеи в",
-    heroWords: ["быстрые сайты", "живые интерфейсы", "реальность"],
+    heroWords: ["живые интерфейсы", "работающий продукт", "реальность"],
     heroText:
       "Эта страница — моё портфолио. Здесь собраны контакты, опыт, навыки и примеры сайтов, которые можно открыть и посмотреть вживую.",
     heroScroll: "Листайте",
@@ -266,9 +266,9 @@ export const translations = {
     heroBadge: "Roman Bondarchuk · Front-end Developer",
     heroTitle: "Roman Bondarchuk",
     heroRole: "Front-end Developer",
-    heroHeadline: ["Not your average ", "front-end", " developer"],
+    heroHeadline: ["I build ", "fast", ", user‑friendly websites"],
     heroTaglineStart: "Turning your ideas into",
-    heroWords: ["fast websites", "living interfaces", "reality"],
+    heroWords: ["living interfaces", "a working product", "reality"],
     heroText:
       "This page is my portfolio. Here you will find contacts, experience, skills, and sample websites you can open and explore live.",
     heroScroll: "Scroll",
