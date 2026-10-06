@@ -6,11 +6,11 @@ import {useTheme} from "@/context/ThemeContext";
 import styles from "./Header.module.css";
 
 const links = [
-  {href: "#about", key: "navAbout" as const},
-  {href: "#skills", key: "navSkills" as const},
-  {href: "#experience", key: "navExperience" as const},
-  {href: "#projects", key: "navProjects" as const},
-  {href: "#contact", key: "navContact" as const},
+  {href: "/#about", key: "navAbout" as const},
+  {href: "/#skills", key: "navSkills" as const},
+  {href: "/#experience", key: "navExperience" as const},
+  {href: "/#projects", key: "navProjects" as const},
+  {href: "/#contact", key: "navContact" as const},
 ];
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header className={headerClass}>
       <div className={`container ${styles.inner}`}>
-        <a href="#" className={styles.logo} onClick={() => setMenuOpen(false)}>
+        <a href="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
           RB<span>.</span>
         </a>
         <nav
