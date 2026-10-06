@@ -1,5 +1,6 @@
 "use client";
 
+import {useEffect, useState} from "react";
 import {useLanguage} from "@/context/LanguageContext";
 import styles from "./Header.module.css";
 
@@ -13,16 +14,42 @@ const links = [
 
 export default function Header() {
   const {locale, setLocale, t} = useLanguage();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive: true});
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }, [menuOpen]);
+
+  const headerClass = [
+    styles.header,
+    scrolled || menuOpen ? styles.scrolled : "",
+  ].join(" ");
 
   return (
-    <header className={styles.header}>
+    <header className={headerClass}>
       <div className={`container ${styles.inner}`}>
-        <a href="#" className={styles.logo}>
-          RB<span>.</span>
+        <a href="#" className={styles.logo} onClick={() => setMenuOpen(false)}>
+          {t.heroTitle.split(" ")[0]}<span>.</span>
         </a>
-        <nav className={styles.nav} aria-label="Main">
+        <nav
+          className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
+          aria-label="Main"
+        >
           {links.map((link) => (
-            <a key={link.href} href={link.href} className={styles.navLink}>
+            <a
+              key={link.href}
+              href={link.href}
+              className={styles.navLink}
+              onClick={() => setMenuOpen(false)}
+            >
               {t[link.key]}
             </a>
           ))}
@@ -44,6 +71,16 @@ export default function Header() {
               EN
             </button>
           </div>
+          <button
+            type="button"
+            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ""}`}
+            aria-label="Menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span />
+            <span />
+          </button>
         </div>
       </div>
     </header>
