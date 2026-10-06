@@ -39,7 +39,7 @@ export default function Header() {
     <header className={headerClass}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          {t.heroTitle.split(" ")[0]}<span>.</span>
+          RB<span>.</span>
         </a>
         <nav
           className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}

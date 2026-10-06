@@ -29,10 +29,9 @@
 .logo {
   position: relative;
   z-index: 2;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.6rem;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.04em;
 }
 
 .logo span {
