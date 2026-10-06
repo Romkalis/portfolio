@@ -91,6 +91,18 @@
   transform: translateX(4px);
 }
 
+@media (max-width: 420px) {
+  .panel {
+    min-height: 0;
+    padding: 3.5rem 1rem;
+  }
+
+  .action {
+    padding: 0.9rem 1.1rem;
+    letter-spacing: 0.1em;
+  }
+}
+
 @media (min-width: 900px) {
   .band {
     grid-template-columns: 1fr 1fr;

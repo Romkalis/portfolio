@@ -121,10 +121,11 @@ img {
 .sectionTitle {
   margin: 0 0 1rem;
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 4.5vw, 3rem);
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03em;
+  overflow-wrap: break-word;
 }
 
 .sectionTitle em {

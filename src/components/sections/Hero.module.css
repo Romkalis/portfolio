@@ -270,3 +270,9 @@
     top: 100%;
   }
 }
+
+@media (max-width: 520px), (max-height: 760px) {
+  .scroll {
+    display: none;
+  }
+}

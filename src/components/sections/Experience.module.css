@@ -131,6 +131,33 @@
   gap: 0.4rem;
 }
 
+@media (max-width: 520px) {
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline::before {
+    left: 0.2rem;
+  }
+
+  .job {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .job::before {
+    left: calc(-1.25rem + 0.2rem - 6px);
+    top: 1.75rem;
+  }
+
+  .company {
+    font-size: 1.25rem;
+  }
+
+  .company a {
+    display: inline;
+  }
+}
+
 @media (min-width: 960px) {
   .grid {
     grid-template-columns: 0.8fr 1.4fr;
