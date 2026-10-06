@@ -7,6 +7,9 @@ import styles from "./Projects.module.css";
 
 const tags = Array.from(new Set(demos.map((demo) => demo.tag)));
 
+// Set by scripts/dev.sh, where demos are served separately; empty in builds.
+const demosOrigin = process.env.NEXT_PUBLIC_DEMOS_ORIGIN ?? "";
+
 export default function Projects() {
   const {t} = useLanguage();
   const [filter, setFilter] = useState<string | null>(null);
@@ -46,7 +49,7 @@ export default function Projects() {
             return (
               <article key={demo.slug} className={styles.card}>
                 <a
-                  href={`/demos/${demo.slug}/`}
+                  href={`${demosOrigin}/demos/${demo.slug}/`}
                   className={styles.preview}
                   target="_blank"
                   rel="noreferrer"
