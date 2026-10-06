@@ -35,7 +35,7 @@
 
 .filters button:hover,
 .filters .filterActive {
-  color: var(--navy);
+  color: var(--ink);
 }
 
 .filters .filterActive::after {
@@ -87,14 +87,14 @@
   align-items: center;
   height: 1.6rem;
   padding: 0 0.75rem;
-  background: #eceef5;
+  background: var(--chrome);
 }
 
 .chrome i {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: #c9cde0;
+  background: var(--chrome-dot);
 }
 
 .preview img {
@@ -183,7 +183,7 @@
   gap: 0.25rem 0.9rem;
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .stack span::before {

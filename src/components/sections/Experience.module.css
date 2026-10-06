@@ -23,7 +23,7 @@
 .job {
   position: relative;
   padding: 2rem;
-  background: var(--paper);
+  background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition:
@@ -43,7 +43,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--paper);
+  background: var(--surface);
   border: 3px solid var(--accent);
   transition:
     background 0.3s ease,
@@ -66,7 +66,7 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .company {
@@ -87,12 +87,12 @@
 .company a span {
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-text);
   transition: transform 0.2s ease;
 }
 
 .company a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .company a:hover span {

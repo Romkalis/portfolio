@@ -14,14 +14,14 @@
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--surface-soft);
   transition:
     background 0.3s ease,
     transform 0.3s ease;
 }
 
 .card:hover {
-  background: var(--paper);
+  background: var(--surface);
   transform: translateY(-4px);
 }
 
@@ -32,7 +32,7 @@
   height: 3rem;
   margin-bottom: 1.1rem;
   border-radius: 50%;
-  background: var(--paper);
+  background: var(--surface);
   font-size: 1.35rem;
   box-shadow: 0 8px 20px rgba(20, 30, 85, 0.08);
 }

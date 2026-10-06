@@ -12,9 +12,9 @@
 }
 
 .scrolled {
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--header-bg);
   backdrop-filter: blur(12px);
-  color: var(--navy);
+  color: var(--ink);
   box-shadow: 0 1px 0 var(--border);
 }
 
@@ -36,7 +36,7 @@
 }
 
 .logo span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .nav {
@@ -128,7 +128,34 @@
 
 .lang .langActive {
   opacity: 1;
-  color: var(--accent);
+  color: var(--accent-text);
+}
+
+.theme {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  opacity: 0.75;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.4s ease;
+}
+
+.theme:hover {
+  opacity: 1;
+  transform: rotate(20deg);
+}
+
+.theme svg {
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 .burger {
@@ -179,7 +206,34 @@
     visibility: visible;
   }
 
-  .burger {
+  .theme {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  opacity: 0.75;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.4s ease;
+}
+
+.theme:hover {
+  opacity: 1;
+  transform: rotate(20deg);
+}
+
+.theme svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.burger {
     display: none;
   }
 }

@@ -29,7 +29,7 @@
 
 .stat {
   padding: 2rem 1.5rem;
-  background: var(--paper);
+  background: var(--surface);
   transition: background 0.3s ease;
 }
 
@@ -44,12 +44,12 @@
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--navy);
+  color: var(--ink);
   font-variant-numeric: lining-nums tabular-nums;
 }
 
 .stat strong span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .stat p {

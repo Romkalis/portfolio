@@ -9,9 +9,15 @@
   --navy-deep: #0c1238;
   --cream: #efeee5;
   --paper: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.55);
+  --header-bg: rgba(255, 255, 255, 0.96);
+  --chrome: #eceef5;
+  --chrome-dot: #c9cde0;
   --ink: #141e55;
   --ink-muted: #5b6283;
   --accent: #3452ff;
+  --accent-text: #3452ff;
   --accent-dim: rgba(52, 82, 255, 0.1);
   --accent-2: #8224e3;
   --accent-3: #fd0025;
@@ -24,7 +30,26 @@
   --header-h: 4.5rem;
   --font-display: var(--font-manrope), "Segoe UI", system-ui, sans-serif;
   --font-sans: var(--font-montserrat), "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
   --font-mono: var(--font-jetbrains), "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0b1028;
+  --surface: #151c44;
+  --surface-soft: rgba(255, 255, 255, 0.03);
+  --cream: #10173a;
+  --ink: #e7e9fb;
+  --ink-muted: #9aa2cc;
+  --accent-text: #8fa0ff;
+  --accent-dim: rgba(110, 130, 255, 0.16);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 30px 70px rgba(0, 0, 0, 0.6);
+  --header-bg: rgba(11, 16, 40, 0.88);
+  --chrome: #1c2450;
+  --chrome-dot: #3a4378;
 }
 
 html {
@@ -40,6 +65,9 @@ body {
   background: var(--paper);
   color: var(--ink);
   line-height: 1.75;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -83,7 +111,7 @@ img {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .sectionNavy .eyebrow {
@@ -102,7 +130,7 @@ img {
 .sectionTitle em {
   font-style: normal;
   font-weight: 300;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .sectionNavy .sectionTitle em {
@@ -178,7 +206,7 @@ img {
 }
 
 .card {
-  background: var(--paper);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -193,7 +221,7 @@ img {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   background: var(--accent-dim);
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 @media (prefers-reduced-motion: reduce) {

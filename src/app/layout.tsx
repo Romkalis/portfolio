@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {JetBrains_Mono, Manrope, Montserrat} from "next/font/google";
 import {LanguageProvider} from "@/context/LanguageContext";
+import {ThemeProvider, themeInitScript} from "@/context/ThemeContext";
 import Header from "@/components/Header";
 import "./globals.css";
 
@@ -38,11 +39,16 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       className={`${manrope.variable} ${montserrat.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{__html: themeInitScript}} />
+      </head>
       <body>
-        <LanguageProvider>
-          <Header />
-          {children}
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            <Header />
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
