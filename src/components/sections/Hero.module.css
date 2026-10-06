@@ -158,6 +158,17 @@
   margin-top: 2.75rem;
 }
 
+@media (max-width: 520px) {
+  .badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+  }
+
+  .actions a {
+    min-width: 15rem;
+  }
+}
+
 .scroll {
   position: absolute;
   z-index: 1;
