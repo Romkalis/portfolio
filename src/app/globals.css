@@ -24,7 +24,7 @@
   --header-h: 4.5rem;
   --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-montserrat), "Segoe UI", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
 html {
@@ -84,6 +84,10 @@ img {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+.sectionNavy .eyebrow {
+  color: #8fa0ff;
 }
 
 .sectionTitle {

@@ -96,8 +96,32 @@ export const translations = {
     aboutText:
       "Frontend-разработчик, ориентированный на создание качественных и масштабируемых web-сервисов. Владею современными технологиями (HTML5, CSS3, JavaScript ES6+, React, Redux Toolkit, TypeScript, Next.js). Опыт разработки адаптивных, user-friendly интерфейсов с высокой производительностью (PageSpeed / Lighthouse ≥ 95).",
     skillsTitle: "Навыки",
+    skillsHeading: ["Мой ", "стек", " в терминале"],
+    skillsLead:
+      "Всё, чем я пользуюсь каждый день. Терминал живой — введите команду или нажмите на подсказку ниже.",
+    terminal: {
+      title: "roman@portfolio: ~/skills — zsh",
+      tryLabel: "Попробуйте:",
+      whoami: "Роман Бондарчук — Front-end Developer. React, Next.js, TypeScript.",
+      help: [
+        ["help", "список команд"],
+        ["whoami", "кто я"],
+        ["skills", "все навыки сразу"],
+        ["ls [группа]", "frontend, tools или api"],
+        ["contact", "как со мной связаться"],
+        ["sudo hire roman", "сделать оффер 😉"],
+        ["clear", "очистить экран"],
+      ],
+      cd: "Вы уже дома. Тут уютно.",
+      contact: "Пишите — отвечаю быстро:",
+      hire: "Доступ разрешён ✓ Отличное решение! Напишите мне:",
+      notFound: "команда не найдена:",
+      notFoundHint: "Введите help, чтобы увидеть список команд.",
+      noGroup: "нет такой директории:",
+    },
     skillsGroups: [
       {
+        id: "frontend",
         title: "Frontend",
         items: [
           "HTML5",
@@ -112,10 +136,12 @@ export const translations = {
         ],
       },
       {
+        id: "tools",
         title: "Инструменты",
         items: ["Gulp", "LESS", "SCSS", "Jest", "Storybook", "Git"],
       },
       {
+        id: "api",
         title: "API и прочее",
         items: [
           "REST API",
@@ -261,8 +287,32 @@ export const translations = {
     aboutText:
       "Frontend developer focused on building high-quality, scalable web services. Proficient in modern technologies (HTML5, CSS3, JavaScript ES6+, React, Redux Toolkit, TypeScript, Next.js). Experienced in responsive, user-friendly interfaces with strong performance (PageSpeed / Lighthouse ≥ 95).",
     skillsTitle: "Skills",
+    skillsHeading: ["My ", "stack", " in a terminal"],
+    skillsLead:
+      "Everything I use day to day. The terminal is live — type a command or tap a hint below.",
+    terminal: {
+      title: "roman@portfolio: ~/skills — zsh",
+      tryLabel: "Try:",
+      whoami: "Roman Bondarchuk — Front-end Developer. React, Next.js, TypeScript.",
+      help: [
+        ["help", "list commands"],
+        ["whoami", "who am I"],
+        ["skills", "all skills at once"],
+        ["ls [group]", "frontend, tools or api"],
+        ["contact", "how to reach me"],
+        ["sudo hire roman", "make an offer 😉"],
+        ["clear", "clear the screen"],
+      ],
+      cd: "You're already home. It's cozy here.",
+      contact: "Drop me a line — I reply fast:",
+      hire: "Permission granted ✓ Great choice! Reach me at:",
+      notFound: "command not found:",
+      notFoundHint: "Type help to see available commands.",
+      noGroup: "no such directory:",
+    },
     skillsGroups: [
       {
+        id: "frontend",
         title: "Frontend",
         items: [
           "HTML5",
@@ -277,10 +327,12 @@ export const translations = {
         ],
       },
       {
+        id: "tools",
         title: "Tools",
         items: ["Gulp", "LESS", "SCSS", "Jest", "Storybook", "Git"],
       },
       {
+        id: "api",
         title: "API & more",
         items: [
           "REST API",

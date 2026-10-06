@@ -5,6 +5,7 @@ import {useLanguage} from "@/context/LanguageContext";
 import About from "./sections/About";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
+import SkillsTerminal from "./sections/SkillsTerminal";
 import styles from "./PortfolioPage.module.css";
 
 export default function PortfolioPage() {
@@ -19,23 +20,7 @@ export default function PortfolioPage() {
 
       <About />
 
-      <section id="skills" className="section">
-        <div className="container">
-          <h2 className="sectionTitle">{t.skillsTitle}</h2>
-          <div className={styles.skillsGrid}>
-            {t.skillsGroups.map((group) => (
-              <article key={group.title} className={`card ${styles.skillCard}`}>
-                <h3>{group.title}</h3>
-                <ul>
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <SkillsTerminal />
 
       <section id="experience" className="section">
         <div className="container">
