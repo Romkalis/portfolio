@@ -104,15 +104,15 @@
 .title {
   margin: 0 auto;
   max-width: 14ch;
-  font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 8vw, 5.75rem);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 8vw, 5.5rem);
+  font-weight: 800;
   line-height: 1.04;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.045em;
 }
 
 .title em {
-  font-weight: 400;
+  font-style: normal;
   background: linear-gradient(100deg, #8fa0ff, #c39bff 60%, #ff7a8f);
   -webkit-background-clip: text;
   background-clip: text;
@@ -123,9 +123,9 @@
 .tagline {
   margin: 1.75rem 0 0;
   min-height: 2.2em;
-  font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
-  font-style: italic;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.78);
 }
 

@@ -39,10 +39,11 @@
 
 .stat strong {
   display: block;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2.6rem, 5vw, 3.6rem);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
+  letter-spacing: -0.04em;
   color: var(--navy);
   font-variant-numeric: lining-nums tabular-nums;
 }

@@ -22,7 +22,7 @@
   --radius: 6px;
   --max: 1180px;
   --header-h: 4.5rem;
-  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-manrope), "Segoe UI", system-ui, sans-serif;
   --font-sans: var(--font-montserrat), "Segoe UI", system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 }
@@ -92,15 +92,16 @@ img {
 
 .sectionTitle {
   margin: 0 0 1rem;
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 4.5vw, 3rem);
+  font-weight: 800;
   line-height: 1.15;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
 }
 
 .sectionTitle em {
-  font-style: italic;
+  font-style: normal;
+  font-weight: 300;
   color: var(--accent);
 }
 

@@ -1,14 +1,13 @@
 import type {Metadata} from "next";
-import {JetBrains_Mono, Montserrat, Playfair_Display} from "next/font/google";
+import {JetBrains_Mono, Manrope, Montserrat} from "next/font/google";
 import {LanguageProvider} from "@/context/LanguageContext";
 import Header from "@/components/Header";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-playfair",
+  weight: ["300", "500", "700", "800"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -36,7 +35,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${montserrat.variable} ${jetbrains.variable}`}
+      className={`${manrope.variable} ${montserrat.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <body>
