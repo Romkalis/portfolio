@@ -221,6 +221,9 @@ export const translations = {
       "Ниже — собранные статические версии сайтов. Откройте любой, чтобы пройтись по страницам и интерактиву.",
     openDemo: "Открыть сайт",
     contactTitle: "Контакты",
+    contactHeading: ["Давайте сделаем ", "что‑то классное", " вместе"],
+    contactLead: "Открыт к предложениям о работе и интересным проектам.",
+    backToTop: "Наверх",
     ctaExplore: {
       title: ["Хотите ", "узнать больше?"],
       text: "Полное резюме с опытом, стеком и достижениями.",
@@ -426,6 +429,9 @@ export const translations = {
       "Static builds of sample sites below. Open any demo to browse pages and interactions.",
     openDemo: "Open site",
     contactTitle: "Contact",
+    contactHeading: ["Let's build ", "something great", " together"],
+    contactLead: "Open to job offers and interesting projects.",
+    backToTop: "Back to top",
     ctaExplore: {
       title: ["Want to ", "know more?"],
       text: "Full résumé with experience, stack, and achievements.",
