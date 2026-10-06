@@ -1,11 +1,12 @@
 "use client";
 
-import {contacts, demos, resumeDownloads} from "@/data/resume";
+import {contacts, resumeDownloads} from "@/data/resume";
 import {useLanguage} from "@/context/LanguageContext";
 import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Features from "./sections/Features";
 import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 import SkillsTerminal from "./sections/SkillsTerminal";
 import styles from "./PortfolioPage.module.css";
 
@@ -44,42 +45,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section id="projects" className="section">
-        <div className="container">
-          <h2 className="sectionTitle">{t.projectsTitle}</h2>
-          <p className="sectionLead">{t.projectsHint}</p>
-          <div className={styles.projectsGrid}>
-            {demos.map((demo) => {
-              const description =
-                t.demoDescriptions[demo.slug as keyof typeof t.demoDescriptions];
-              return (
-                <article key={demo.slug} className={`card ${styles.projectCard}`}>
-                  <div className={styles.projectTop}>
-                    <h3>{demo.siteName}</h3>
-                    <span className="tag">{demo.tag}</span>
-                  </div>
-                  <p>{description}</p>
-                  <div className={styles.stackRow}>
-                    {demo.stack.map((tech) => (
-                      <span key={tech} className={styles.tech}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href={`/demos/${demo.slug}/`}
-                    className={`btn btnPrimary ${styles.demoLink}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t.openDemo} →
-                  </a>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <Projects />
 
       <section id="contact" className="section">
         <div className="container">

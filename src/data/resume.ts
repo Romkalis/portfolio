@@ -215,6 +215,8 @@ export const translations = {
     languagesTitle: "Языки",
     languages: ["Русский — родной", "Английский — B1"],
     projectsTitle: "Примеры проектов",
+    projectsHeading: ["Избранные ", "кейсы"],
+    projectsFilterAll: "Все",
     projectsHint:
       "Ниже — собранные статические версии сайтов. Откройте любой, чтобы пройтись по страницам и интерактиву.",
     openDemo: "Открыть сайт",
@@ -409,6 +411,8 @@ export const translations = {
     languagesTitle: "Languages",
     languages: ["Russian — native", "English — B1"],
     projectsTitle: "Project samples",
+    projectsHeading: ["Featured ", "case studies"],
+    projectsFilterAll: "All",
     projectsHint:
       "Static builds of sample sites below. Open any demo to browse pages and interactions.",
     openDemo: "Open site",
